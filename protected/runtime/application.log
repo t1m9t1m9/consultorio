@@ -1096,3 +1096,25 @@ Stack trace:
 REQUEST_URI=/consultorio/index.php/site/registro
 HTTP_REFERER=http://localhost/consultorio/index.php/site/registro
 ---
+2021/05/05 11:54:54 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "css". in /var/www/html/yii/framework/web/CController.php:486
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(270): CController->missingAction()
+#1 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run()
+#2 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#3 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/html/consultorio/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/consultorio/index.php/site/css/bootstrap.min.css
+HTTP_REFERER=http://localhost/consultorio/index.php/site/registro
+---
+2021/05/05 11:54:54 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "css". in /var/www/html/yii/framework/web/CController.php:486
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(270): CController->missingAction()
+#1 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run()
+#2 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#3 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/html/consultorio/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/consultorio/index.php/site/css/bootstrap.min.css
+HTTP_REFERER=http://localhost/consultorio/index.php/site/registro
+---

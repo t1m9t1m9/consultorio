@@ -2,6 +2,7 @@
 $this->pageTitle=Yii::app()->name . ' - Registro';
 $this->breadcrumbs=array('Registro');
 ?>
+
 <h1 align="center">Registro para el Login</h1><br>
 
 <p align="center">Por favor llene los siguientes campos :</p>
@@ -157,10 +158,9 @@ $this->breadcrumbs=array('Registro');
         ?>
     </div>
 
-
-
     <div class="row buttons" align="center">
-        <?php echo CHtml::submitButton('Registrarme'); ?>
+
+        <?php echo CHtml::submitButton('Registrarme', array('class' => 'btn btn-primary')); ?>
     </div>
 
     <?php $this->endWidget(); ?>
