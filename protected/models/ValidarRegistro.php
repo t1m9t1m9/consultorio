@@ -248,4 +248,26 @@ class ValidarRegistro extends CFormModel
             'etnia'=>'Etnia',
         );
     }
+
+//    public function comprobar_cedula($attributes, $params)
+//    {
+//        $conexion = Yii::app()->db;
+//
+//        $consulta = "SELECT ci FROM usuario WHERE ";
+//        $consulta .= "ced_usu='".$this->cedula."'";
+//
+//        $resultado = $conexion->createCommand($consulta);
+//        $filas = $resultado->query();
+//
+//        foreach($filas as $fila)
+//        {
+//            if($this->cedula === $fila['cedula'])
+//            {
+//                $this->addError('cedula', 'Cedula no disponible');
+//                break;
+//            }
+//        }
+
+//    }
+
 }
