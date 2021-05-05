@@ -4,30 +4,31 @@ $this->breadcrumbs=array('Registro');
 ?>
 
 <h1 align="center">Registro para el Login</h1><br>
+<div align="center">
+    <h2 style="color: red"><b><?php echo $msg; ?></b></h2>
 
+</div>
 <p align="center">Por favor llene los siguientes campos :</p>
 
 <div class="form">
     <?php
-    $form = $this->beginWidget('CActiveForm', array(
-    'method' => 'POST',
-    'action' => Yii::app()->createUrl('site/registro'),
-    #'id' => 'form',
-    'enableClientValidation' => true,
-    #'enableAjaxValidation' => true,
-    'clientOptions' => array(
-        'validateOnSubmit' => true,
-        'validateOnChange' => true,
-        'validateOnType' => true,
-    ),
+        $form = $this->beginWidget('CActiveForm', array(
+        'method' => 'POST',
+        'action' => Yii::app()->createUrl('site/registro'),
+        'id' => 'form',
+        'enableClientValidation' => true,
+        'enableAjaxValidation' => true,
+        'clientOptions' => array(
+                                    'validateOnSubmit' => true
+        ),
     ));
 ?>
     <p class="note" align="center">Los campos con <span class="required">*</span> son requeridos.</p>
 
     <div class="row" align="center">
-        <?php echo $form->labelEx($model,'cedula'); ?>
-        <?php echo $form->textField($model,'cedula'); ?>
-        <?php echo $form->error($model,'cedula'); ?>
+        <?php echo $form->labelEx($model,'ci'); ?>
+        <?php echo $form->textField($model,'ci'); ?>
+        <?php echo $form->error($model,'ci'); ?>
     </div>
 
     <div class="row" align="center">
@@ -75,11 +76,6 @@ $this->breadcrumbs=array('Registro');
         );
         ?>
     </div>
-<!--    <div class="row">-->
-<!--        --><?php //echo $form->labelEx($model,'sexo'); ?>
-<!--        --><?php //echo $form->dropDownList($model, 'sexo', array('MASCULINO'=>'MASCULINO', 'FEMENINO'=>'FEMENINO')); ?>
-<!--        --><?php //echo $form->error($model,'sexo'); ?>
-<!--    </div>-->
 
     <!--ETNIA-->
     <div class="row" align="center">
@@ -97,12 +93,6 @@ $this->breadcrumbs=array('Registro');
         );
         ?>
     </div>
-
-<!--    <div class="row">-->
-<!--        --><?php //echo $form->labelEx($model,'etnia'); ?>
-<!--        --><?php //echo $form->dropDownList($model, 'sexo', array('BLANCO'=>'BLANCO', 'MESTIZO'=>'MESTIZO', 'INDIGENA'=>'INDIGENA', 'AFROECUATORIANO'=>'AFROECUATORIANO', 'MONTUBIO'=>'MONTUBIO')); ?>
-<!--        --><?php //echo $form->error($model,'etnia'); ?>
-<!--    </div>-->
 
     <div class="row" align="center">
         <?php echo $form->labelEx($model,'email'); ?>
@@ -125,21 +115,21 @@ $this->breadcrumbs=array('Registro');
 
     <div class="row" align="center">
         <h4>Preguntas de seguridad</h4>
-        <?php echo $form->labelEx($model,'respuesta1'); ?>
-        <?php echo $form->textField($model,'respuesta1'); ?>
-        <?php echo $form->error($model,'respuesta1'); ?>
+        <?php echo $form->labelEx($model,'pregunta1'); ?>
+        <?php echo $form->textField($model,'pregunta1'); ?>
+        <?php echo $form->error($model,'pregunta1'); ?>
     </div>
 
     <div class="row" align="center">
-        <?php echo $form->labelEx($model,'respuesta2'); ?>
-        <?php echo $form->textField($model,'respuesta2'); ?>
-        <?php echo $form->error($model,'respuesta2'); ?>
+        <?php echo $form->labelEx($model,'pregunta2'); ?>
+        <?php echo $form->textField($model,'pregunta2'); ?>
+        <?php echo $form->error($model,'pregunta2'); ?>
     </div>
 
     <div class="row" align="center">
-        <?php echo $form->labelEx($model,'respuesta3'); ?>
-        <?php echo $form->textField($model,'respuesta3'); ?>
-        <?php echo $form->error($model,'respuesta3'); ?>
+        <?php echo $form->labelEx($model,'pregunta3'); ?>
+        <?php echo $form->textField($model,'pregunta3'); ?>
+        <?php echo $form->error($model,'pregunta3'); ?>
     </div>
 
     <div class="row" align="center">
@@ -164,5 +154,5 @@ $this->breadcrumbs=array('Registro');
     </div>
 
     <?php $this->endWidget(); ?>
-</div><!-- form -->
+</div>
 

@@ -2,7 +2,7 @@
 
 class ValidarRegistro extends CFormModel
 {
-    public $cedula;
+    public $ci;
     public $nombre1;
     public $nombre2;
     public $apellido1;
@@ -10,9 +10,9 @@ class ValidarRegistro extends CFormModel
     public $email;
     public $celular;
     public $direccion;
-    public $respuesta1;
-    public $respuesta2;
-    public $respuesta3;
+    public $pregunta1;
+    public $pregunta2;
+    public $pregunta3;
     public $password;
     public $repetir_password;
     public $edad;
@@ -23,21 +23,22 @@ class ValidarRegistro extends CFormModel
     {
         return array(
 
-            array('cedula, nombre1, nombre2, apellido1, apellido2, 
+            array('ci, nombre1, nombre2, apellido1, apellido2, 
                    edad, sexo, etnia, email, celular, direccion, 
-                   respuesta1, respuesta2, respuesta3, password, 
+                   pregunta1, pregunta2, pregunta3, password, 
                    repetir_password',
-                  'required'
+                  'required',
+                  'message' => 'Este campo es requerido',
             ),
 
             array(
-                'cedula',
+                'ci',
                 'match',
                 'pattern' => '/^[0-9]+$/i',
                 'message' => 'Error, solo numeros.',
             ),
             array(
-                'cedula',
+                'ci',
                 'length',
                 'min' => 10,
                 'tooShort' => 'La cedula tiene 10 digitos',
@@ -158,13 +159,13 @@ class ValidarRegistro extends CFormModel
             ),
 
             array(
-                'respuesta1',
+                'pregunta1',
                 'match',
                 'pattern' => '/^[a-zA-Záéíóúñ\s]+$/i',
                 'message' => 'Error, solo letras.',
             ),
             array(
-                'respuesta1',
+                'pregunta1',
                 'length',
                 'min' => 3,
                 'tooShort' => 'Debe tener minimo 3 letras',
@@ -173,13 +174,13 @@ class ValidarRegistro extends CFormModel
             ),
 
             array(
-                'respuesta2',
+                'pregunta2',
                 'match',
                 'pattern' => '/^[a-zA-Záéíóúñ\s]+$/i',
                 'message' => 'Error, solo letras.',
             ),
             array(
-                'respuesta2',
+                'pregunta2',
                 'length',
                 'min' => 3,
                 'tooShort' => 'Debe tener minimo 3 letras',
@@ -188,13 +189,13 @@ class ValidarRegistro extends CFormModel
             ),
 
             array(
-                'respuesta3',
+                'pregunta3',
                 'match',
                 'pattern' => '/^[a-zA-Záéíóúñ\s]+$/i',
                 'message' => 'Error, solo letras.',
             ),
             array(
-                'respuesta3',
+                'pregunta3',
                 'length',
                 'min' => 3,
                 'tooShort' => 'Debe tener minimo 3 letras',
@@ -223,14 +224,14 @@ class ValidarRegistro extends CFormModel
                 'compareAttribute' => 'password',
                 'message' => 'El password no coincide',
             ),
-
+                array('ci', 'comprobar_cedula')
         );
     }
 
     public function attributeLabels()
     {
         return array(
-            'cedula'=>'Cedula',
+            'ci'=>'Cedula',
             'nombre1'=>'Primer Nombre',
             'nombre2'=>'Segundo Nombre',
             'apellido1'=>'Primer Apellido',
@@ -238,9 +239,9 @@ class ValidarRegistro extends CFormModel
             'email'=>'Correo Electronico',
             'celular'=>'Telefono Celular',
             'direccion'=>'Direccion',
-            'respuesta1'=>'En que ciudad nacio?',
-            'respuesta2'=>'Nombre de su mascota?',
-            'respuesta3'=>'Libro favorito?',
+            'pregunta1'=>'En que ciudad nacio?',
+            'pregunta2'=>'Nombre de su mascota?',
+            'pregunta3'=>'Libro favorito?',
             'password'=>'Password',
             'repetir_password'=>'Repetir Password',
             'edad'=>'Edad',
@@ -249,25 +250,25 @@ class ValidarRegistro extends CFormModel
         );
     }
 
-//    public function comprobar_cedula($attributes, $params)
-//    {
-//        $conexion = Yii::app()->db;
-//
-//        $consulta = "SELECT ci FROM usuario WHERE ";
-//        $consulta .= "ced_usu='".$this->cedula."'";
-//
-//        $resultado = $conexion->createCommand($consulta);
-//        $filas = $resultado->query();
-//
-//        foreach($filas as $fila)
-//        {
-//            if($this->cedula === $fila['cedula'])
-//            {
-//                $this->addError('cedula', 'Cedula no disponible');
-//                break;
-//            }
-//        }
+    public function comprobar_cedula($attributes, $params)
+    {
+        $conexion = Yii::app()->db;
 
-//    }
+        $consulta = "SELECT ci FROM usuario WHERE ";
+        $consulta .= "ci='".$this->ci."'";
+
+        $resultado = $conexion->createCommand($consulta);
+        $filas = $resultado->query();
+
+        foreach($filas as $fila)
+        {
+            if($this->ci === $fila['ci'])
+            {
+                $this->addError('ci', 'Cedula no disponible');
+                break;
+            }
+        }
+
+    }
 
 }

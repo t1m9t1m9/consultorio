@@ -31,3 +31,23 @@ class UserIdentity extends CUserIdentity
 		return !$this->errorCode;
 	}
 }
+
+//public function authenticate()
+//{
+//    $conexion = Yii::app()->db;
+//
+//    $consulta = "SELECT ced_usu, pass_usu FROM usuario ";
+//    $consulta .= "WHERE ced_usu='".$this->username."' AND ";
+//    $consulta .= "pass_usu='".md5($this->password)."'";
+//
+//    $resultado = $conexion->createCommand($consulta)->query();
+//
+//    $resultado->bindColumn(1, $this->username);
+//    $resultado->bindColumn(2, $this->password);
+//
+//    while($resultado->read()!==false)
+//    {
+//        $this->errorCode = self::ERROR_NONE;
+//        return !$this->errorCode;
+//    }
+//}

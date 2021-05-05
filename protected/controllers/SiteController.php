@@ -107,13 +107,15 @@ class SiteController extends Controller
 		$this->redirect(Yii::app()->homeUrl);
 	}
 
+	//REGISTRO DE USUARIO
 	public function actionregistro()
     {
         $model = new ValidarRegistro;
+        $msg = '';
         $model->sexo = '1';
         $model->etnia = '1';
         // if it is ajax validation request
-        if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
+        if(isset($_POST['ajax']) && $_POST['ajax']==='form')
         {
             echo CActiveForm::validate($model);
             Yii::app()->end();
@@ -122,12 +124,54 @@ class SiteController extends Controller
         if(isset($_POST['ValidarRegistro']))
         {
             $model->attributes=$_POST['ValidarRegistro'];
-            // validate user input and redirect to the previous page if valid
+            if(!$model->validate())
+            {
+                $model->addError('repetir_password', 'Error al enviar el Formulario');
+            }
+            else
+            {
+                //Guardar el nuevo usuario en la base de datos
+                $guardar = new ConsultasBD;
+                $guardar->guardarUsuario(
+                    $model->ci,
+                    $model->nombre1,
+                    $model->nombre2,
+                    $model->apellido1,
+                    $model->apellido2,
+                    $model->edad,
+                    $model->sexo,
+                    $model->etnia,
+                    $model->email,
+                    $model->celular,
+                    $model->direccion,
+                    $model->pregunta1,
+                    $model->pregunta2,
+                    $model->pregunta3,
+                    $model->password
+                );
 
-//            if($model->validate() && $model->login())
-//                $this->redirect(Yii::app()->user->returnUrl);
+                    //Refrescar Pagina
+                    $model->ci = '';
+                    $model->nombre1 = '';
+                    $model->nombre2 = '';
+                    $model->apellido1 = '';
+                    $model->apellido2 = '';
+                    $model->edad = '';
+                    $model->sexo = '';
+                    $model->etnia = '';
+                    $model->email = '';
+                    $model->celular = '';
+                    $model->direccion = '';
+                    $model->pregunta1 = '';
+                    $model->pregunta2 = '';
+                    $model->pregunta3 = '';
+                    $model->password = '';
+                    $model->repetir_password = '';
+
+                    //Mensaje de confirmacion de registro
+                    $msg = 'Se registro exitosamente';
+            }
         }
-
-             $this->render('registro', array('model'=>$model));
+             $this->render('registro', array('model'=>$model, 'msg'=> $msg));
     }
 }
