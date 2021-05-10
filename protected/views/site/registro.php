@@ -70,13 +70,14 @@ $this->breadcrumbs=array('Registro');
             array('1' => 'MASCULINO', '2' => 'FEMENINO'),
             array(
                 'labelOptions' => array('style' => 'display:inline'),
-                'separator' => '',
+                'separator' => '<br>',
                 'template' => ' {label}: {input} ',
             )
         );
         ?>
-    </div>
 
+    </div>
+<br>
     <!--ETNIA-->
     <div class="row" align="center">
         <?php
@@ -87,13 +88,13 @@ $this->breadcrumbs=array('Registro');
             array('1' => 'BLANCO', '2' => 'MESTIZO', '3' => 'INDIGENA', '4' => 'AFROECUATORIANO', '5' => 'MONTUBIO'),
             array(
                 'labelOptions' => array('style' => 'display:inline'),
-                'separator' => ' ',
+                'separator' => '<br> ',
                 'template' => ' {label}: {input} ',
             )
         );
         ?>
     </div>
-
+<br>
     <div class="row" align="center">
         <?php echo $form->labelEx($model,'email'); ?>
         <?php echo $form->textField($model,'email'); ?>
