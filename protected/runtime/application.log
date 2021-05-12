@@ -3780,3 +3780,14 @@ REQUEST_URI=/consultorio/index.php/site/registro
 in /var/www/html/consultorio/protected/views/site/registro.php (73)
 in /var/www/html/consultorio/protected/controllers/SiteController.php (175)
 in /var/www/html/consultorio/index.php (13)
+2021/05/11 22:05:51 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "medidas". in /var/www/html/yii/framework/web/CController.php:486
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(270): CController->missingAction('medidas')
+#1 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('medidas')
+#2 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/medidas')
+#3 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/html/consultorio/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/consultorio/index.php/site/medidas
+HTTP_REFERER=http://localhost/consultorio/index.php/site/index
+---
