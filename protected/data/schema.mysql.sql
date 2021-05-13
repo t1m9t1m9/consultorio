@@ -17,5 +17,5 @@ CREATE TABLE usuario (
 );
 
 INSERT INTO usuario (ci, primerNombre, segundoNombre, primerApellido, segundoApellido, edad, sexo, etnia, email, celular, direccion, pregunta1, pregunta2, pregunta3, password)
-VALUES ('1803087558', 'Marcelo', 'Alejandro','Espinosa','Carvajal',34,'Masculino','Mestizo','marceespinosa9@gmail.com','0994036590','Collay y el arenal', 'Ambato','Natasha','ilusiones','29Glim09');
+VALUES ('1803087558', 'Marcelo', 'Alejandro','Espinosa','Carvajal',34,'Masculino','Mestizo','marceespinosa9@gmail.com','0994036590','Collay y el arenal', 'Ambato','Natasha','ilusiones','0aa75ab97c26a79526cee8ae49ab4b4e');
 
