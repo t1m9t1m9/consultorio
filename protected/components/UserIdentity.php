@@ -15,39 +15,24 @@ class UserIdentity extends CUserIdentity
 	 * against some persistent user identity storage (e.g. database).
 	 * @return boolean whether authentication succeeds.
 	 */
-	public function authenticate()
-	{
-		$users=array(
-			// username => password
-			'demo'=>'demo',
-			'admin'=>'admin',
-		);
-		if(!isset($users[$this->username]))
-			$this->errorCode=self::ERROR_USERNAME_INVALID;
-		elseif($users[$this->username]!==$this->password)
-			$this->errorCode=self::ERROR_PASSWORD_INVALID;
-		else
-			$this->errorCode=self::ERROR_NONE;
-		return !$this->errorCode;
-	}
+    public function authenticate()
+{
+    $conexion = Yii::app()->db;
+
+    $consulta = "SELECT ci, password FROM usuario ";
+    $consulta .= "WHERE ci='".$this->username ."' AND ";
+    $consulta .= "password='".md5($this->password)."'";
+
+    $resultado = $conexion->createCommand($consulta)->query();
+
+    $resultado->bindColumn(1, $this->username);
+    $resultado->bindColumn(2, $this->password);
+
+    while($resultado->read()!==false)
+    {
+        $this->errorCode = self::ERROR_NONE;
+        return !$this->errorCode;
+    }
+}
 }
 
-//public function authenticate()
-//{
-//    $conexion = Yii::app()->db;
-//
-//    $consulta = "SELECT ced_usu, pass_usu FROM usuario ";
-//    $consulta .= "WHERE ced_usu='".$this->username."' AND ";
-//    $consulta .= "pass_usu='".md5($this->password)."'";
-//
-//    $resultado = $conexion->createCommand($consulta)->query();
-//
-//    $resultado->bindColumn(1, $this->username);
-//    $resultado->bindColumn(2, $this->password);
-//
-//    while($resultado->read()!==false)
-//    {
-//        $this->errorCode = self::ERROR_NONE;
-//        return !$this->errorCode;
-//    }
-//}
