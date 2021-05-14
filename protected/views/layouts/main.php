@@ -1,4 +1,5 @@
 <?php /* @var $this Controller */
+//@todo Configurar bootstrap y nav bar para crear menus contextuales
 $cedu=Yii::app()->user->name;
 $idusu = Usuario::model()->findAll();
 $i1 = 1;
