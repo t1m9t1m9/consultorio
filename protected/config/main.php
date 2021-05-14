@@ -1,5 +1,5 @@
 <?php
-
+Yii::setPathOfAlias('bootstrap', dirname(__FILE__).'/../extensions/bootstrap');
 // uncomment the following to define a path alias
 // Yii::setPathOfAlias('local','path/to/local-folder');
 
@@ -8,7 +8,7 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Consultorio Medico Gutierrez',
-
+    'theme'=>'bootstrap',
 	// preloading 'log' component
 	'preload'=>array('log'),
 
@@ -19,6 +19,11 @@ return array(
 	),
 
 	'modules'=>array(
+
+        'gii'=>array(
+            'generatorPaths'=>array(
+                'bootstrap.gii',
+            ),),
 		// uncomment the following to enable the Gii tool
 
 		'gii'=>array(
@@ -32,7 +37,9 @@ return array(
 
 	// application components
 	'components'=>array(
-
+            'bootstrap'=>array(
+            'class'=>'bootstrap.components.Bootstrap',
+        ),
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
