@@ -9,9 +9,9 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<h1>Login</h1>
+<h1 class="text-center">Login</h1>
 
-<p>Por favor llene los campos con sus credenciales de inicio:</p>
+<p class="text-center">Por favor llene los campos con sus credenciales de inicio:</p>
 
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -22,32 +22,26 @@ $this->breadcrumbs=array(
 	),
 )); ?>
 
-	<p class="note">Los campos con <span class="required">*</span> son requeridos.</p>
+	<p class="note text-center">Los campos con <span class="required">*</span> son requeridos.</p>
 
-	<div class="row">
+	<div class="row text-center">
 		<?php echo $form->labelEx($model,'username'); ?>
 		<?php echo $form->textField($model,'username'); ?>
 		<?php echo $form->error($model,'username'); ?>
 	</div>
 
-	<div class="row">
+	<div class="row text-center">
 		<?php echo $form->labelEx($model,'password'); ?>
 		<?php echo $form->passwordField($model,'password'); ?>
 		<?php echo $form->error($model,'password'); ?>
 	</div>
 
-	<div class="row rememberMe">
-		<?php echo $form->checkBox($model,'rememberMe'); ?>
-		<?php echo $form->label($model,'rememberMe'); ?>
-		<?php echo $form->error($model,'rememberMe'); ?>
-	</div>
-
-    <a href="<?php echo Yii::app()->createUrl('site/registro'); ?>">
-        Registrarse
-    </a>
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Ingresar'); ?>
+	<div class="row buttons text-center">
+		<?php echo CHtml::submitButton('Ingresar', array('class'=>'btn btn-primary')); ?>
+        <br><br>
+        <a href="<?php echo Yii::app()->createUrl('site/registro'); ?>">
+            <center>             Registrarse</center>
+        </a>
 	</div>
 
 <?php $this->endWidget(); ?>
