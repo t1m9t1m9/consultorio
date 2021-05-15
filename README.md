@@ -1,8 +1,8 @@
 # consultorio
-se debe crear la base de datos con el numbre de consultorio, 
+se debe crear la base de datos con el nombre de consultorio, 
 el sistema esta utilizando MySql como motor de base de datos 
 y se debe configurar en el archivo database.php que se encuentra
-dentro de la carpeta protected, config.
+dentro de la carpeta protected,y luego en la carpeta config.
 
 el usuario y password debe estar acorde a la configuracion previa de mysql.
 
