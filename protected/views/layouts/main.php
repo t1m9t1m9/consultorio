@@ -17,6 +17,7 @@ foreach($idusu as $idusuced)
 <!DOCTYPE html>
 <html>
 <head>
+
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="language" content="en">
 
@@ -33,7 +34,13 @@ foreach($idusu as $idusuced)
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
-                <button type="button" class="btn btn-navbar" data-toogle="collapse" data-target=".nav-collapse">
+<!--                <button type="button" class="btn btn-navbar" data-toogle="collapse" data-target=".nav-collapse">-->
+<!--                    <span class="icon-bar"></span>-->
+<!--                    <span class="icon-bar"></span>-->
+<!--                    <span class="icon-bar"></span>-->
+<!--                </button>-->
+                <button class="btn btn-navbar" type="button" data-toggle="collapse" data-target=".nav-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<!--                    <span class="navbar-toggler-icon"></span>-->
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -54,9 +61,8 @@ foreach($idusu as $idusuced)
 				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 				array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-//				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-//                array('label'=>'Logout ()', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-               array('label'=>'Logout (' . $nom[$posision] . " " . $ape[$posision] . ')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+                array('label'=>'Panel de Control', 'url'=>array('/site/panel'), 'visible'=>!Yii::app()->user->isGuest),
+                array('label'=>'Logout (' . $nom[$posision] . " " . $ape[$posision] . ')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
             'htmlOptions' => array('class' => 'nav navbar-nav'),
 		));
@@ -70,9 +76,8 @@ foreach($idusu as $idusuced)
                     array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
                     array('label'=>'Contact', 'url'=>array('/site/contact')),
                     array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-//                    array('label'=>'Logout ()', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-                    // array('label'=>'Logout (' . $nom[$posision] . " " . $ape[$posision] . ')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+                    array('label'=>'Panel de Control', 'url'=>array('/site/panel'), 'visible'=>!Yii::app()->user->isGuest),
+				    array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
                 ),
                 'htmlOptions' => array('class' => 'nav navbar-nav'),
             ));
