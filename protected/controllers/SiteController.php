@@ -174,4 +174,17 @@ class SiteController extends Controller
         }
              $this->render('registro', array('model'=>$model, 'msg'=> $msg));
     }
+
+    public function actionPanel()
+    {
+        if (Yii::app()->user->isGuest)
+        {
+            $this->redirect(Yii::app()->homeUrl);
+        }
+        else
+        {
+            $this->render('panel');
+        }
+    }
+
 }
