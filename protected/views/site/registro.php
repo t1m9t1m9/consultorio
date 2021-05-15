@@ -28,37 +28,37 @@ $this->breadcrumbs=array('Registro');
     <div class="row" align="center">
         <?php echo $form->labelEx($model,'ci'); ?>
         <?php echo $form->textField($model,'ci'); ?>
-        <?php echo $form->error($model,'ci'); ?>
+        <?php echo $form->error($model,'ci', array("class" => "text-error")); ?>
     </div>
 
     <div class="row" align="center">
         <?php echo $form->labelEx($model,'nombre1'); ?>
         <?php echo $form->textField($model,'nombre1'); ?>
-        <?php echo $form->error($model,'nombre1'); ?>
+        <?php echo $form->error($model,'nombre1', array("class" => "text-error")); ?>
     </div>
 
     <div class="row" align="center">
         <?php echo $form->labelEx($model,'nombre2'); ?>
         <?php echo $form->textField($model,'nombre2'); ?>
-        <?php echo $form->error($model,'nombre2'); ?>
+        <?php echo $form->error($model,'nombre2', array("class" => "text-error")); ?>
     </div>
 
     <div class="row" align="center">
         <?php echo $form->labelEx($model,'apellido1'); ?>
         <?php echo $form->textField($model,'apellido1'); ?>
-        <?php echo $form->error($model,'apellido1'); ?>
+        <?php echo $form->error($model,'apellido1', array("class" => "text-error")); ?>
     </div>
 
     <div class="row" align="center">
         <?php echo $form->labelEx($model,'apellido2'); ?>
         <?php echo $form->textField($model,'apellido2'); ?>
-        <?php echo $form->error($model,'apellido2'); ?>
+        <?php echo $form->error($model,'apellido2', array("class" => "text-error")); ?>
     </div>
 
     <div class="row" align="center">
         <?php echo $form->labelEx($model,'edad'); ?>
         <?php echo $form->numberField($model,'edad'); ?>
-        <?php echo $form->error($model,'edad'); ?>
+        <?php echo $form->error($model,'edad', array("class" => "text-error")); ?>
     </div>
     <!--SEXO-->
     <div class="row" align="center">
@@ -98,19 +98,19 @@ $this->breadcrumbs=array('Registro');
     <div class="row" align="center">
         <?php echo $form->labelEx($model,'email'); ?>
         <?php echo $form->textField($model,'email'); ?>
-        <?php echo $form->error($model,'email'); ?>
+        <?php echo $form->error($model,'email', array("class" => "text-error")); ?>
     </div>
 
     <div class="row" align="center">
         <?php echo $form->labelEx($model,'celular'); ?>
         <?php echo $form->textField($model,'celular'); ?>
-        <?php echo $form->error($model,'celular'); ?>
+        <?php echo $form->error($model,'celular', array("class" => "text-error")); ?>
     </div>
 
     <div class="row" align="center">
         <?php echo $form->labelEx($model,'direccion'); ?>
         <?php echo $form->textField($model,'direccion'); ?>
-        <?php echo $form->error($model,'direccion'); ?>
+        <?php echo $form->error($model,'direccion', array("class" => "text-error")); ?>
     </div>
 <br>
 
@@ -118,19 +118,19 @@ $this->breadcrumbs=array('Registro');
         <h4>Preguntas de seguridad</h4>
         <?php echo $form->labelEx($model,'pregunta1'); ?>
         <?php echo $form->textField($model,'pregunta1'); ?>
-        <?php echo $form->error($model,'pregunta1'); ?>
+        <?php echo $form->error($model,'pregunta1', array("class" => "text-error")); ?>
     </div>
 
     <div class="row" align="center">
         <?php echo $form->labelEx($model,'pregunta2'); ?>
         <?php echo $form->textField($model,'pregunta2'); ?>
-        <?php echo $form->error($model,'pregunta2'); ?>
+        <?php echo $form->error($model,'pregunta2', array("class" => "text-error")); ?>
     </div>
 
     <div class="row" align="center">
         <?php echo $form->labelEx($model,'pregunta3'); ?>
         <?php echo $form->textField($model,'pregunta3'); ?>
-        <?php echo $form->error($model,'pregunta3'); ?>
+        <?php echo $form->error($model,'pregunta3', array("class" => "text-error")); ?>
     </div>
 
     <div class="row" align="center">
