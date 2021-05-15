@@ -27,13 +27,13 @@ $this->breadcrumbs=array(
 	<div class="row text-center">
 		<?php echo $form->labelEx($model,'username'); ?>
 		<?php echo $form->textField($model,'username'); ?>
-		<?php echo $form->error($model,'username'); ?>
+		<?php echo $form->error($model,'username', array("class" => "text-error")); ?>
 	</div>
 
 	<div class="row text-center">
 		<?php echo $form->labelEx($model,'password'); ?>
 		<?php echo $form->passwordField($model,'password'); ?>
-		<?php echo $form->error($model,'password'); ?>
+		<?php echo $form->error($model,'password', array("class" => "text-error")); ?>
 	</div>
 
 	<div class="row buttons text-center">
