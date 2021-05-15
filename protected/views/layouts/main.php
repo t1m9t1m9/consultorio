@@ -53,7 +53,8 @@ foreach($idusu as $idusuced)
                 <div class="nav-collapse collapse">
 
 		<?php
-        if($posision != '0') {
+        if($posision != '0')
+        {
 		$this->widget('zii.widgets.CMenu',array(
 
 			'items'=>array(
