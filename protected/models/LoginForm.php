@@ -22,7 +22,30 @@ class LoginForm extends CFormModel
 	{
 		return array(
 			// username and password are required
-			array('username, password', 'required'),
+			array('username, password',
+                'required',
+                'message' => 'Campos requeridos',
+                ),
+			array(
+			    'username',
+                'match',
+                'pattern' => '/^[0-9]+$/i',
+                'message' => 'Solo se permite numeros',
+            ),
+            array(
+                'username',
+                'length',
+                'min' => 10,
+                'tooShort' => 'La cedula tiene 10 digitos',
+                'max' => 10,
+                'tooLong' => 'La cedula tiene 10 digitos',
+            ),
+            array(
+                'password',
+                'match',
+                'pattern' => '/^[a-z0-9\_]+$/i',
+                'message' => 'Solo letras, numeros y guiones bajos',
+            ),
 			// rememberMe needs to be a boolean
 			array('rememberMe', 'boolean'),
 			// password needs to be authenticated
@@ -38,7 +61,7 @@ class LoginForm extends CFormModel
 		return array(
 			'rememberMe'=>'Recuerdame la proxima vez',
             'username'=>'Usuario',
-            'password'=>'Contraseña',
+            'password'=>'Password',
 
 		);
 	}
@@ -55,7 +78,7 @@ class LoginForm extends CFormModel
 		{
 			$this->_identity=new UserIdentity($this->username,$this->password);
 			if(!$this->_identity->authenticate())
-				$this->addError('password','Incorrect username or password.');
+				$this->addError('password','Error al iniciar sesion.');
 		}
 	}
 
