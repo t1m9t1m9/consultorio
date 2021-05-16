@@ -39,8 +39,8 @@ $this->breadcrumbs=array(
 	<div class="row buttons text-center">
 		<?php echo CHtml::submitButton('Ingresar', array('class'=>'btn btn-primary')); ?>
         <br><br>
-        <a href="<?php echo Yii::app()->createUrl('site/registro'); ?>">
-            <center>             Registrarse</center>
+        <a href="<?php echo Yii::app()->createUrl('site/recuperarpassword'); ?>">
+            <center>Recuperar Password</center>
         </a>
 	</div>
 

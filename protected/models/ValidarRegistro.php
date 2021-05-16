@@ -264,7 +264,7 @@ class ValidarRegistro extends CFormModel
         {
             if($this->ci === $fila['ci'])
             {
-                $this->addError('ci', 'Cedula no disponible');
+                $this->addError('ci', 'Su cedula ya se encuentra registrada');
                 break;
             }
         }

@@ -112,6 +112,22 @@ $this->breadcrumbs=array('Registro');
         <?php echo $form->textField($model,'direccion'); ?>
         <?php echo $form->error($model,'direccion', array("class" => "text-error")); ?>
     </div>
+
+    <div class="row" align="center">
+        <?php
+        echo $form->labelEx($model, 'password');
+        echo $form->passwordField($model, 'password');
+        echo $form->error($model, 'password', array('class' => 'text-error'));
+        ?>
+    </div>
+
+    <div class="row" align="center">
+        <?php
+        echo $form->labelEx($model, 'repetir_password');
+        echo $form->passwordField($model, 'repetir_password');
+        echo $form->error($model, 'repetir_password', array('class' => 'text-error'));
+        ?>
+    </div>
 <br>
 
     <div class="row" align="center">
@@ -133,21 +149,7 @@ $this->breadcrumbs=array('Registro');
         <?php echo $form->error($model,'pregunta3', array("class" => "text-error")); ?>
     </div>
 
-    <div class="row" align="center">
-        <?php
-        echo $form->labelEx($model, 'password');
-        echo $form->passwordField($model, 'password');
-        echo $form->error($model, 'password', array('class' => 'text-error'));
-        ?>
-    </div>
 
-    <div class="row" align="center">
-        <?php
-        echo $form->labelEx($model, 'repetir_password');
-        echo $form->passwordField($model, 'repetir_password');
-        echo $form->error($model, 'repetir_password', array('class' => 'text-error'));
-        ?>
-    </div>
 
     <div class="row buttons" align="center">
 

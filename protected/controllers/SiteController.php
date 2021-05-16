@@ -175,16 +175,79 @@ class SiteController extends Controller
              $this->render('registro', array('model'=>$model, 'msg'=> $msg));
     }
 
-    public function actionPanel()
-    {
-        if (Yii::app()->user->isGuest)
-        {
-            $this->redirect(Yii::app()->homeUrl);
-        }
-        else
-        {
-            $this->render('panel');
-        }
-    }
+    //valida una pagina para que solo se tenga acceso si estas logeado en el sistema
+//    public function actionPanel()
+//    {
+//        if (Yii::app()->user->isGuest)
+//        {
+//            $this->redirect(Yii::app()->homeUrl);
+//        }
+//        else
+//        {
+//            $this->render('panel');
+//        }
+//    }
 
+    public function actionRecuperarPassword()
+    {
+        $model = new RecuperarPassword;
+        $msg = '';
+        $msg1 = '';
+        $password = '';
+
+        if(isset($_POST["RecuperarPassword"]))
+        {
+            $model->attributes = $_POST['RecuperarPassword'];
+            if(!$model->validate())
+            {
+                $msg = "<strong class='text-error'>Error al enviar el formulario</strong>";
+            }
+            else
+            {
+                $conexion = Yii::app()->db;
+
+                //Verificar si el usuario existe
+                $consulta = "SELECT ci, email FROM usuario WHERE ";
+                $consulta .= "ci='".$model->username."' AND email='$model->email'";
+
+                $resultado = $conexion->createCommand($consulta);
+                $filas = $resultado->query();
+                $existe = false;
+
+                foreach ($filas as $fila)
+                {
+                    $existe = true;
+                }
+
+                //si el usuario existe
+                if($existe === true)
+                {
+                    //buscar el password del usuario
+                    $consulta = "SELECT password FROM usuario WHERE ";
+                    $consulta .= "ci='".$model->username."' AND email='".$model->email."'";
+
+                    $resultado = $conexion->createCommand($consulta)->query();
+
+                    $resultado->bindColumn(1, $password);
+
+                    while($resultado->read()!==false)
+                    {
+                        $actualizar1 = new ConsultasBD;
+                        $actualizar1->actualizar_pass(
+                            $model->username
+                        );
+
+
+                        $msg1 = 'Su contraseña es su numero de cedula, por favor ingrese y cambien su contraseña por seguridad';
+
+                        //refrescar vista
+                        $model->username = '';
+                        $model->email = '';
+                        $model->captcha ='';
+                    }
+                }
+            }
+        }
+        $this->render('recuperarpassword', array('model'=>$model, 'msg' => $msg, 'msg1' => $msg1));
+    }
 }

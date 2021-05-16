@@ -55,31 +55,37 @@ foreach($idusu as $idusuced)
 		<?php
         if($posision != '0')
         {
-		$this->widget('zii.widgets.CMenu',array(
+		$this->widget('bootstrap.widgets.TbMenu',array(
 
 			'items'=>array(
 				array('label'=>'Inicio', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
-                array('label'=>'Registro', 'url'=>array('/site/registro'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'Registro', 'url'=>array('/site/registro'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-                array('label'=>'Panel de Control', 'url'=>array('/site/panel'), 'visible'=>!Yii::app()->user->isGuest),
+                array('label'=>'Panel de Control', 'visible'=>!Yii::app()->user->isGuest,
+                        'items' => array(
+                                        array('label' => 'Cambiar Password', 'url' => array('/usuario/configuracion')),
+                                            array('label' => 'Actualizar Informacion', 'url' => array('/usuario/actualizarInformacion')),
+                        ),
+                    ),
                 array('label'=>'Logout (' . $nom[$posision] . " " . $ape[$posision] . ')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
             'htmlOptions' => array('class' => 'nav navbar-nav'),
 		));
         }
         else
-        {
-            $this->widget('zii.widgets.CMenu',array(
+        {//var/www/html/consultorio/protected/views/usuario/configuracion.php
+            $this->widget('bootstrap.widgets.TbMenu',array(
 
                 'items'=>array(
                     array('label'=>'Inicio', 'url'=>array('/site/index')),
-                    array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-                    array('label'=>'Contact', 'url'=>array('/site/contact')),
                     array('label'=>'Registro', 'url'=>array('/site/registro'), 'visible'=>Yii::app()->user->isGuest),
                     array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-                    array('label'=>'Panel de Control', 'url'=>array('/site/panel'), 'visible'=>!Yii::app()->user->isGuest),
+                    array('label'=>'Panel de Control', 'visible'=>!Yii::app()->user->isGuest,
+                        'items' => array(
+                            array('label' => 'Cambiar Password', 'url' => array('/usuario/configuracion')),
+                                array('label' => 'Actualizar Informacion', 'url' => array('/usuario/actualizarInformacion')),
+                        ),
+                    ),
 				    array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
                 ),
                 'htmlOptions' => array('class' => 'nav navbar-nav'),
@@ -93,7 +99,7 @@ foreach($idusu as $idusuced)
 
 <div class="container">
 <div class="page-header">
-    <br /><br />
+    <br />
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,

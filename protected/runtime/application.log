@@ -3791,3 +3791,1353 @@ Stack trace:
 REQUEST_URI=/consultorio/index.php/site/medidas
 HTTP_REFERER=http://localhost/consultorio/index.php/site/index
 ---
+2021/05/14 20:11:19 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'e6fda0f0d3e0adfff69e334462d1ef6a'' at line 1. The SQL statement executed was: SELECT ci, password FROM usuario WHERE ci=''' AND password='e6fda0f0d3e0adfff69e334462d1ef6a'.
+in /var/www/html/consultorio/protected/components/UserIdentity.php (26)
+in /var/www/html/consultorio/protected/models/LoginForm.php (57)
+in /var/www/html/consultorio/protected/controllers/SiteController.php (94)
+2021/05/14 20:11:19 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'e6fda0f0d3e0adfff69e334462d1ef6a'' at line 1. The SQL statement executed was: SELECT ci, password FROM usuario WHERE ci=''' AND password='e6fda0f0d3e0adfff69e334462d1ef6a' in /var/www/html/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/yii/framework/db/CDbCommand.php(377): CDbCommand->queryInternal('', 0, Array)
+#1 /var/www/html/consultorio/protected/components/UserIdentity.php(26): CDbCommand->query()
+#2 /var/www/html/consultorio/protected/models/LoginForm.php(57): UserIdentity->authenticate()
+#3 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 /var/www/html/yii/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), Array)
+#6 /var/www/html/consultorio/protected/controllers/SiteController.php(94): CModel->validate()
+#7 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#12 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /var/www/html/consultorio/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/consultorio/index.php/site/login
+HTTP_REFERER=http://localhost/consultorio/index.php/site/login
+---
+2021/05/14 23:49:12 [error] [exception.ParseError] ParseError: syntax error, unexpected '>' in /var/www/html/consultorio/protected/views/layouts/main.php:81
+Stack trace:
+#0 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#1 /var/www/html/yii/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#2 /var/www/html/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#3 /var/www/html/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#4 /var/www/html/yii/framework/web/CBaseController.php(215): COutputProcessor->run()
+#5 /var/www/html/yii/framework/web/CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 /var/www/html/consultorio/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#7 /var/www/html/yii/framework/web/CBaseController.php(126): require('/var/www/html/c...')
+#8 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#9 /var/www/html/yii/framework/web/CController.php(787): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#10 /var/www/html/consultorio/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#11 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#12 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#14 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#16 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#17 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /var/www/html/consultorio/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/consultorio/index.php/site/login
+HTTP_REFERER=http://localhost/consultorio/index.php/site/registro
+---
+2021/05/15 17:33:22 [error] [php] Undefined variable: model (/var/www/html/consultorio/protected/views/site/recuperarpassword.php:20)
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(872): SiteController->renderFile()
+#1 /var/www/html/yii/framework/web/CController.php(785): SiteController->renderPartial()
+#2 /var/www/html/consultorio/protected/controllers/SiteController.php(192): SiteController->render()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionRecuperarPassword()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/html/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/html/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/html/consultorio/index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php/site/recuperarpassword
+in /var/www/html/consultorio/protected/views/site/recuperarpassword.php (20)
+in /var/www/html/consultorio/protected/controllers/SiteController.php (192)
+in /var/www/html/consultorio/index.php (13)
+2021/05/15 17:46:16 [error] [php] Undefined variable: model (/var/www/html/consultorio/protected/controllers/SiteController.php:192)
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#5 /var/www/html/consultorio/index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php/site/recuperarpassword
+in /var/www/html/consultorio/protected/controllers/SiteController.php (192)
+in /var/www/html/consultorio/index.php (13)
+2021/05/15 17:46:17 [error] [php] Undefined variable: model (/var/www/html/consultorio/protected/controllers/SiteController.php:192)
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#5 /var/www/html/consultorio/index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php/site/recuperarpassword
+in /var/www/html/consultorio/protected/controllers/SiteController.php (192)
+in /var/www/html/consultorio/index.php (13)
+2021/05/15 17:47:07 [error] [php] Undefined variable: model (/var/www/html/consultorio/protected/views/site/recuperarpassword.php:20)
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(872): SiteController->renderFile()
+#1 /var/www/html/yii/framework/web/CController.php(785): SiteController->renderPartial()
+#2 /var/www/html/consultorio/protected/controllers/SiteController.php(192): SiteController->render()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionRecuperarPassword()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/html/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/html/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/html/consultorio/index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php/site/recuperarpassword
+in /var/www/html/consultorio/protected/views/site/recuperarpassword.php (20)
+in /var/www/html/consultorio/protected/controllers/SiteController.php (192)
+in /var/www/html/consultorio/index.php (13)
+2021/05/15 17:50:28 [error] [php] Undefined variable: model (/var/www/html/consultorio/protected/views/site/recuperarpassword.php:20)
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(872): SiteController->renderFile()
+#1 /var/www/html/yii/framework/web/CController.php(785): SiteController->renderPartial()
+#2 /var/www/html/consultorio/protected/controllers/SiteController.php(192): SiteController->render()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionRecuperarPassword()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/html/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/html/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/html/consultorio/index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php/site/recuperarpassword
+in /var/www/html/consultorio/protected/views/site/recuperarpassword.php (20)
+in /var/www/html/consultorio/protected/controllers/SiteController.php (192)
+in /var/www/html/consultorio/index.php (13)
+2021/05/15 17:50:29 [error] [php] Undefined variable: model (/var/www/html/consultorio/protected/views/site/recuperarpassword.php:20)
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(872): SiteController->renderFile()
+#1 /var/www/html/yii/framework/web/CController.php(785): SiteController->renderPartial()
+#2 /var/www/html/consultorio/protected/controllers/SiteController.php(192): SiteController->render()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionRecuperarPassword()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/html/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/html/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/html/consultorio/index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php/site/recuperarpassword
+in /var/www/html/consultorio/protected/views/site/recuperarpassword.php (20)
+in /var/www/html/consultorio/protected/controllers/SiteController.php (192)
+in /var/www/html/consultorio/index.php (13)
+2021/05/15 17:50:30 [error] [php] Undefined variable: model (/var/www/html/consultorio/protected/views/site/recuperarpassword.php:20)
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(872): SiteController->renderFile()
+#1 /var/www/html/yii/framework/web/CController.php(785): SiteController->renderPartial()
+#2 /var/www/html/consultorio/protected/controllers/SiteController.php(192): SiteController->render()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionRecuperarPassword()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/html/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/html/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/html/consultorio/index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php/site/recuperarpassword
+in /var/www/html/consultorio/protected/views/site/recuperarpassword.php (20)
+in /var/www/html/consultorio/protected/controllers/SiteController.php (192)
+in /var/www/html/consultorio/index.php (13)
+2021/05/15 17:51:19 [error] [php] Undefined variable: model (/var/www/html/consultorio/protected/controllers/SiteController.php:192)
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#5 /var/www/html/consultorio/index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php/site/recuperarpassword
+in /var/www/html/consultorio/protected/controllers/SiteController.php (192)
+in /var/www/html/consultorio/index.php (13)
+2021/05/15 17:51:20 [error] [php] Undefined variable: model (/var/www/html/consultorio/protected/controllers/SiteController.php:192)
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/html/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/html/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#5 /var/www/html/consultorio/index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php/site/recuperarpassword
+in /var/www/html/consultorio/protected/controllers/SiteController.php (192)
+in /var/www/html/consultorio/index.php (13)
+2021/05/15 18:34:09 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='1803087558' AND email='marceespinosa9@gmail.com'' at line 1. The SQL statement executed was: SELECT ci, email FROM usuario WHEREusername='1803087558' AND email='marceespinosa9@gmail.com'.
+in /var/www/html/consultorio/protected/controllers/SiteController.php (213)
+in /var/www/html/consultorio/index.php (13)
+2021/05/15 18:34:09 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='1803087558' AND email='marceespinosa9@gmail.com'' at line 1. The SQL statement executed was: SELECT ci, email FROM usuario WHEREusername='1803087558' AND email='marceespinosa9@gmail.com' in /var/www/html/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/yii/framework/db/CDbCommand.php(377): CDbCommand->queryInternal('', 0, Array)
+#1 /var/www/html/consultorio/protected/controllers/SiteController.php(213): CDbCommand->query()
+#2 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionRecuperarPassword()
+#3 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('recuperarpasswo...')
+#7 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/recuperarp...')
+#8 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /var/www/html/consultorio/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/consultorio/index.php/site/recuperarpassword
+HTTP_REFERER=http://localhost/consultorio/index.php/site/recuperarpassword
+---
+2021/05/15 18:35:55 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='1803087558' AND email='marceespinosa9@gmail.com'' at line 1. The SQL statement executed was: SELECT ci, email FROM usuario WHEREusername='1803087558' AND email='marceespinosa9@gmail.com'.
+in /var/www/html/consultorio/protected/controllers/SiteController.php (213)
+in /var/www/html/consultorio/index.php (13)
+2021/05/15 18:35:55 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='1803087558' AND email='marceespinosa9@gmail.com'' at line 1. The SQL statement executed was: SELECT ci, email FROM usuario WHEREusername='1803087558' AND email='marceespinosa9@gmail.com' in /var/www/html/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/yii/framework/db/CDbCommand.php(377): CDbCommand->queryInternal('', 0, Array)
+#1 /var/www/html/consultorio/protected/controllers/SiteController.php(213): CDbCommand->query()
+#2 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionRecuperarPassword()
+#3 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('recuperarpasswo...')
+#7 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/recuperarp...')
+#8 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /var/www/html/consultorio/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/consultorio/index.php/site/recuperarpassword
+HTTP_REFERER=http://localhost/consultorio/index.php/site/recuperarpassword
+---
+2021/05/15 18:37:13 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='1803087558' AND email='marceespinosa9@gmail.com'' at line 1. The SQL statement executed was: SELECT ci, email FROM usuario WHEREci='1803087558' AND email='marceespinosa9@gmail.com'.
+in /var/www/html/consultorio/protected/controllers/SiteController.php (213)
+in /var/www/html/consultorio/index.php (13)
+2021/05/15 18:37:13 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='1803087558' AND email='marceespinosa9@gmail.com'' at line 1. The SQL statement executed was: SELECT ci, email FROM usuario WHEREci='1803087558' AND email='marceespinosa9@gmail.com' in /var/www/html/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/yii/framework/db/CDbCommand.php(377): CDbCommand->queryInternal('', 0, Array)
+#1 /var/www/html/consultorio/protected/controllers/SiteController.php(213): CDbCommand->query()
+#2 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionRecuperarPassword()
+#3 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('recuperarpasswo...')
+#7 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/recuperarp...')
+#8 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /var/www/html/consultorio/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/consultorio/index.php/site/recuperarpassword
+HTTP_REFERER=http://localhost/consultorio/index.php/site/recuperarpassword
+---
+2021/05/15 18:42:13 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='1803087558' AND email='marceespinosa9@gmail.com'' at line 1. The SQL statement executed was: SELECT ci, email FROM usuario WHEREci='1803087558' AND email='marceespinosa9@gmail.com'.
+in /var/www/html/consultorio/protected/controllers/SiteController.php (213)
+in /var/www/html/consultorio/index.php (13)
+2021/05/15 18:42:13 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='1803087558' AND email='marceespinosa9@gmail.com'' at line 1. The SQL statement executed was: SELECT ci, email FROM usuario WHEREci='1803087558' AND email='marceespinosa9@gmail.com' in /var/www/html/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/yii/framework/db/CDbCommand.php(377): CDbCommand->queryInternal('', 0, Array)
+#1 /var/www/html/consultorio/protected/controllers/SiteController.php(213): CDbCommand->query()
+#2 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionRecuperarPassword()
+#3 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('recuperarpasswo...')
+#7 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/recuperarp...')
+#8 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /var/www/html/consultorio/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/consultorio/index.php/site/recuperarpassword
+HTTP_REFERER=http://localhost/consultorio/index.php/site/recuperarpassword
+---
+2021/05/15 18:42:43 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='1803087558' AND email='marceespinosa9@gmail.com'' at line 1. The SQL statement executed was: SELECT ci, email FROM usuario WHEREci='1803087558' AND email='marceespinosa9@gmail.com'.
+in /var/www/html/consultorio/protected/controllers/SiteController.php (213)
+in /var/www/html/consultorio/index.php (13)
+2021/05/15 18:42:43 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='1803087558' AND email='marceespinosa9@gmail.com'' at line 1. The SQL statement executed was: SELECT ci, email FROM usuario WHEREci='1803087558' AND email='marceespinosa9@gmail.com' in /var/www/html/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/yii/framework/db/CDbCommand.php(377): CDbCommand->queryInternal('', 0, Array)
+#1 /var/www/html/consultorio/protected/controllers/SiteController.php(213): CDbCommand->query()
+#2 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionRecuperarPassword()
+#3 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('recuperarpasswo...')
+#7 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/recuperarp...')
+#8 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /var/www/html/consultorio/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/consultorio/index.php/site/recuperarpassword
+HTTP_REFERER=http://localhost/consultorio/index.php/site/recuperarpassword
+---
+2021/05/15 18:45:57 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='1803087558' AND email='marceespinosa9@gmail.com'' at line 1. The SQL statement executed was: SELECT ci, email FROM usuario WHEREci='1803087558' AND email='marceespinosa9@gmail.com'.
+in /var/www/html/consultorio/protected/controllers/SiteController.php (213)
+in /var/www/html/consultorio/index.php (13)
+2021/05/15 18:45:57 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='1803087558' AND email='marceespinosa9@gmail.com'' at line 1. The SQL statement executed was: SELECT ci, email FROM usuario WHEREci='1803087558' AND email='marceespinosa9@gmail.com' in /var/www/html/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/yii/framework/db/CDbCommand.php(377): CDbCommand->queryInternal('', 0, Array)
+#1 /var/www/html/consultorio/protected/controllers/SiteController.php(213): CDbCommand->query()
+#2 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionRecuperarPassword()
+#3 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('recuperarpasswo...')
+#7 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/recuperarp...')
+#8 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /var/www/html/consultorio/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/consultorio/index.php/site/recuperarpassword
+HTTP_REFERER=http://localhost/consultorio/index.php/site/recuperarpassword
+---
+2021/05/15 18:46:14 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='1803087558' AND email='marceespinosa9@gmail.com'' at line 1. The SQL statement executed was: SELECT ci, email FROM usuario WHEREci='1803087558' AND email='marceespinosa9@gmail.com'.
+in /var/www/html/consultorio/protected/controllers/SiteController.php (213)
+in /var/www/html/consultorio/index.php (13)
+2021/05/15 18:46:14 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='1803087558' AND email='marceespinosa9@gmail.com'' at line 1. The SQL statement executed was: SELECT ci, email FROM usuario WHEREci='1803087558' AND email='marceespinosa9@gmail.com' in /var/www/html/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/yii/framework/db/CDbCommand.php(377): CDbCommand->queryInternal('', 0, Array)
+#1 /var/www/html/consultorio/protected/controllers/SiteController.php(213): CDbCommand->query()
+#2 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionRecuperarPassword()
+#3 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('recuperarpasswo...')
+#7 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/recuperarp...')
+#8 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /var/www/html/consultorio/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/consultorio/index.php/site/recuperarpassword
+HTTP_REFERER=http://localhost/consultorio/index.php/site/recuperarpassword
+---
+2021/05/15 18:51:09 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='1803087558' AND email='marceespinosa9@gmail.com'' at line 1. The SQL statement executed was: SELECT ci, email FROM usuario WHEREci='1803087558' AND email='marceespinosa9@gmail.com'.
+in /var/www/html/consultorio/protected/controllers/SiteController.php (213)
+in /var/www/html/consultorio/index.php (13)
+2021/05/15 18:51:09 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='1803087558' AND email='marceespinosa9@gmail.com'' at line 1. The SQL statement executed was: SELECT ci, email FROM usuario WHEREci='1803087558' AND email='marceespinosa9@gmail.com' in /var/www/html/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/yii/framework/db/CDbCommand.php(377): CDbCommand->queryInternal('', 0, Array)
+#1 /var/www/html/consultorio/protected/controllers/SiteController.php(213): CDbCommand->query()
+#2 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionRecuperarPassword()
+#3 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('recuperarpasswo...')
+#7 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/recuperarp...')
+#8 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /var/www/html/consultorio/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/consultorio/index.php/site/recuperarpassword
+HTTP_REFERER=http://localhost/consultorio/index.php/site/recuperarpassword
+---
+2021/05/15 18:57:33 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='1803087558' AND email='marceespinosa9@gmail.com'' at line 1. The SQL statement executed was: SELECT ci, email FROM usuario WHEREci='1803087558' AND email='marceespinosa9@gmail.com'.
+in /var/www/html/consultorio/protected/controllers/SiteController.php (213)
+in /var/www/html/consultorio/index.php (13)
+2021/05/15 18:57:33 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='1803087558' AND email='marceespinosa9@gmail.com'' at line 1. The SQL statement executed was: SELECT ci, email FROM usuario WHEREci='1803087558' AND email='marceespinosa9@gmail.com' in /var/www/html/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /var/www/html/yii/framework/db/CDbCommand.php(377): CDbCommand->queryInternal('', 0, Array)
+#1 /var/www/html/consultorio/protected/controllers/SiteController.php(213): CDbCommand->query()
+#2 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionRecuperarPassword()
+#3 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('recuperarpasswo...')
+#7 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/recuperarp...')
+#8 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /var/www/html/consultorio/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/consultorio/index.php/site/recuperarpassword
+HTTP_REFERER=http://localhost/consultorio/index.php/site/recuperarpassword
+---
+2021/05/15 21:56:19 [error] [exception.ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' in /var/www/html/consultorio/protected/views/layouts/main.php:71
+Stack trace:
+#0 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#1 /var/www/html/yii/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#2 /var/www/html/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#3 /var/www/html/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#4 /var/www/html/yii/framework/web/CBaseController.php(215): COutputProcessor->run()
+#5 /var/www/html/yii/framework/web/CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 /var/www/html/consultorio/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#7 /var/www/html/yii/framework/web/CBaseController.php(126): require('/var/www/html/c...')
+#8 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#9 /var/www/html/yii/framework/web/CController.php(787): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#10 /var/www/html/consultorio/protected/controllers/UsuarioController.php(22): CController->render('configuracion')
+#11 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionConfiguracion()
+#12 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/html/yii/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#16 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('configuracion')
+#21 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario/configu...')
+#22 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#23 /var/www/html/consultorio/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/consultorio/index.php/usuario/configuracion
+HTTP_REFERER=http://localhost/consultorio/index.php/site/login
+---
+2021/05/15 21:57:40 [error] [exception.ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' in /var/www/html/consultorio/protected/views/layouts/main.php:71
+Stack trace:
+#0 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#1 /var/www/html/yii/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#2 /var/www/html/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#3 /var/www/html/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#4 /var/www/html/yii/framework/web/CBaseController.php(215): COutputProcessor->run()
+#5 /var/www/html/yii/framework/web/CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 /var/www/html/consultorio/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#7 /var/www/html/yii/framework/web/CBaseController.php(126): require('/var/www/html/c...')
+#8 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#9 /var/www/html/yii/framework/web/CController.php(787): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#10 /var/www/html/consultorio/protected/controllers/UsuarioController.php(22): CController->render('configuracion')
+#11 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionConfiguracion()
+#12 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/html/yii/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#16 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('configuracion')
+#21 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario/configu...')
+#22 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#23 /var/www/html/consultorio/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/consultorio/index.php/usuario/configuracion
+HTTP_REFERER=http://localhost/consultorio/index.php/site/login
+---
+2021/05/15 21:57:41 [error] [exception.ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' in /var/www/html/consultorio/protected/views/layouts/main.php:71
+Stack trace:
+#0 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#1 /var/www/html/yii/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#2 /var/www/html/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#3 /var/www/html/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#4 /var/www/html/yii/framework/web/CBaseController.php(215): COutputProcessor->run()
+#5 /var/www/html/yii/framework/web/CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 /var/www/html/consultorio/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#7 /var/www/html/yii/framework/web/CBaseController.php(126): require('/var/www/html/c...')
+#8 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#9 /var/www/html/yii/framework/web/CController.php(787): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#10 /var/www/html/consultorio/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#11 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#12 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#14 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#16 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#17 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /var/www/html/consultorio/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/consultorio/index.php/site/login
+---
+2021/05/15 21:57:42 [error] [exception.ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' in /var/www/html/consultorio/protected/views/layouts/main.php:71
+Stack trace:
+#0 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#1 /var/www/html/yii/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#2 /var/www/html/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#3 /var/www/html/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#4 /var/www/html/yii/framework/web/CBaseController.php(215): COutputProcessor->run()
+#5 /var/www/html/yii/framework/web/CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 /var/www/html/consultorio/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#7 /var/www/html/yii/framework/web/CBaseController.php(126): require('/var/www/html/c...')
+#8 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#9 /var/www/html/yii/framework/web/CController.php(787): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#10 /var/www/html/consultorio/protected/controllers/SiteController.php(32): CController->render('index')
+#11 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#14 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('')
+#16 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#17 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /var/www/html/consultorio/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/consultorio/index.php
+HTTP_REFERER=http://localhost/consultorio/index.php/site/login
+---
+2021/05/15 21:57:48 [error] [exception.ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' in /var/www/html/consultorio/protected/views/layouts/main.php:71
+Stack trace:
+#0 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#1 /var/www/html/yii/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#2 /var/www/html/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#3 /var/www/html/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#4 /var/www/html/yii/framework/web/CBaseController.php(215): COutputProcessor->run()
+#5 /var/www/html/yii/framework/web/CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 /var/www/html/consultorio/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#7 /var/www/html/yii/framework/web/CBaseController.php(126): require('/var/www/html/c...')
+#8 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#9 /var/www/html/yii/framework/web/CController.php(787): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#10 /var/www/html/consultorio/protected/controllers/SiteController.php(32): CController->render('index')
+#11 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#14 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('')
+#16 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#17 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /var/www/html/consultorio/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/consultorio/index.php
+---
+2021/05/15 21:58:20 [error] [exception.ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' in /var/www/html/consultorio/protected/views/layouts/main.php:71
+Stack trace:
+#0 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#1 /var/www/html/yii/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#2 /var/www/html/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#3 /var/www/html/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#4 /var/www/html/yii/framework/web/CBaseController.php(215): COutputProcessor->run()
+#5 /var/www/html/yii/framework/web/CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 /var/www/html/consultorio/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#7 /var/www/html/yii/framework/web/CBaseController.php(126): require('/var/www/html/c...')
+#8 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#9 /var/www/html/yii/framework/web/CController.php(787): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#10 /var/www/html/consultorio/protected/controllers/SiteController.php(32): CController->render('index')
+#11 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#14 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('')
+#16 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#17 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /var/www/html/consultorio/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/consultorio/index.php
+---
+2021/05/15 22:07:13 [error] [exception.ParseError] ParseError: syntax error, unexpected ';', expecting ',' or ')' in /var/www/html/consultorio/protected/views/layouts/main.php:72
+Stack trace:
+#0 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#1 /var/www/html/yii/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#2 /var/www/html/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#3 /var/www/html/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#4 /var/www/html/yii/framework/web/CBaseController.php(215): COutputProcessor->run()
+#5 /var/www/html/yii/framework/web/CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 /var/www/html/consultorio/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#7 /var/www/html/yii/framework/web/CBaseController.php(126): require('/var/www/html/c...')
+#8 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#9 /var/www/html/yii/framework/web/CController.php(787): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#10 /var/www/html/consultorio/protected/controllers/SiteController.php(32): CController->render('index')
+#11 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#14 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('')
+#16 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#17 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /var/www/html/consultorio/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/consultorio/index.php
+HTTP_REFERER=http://localhost/consultorio/index.php/site/login
+---
+2021/05/15 22:08:26 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "index". in /var/www/html/yii/framework/web/CController.php:486
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(270): CController->missingAction('')
+#1 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario')
+#3 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/html/consultorio/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/consultorio/index.php/usuario
+HTTP_REFERER=http://localhost/consultorio/index.php/usuario/configuracion
+---
+2021/05/15 22:11:18 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "index". in /var/www/html/yii/framework/web/CController.php:486
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(270): CController->missingAction('')
+#1 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario')
+#3 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/html/consultorio/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/consultorio/index.php/usuario
+HTTP_REFERER=http://localhost/consultorio/index.php/usuario/configuracion
+---
+2021/05/15 22:18:11 [error] [php] Undefined variable: msg (/var/www/html/consultorio/protected/views/usuario/configuracion.php:8)
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(872): UsuarioController->renderFile()
+#1 /var/www/html/yii/framework/web/CController.php(785): UsuarioController->renderPartial()
+#2 /var/www/html/consultorio/protected/controllers/UsuarioController.php(22): UsuarioController->render()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionConfiguracion()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): UsuarioController->runAction()
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/yii/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): UsuarioController->runActionWithFilters()
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): UsuarioController->run()
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /var/www/html/consultorio/index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php/usuario/configuracion
+in /var/www/html/consultorio/protected/views/usuario/configuracion.php (8)
+in /var/www/html/consultorio/protected/controllers/UsuarioController.php (22)
+in /var/www/html/consultorio/index.php (13)
+2021/05/15 22:23:03 [error] [php] Undefined variable: msg (/var/www/html/consultorio/protected/views/usuario/configuracion.php:8)
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(872): UsuarioController->renderFile()
+#1 /var/www/html/yii/framework/web/CController.php(785): UsuarioController->renderPartial()
+#2 /var/www/html/consultorio/protected/controllers/UsuarioController.php(22): UsuarioController->render()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionConfiguracion()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): UsuarioController->runAction()
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/yii/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): UsuarioController->runActionWithFilters()
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): UsuarioController->run()
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /var/www/html/consultorio/index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php/usuario/configuracion
+in /var/www/html/consultorio/protected/views/usuario/configuracion.php (8)
+in /var/www/html/consultorio/protected/controllers/UsuarioController.php (22)
+in /var/www/html/consultorio/index.php (13)
+2021/05/15 22:35:24 [error] [exception.ParseError] ParseError: syntax error, unexpected ';', expecting ',' or ')' in /var/www/html/consultorio/protected/views/layouts/main.php:74
+Stack trace:
+#0 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#1 /var/www/html/yii/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#2 /var/www/html/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#3 /var/www/html/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#4 /var/www/html/yii/framework/web/CBaseController.php(215): COutputProcessor->run()
+#5 /var/www/html/yii/framework/web/CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 /var/www/html/consultorio/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#7 /var/www/html/yii/framework/web/CBaseController.php(126): require('/var/www/html/c...')
+#8 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#9 /var/www/html/yii/framework/web/CController.php(787): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#10 /var/www/html/consultorio/protected/controllers/SiteController.php(32): CController->render('index')
+#11 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#14 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('')
+#16 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#17 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /var/www/html/consultorio/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/consultorio/index.php
+HTTP_REFERER=http://localhost/consultorio/index.php/site/login
+---
+2021/05/15 22:36:05 [error] [exception.ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' in /var/www/html/consultorio/protected/views/layouts/main.php:73
+Stack trace:
+#0 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#1 /var/www/html/yii/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#2 /var/www/html/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#3 /var/www/html/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#4 /var/www/html/yii/framework/web/CBaseController.php(215): COutputProcessor->run()
+#5 /var/www/html/yii/framework/web/CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 /var/www/html/consultorio/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#7 /var/www/html/yii/framework/web/CBaseController.php(126): require('/var/www/html/c...')
+#8 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#9 /var/www/html/yii/framework/web/CController.php(787): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#10 /var/www/html/consultorio/protected/controllers/SiteController.php(32): CController->render('index')
+#11 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#14 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('')
+#16 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#17 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /var/www/html/consultorio/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/consultorio/index.php
+HTTP_REFERER=http://localhost/consultorio/index.php/site/login
+---
+2021/05/15 22:36:06 [error] [exception.ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' in /var/www/html/consultorio/protected/views/layouts/main.php:73
+Stack trace:
+#0 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#1 /var/www/html/yii/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#2 /var/www/html/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#3 /var/www/html/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#4 /var/www/html/yii/framework/web/CBaseController.php(215): COutputProcessor->run()
+#5 /var/www/html/yii/framework/web/CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 /var/www/html/consultorio/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#7 /var/www/html/yii/framework/web/CBaseController.php(126): require('/var/www/html/c...')
+#8 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#9 /var/www/html/yii/framework/web/CController.php(787): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#10 /var/www/html/consultorio/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#11 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#12 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#14 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#16 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#17 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /var/www/html/consultorio/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/consultorio/index.php/site/login
+HTTP_REFERER=http://localhost/consultorio/index.php
+---
+2021/05/15 22:36:11 [error] [exception.ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' in /var/www/html/consultorio/protected/views/layouts/main.php:73
+Stack trace:
+#0 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#1 /var/www/html/yii/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#2 /var/www/html/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#3 /var/www/html/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#4 /var/www/html/yii/framework/web/CBaseController.php(215): COutputProcessor->run()
+#5 /var/www/html/yii/framework/web/CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 /var/www/html/consultorio/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#7 /var/www/html/yii/framework/web/CBaseController.php(126): require('/var/www/html/c...')
+#8 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#9 /var/www/html/yii/framework/web/CController.php(787): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#10 /var/www/html/consultorio/protected/controllers/SiteController.php(32): CController->render('index')
+#11 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#14 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('')
+#16 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#17 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /var/www/html/consultorio/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/consultorio/index.php
+---
+2021/05/15 22:54:27 [error] [php] Undefined variable: msg (/var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php:8)
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(872): UsuarioController->renderFile()
+#1 /var/www/html/yii/framework/web/CController.php(785): UsuarioController->renderPartial()
+#2 /var/www/html/consultorio/protected/controllers/UsuarioController.php(69): UsuarioController->render()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionActualizarInformacion()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): UsuarioController->runAction()
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/yii/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): UsuarioController->runActionWithFilters()
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): UsuarioController->run()
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /var/www/html/consultorio/index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+in /var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php (8)
+in /var/www/html/consultorio/protected/controllers/UsuarioController.php (69)
+in /var/www/html/consultorio/index.php (13)
+2021/05/15 22:54:37 [error] [exception.CException] CException: UsuarioController contains improperly nested widget tags in its view "/var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php". A CActiveForm widget does not have an endWidget() call. in /var/www/html/yii/framework/web/CBaseController.php:101
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(872): CBaseController->renderFile('/var/www/html/c...', NULL, true)
+#1 /var/www/html/yii/framework/web/CController.php(785): CController->renderPartial('actualizarInfor...', NULL, true)
+#2 /var/www/html/consultorio/protected/controllers/UsuarioController.php(69): CController->render('actualizarInfor...')
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionActualizarInformacion()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/yii/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('actualizarInfor...')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario/actuali...')
+#14 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /var/www/html/consultorio/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+HTTP_REFERER=http://localhost/consultorio/index.php/usuario/actualizarInformacion
+---
+2021/05/15 22:54:55 [error] [exception.CException] CException: UsuarioController contains improperly nested widget tags in its view "/var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php". A CActiveForm widget does not have an endWidget() call. in /var/www/html/yii/framework/web/CBaseController.php:101
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(872): CBaseController->renderFile('/var/www/html/c...', NULL, true)
+#1 /var/www/html/yii/framework/web/CController.php(785): CController->renderPartial('actualizarInfor...', NULL, true)
+#2 /var/www/html/consultorio/protected/controllers/UsuarioController.php(69): CController->render('actualizarInfor...')
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionActualizarInformacion()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/yii/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('actualizarInfor...')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario/actuali...')
+#14 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /var/www/html/consultorio/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+HTTP_REFERER=http://localhost/consultorio/index.php/usuario/actualizarInformacion
+---
+2021/05/15 22:54:59 [error] [exception.CException] CException: UsuarioController contains improperly nested widget tags in its view "/var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php". A CActiveForm widget does not have an endWidget() call. in /var/www/html/yii/framework/web/CBaseController.php:101
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(872): CBaseController->renderFile('/var/www/html/c...', NULL, true)
+#1 /var/www/html/yii/framework/web/CController.php(785): CController->renderPartial('actualizarInfor...', NULL, true)
+#2 /var/www/html/consultorio/protected/controllers/UsuarioController.php(69): CController->render('actualizarInfor...')
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionActualizarInformacion()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/yii/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('actualizarInfor...')
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario/actuali...')
+#14 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /var/www/html/consultorio/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+HTTP_REFERER=http://localhost/consultorio/index.php/usuario/actualizarInformacion
+---
+2021/05/15 23:10:07 [error] [exception.ParseError] ParseError: syntax error, unexpected 'in' (T_STRING) in /var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php:7
+Stack trace:
+#0 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', NULL, true)
+#1 /var/www/html/yii/framework/web/CController.php(872): CBaseController->renderFile('/var/www/html/c...', NULL, true)
+#2 /var/www/html/yii/framework/web/CController.php(785): CController->renderPartial('actualizarInfor...', NULL, true)
+#3 /var/www/html/consultorio/protected/controllers/UsuarioController.php(69): CController->render('actualizarInfor...')
+#4 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionActualizarInformacion()
+#5 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/html/yii/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('actualizarInfor...')
+#14 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario/actuali...')
+#15 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /var/www/html/consultorio/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+HTTP_REFERER=http://localhost/consultorio/index.php/usuario/actualizarInformacion
+---
+2021/05/15 23:16:16 [error] [php] Trying to get property 'User' of non-object (/var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php:6)
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(872): UsuarioController->renderFile()
+#1 /var/www/html/yii/framework/web/CController.php(785): UsuarioController->renderPartial()
+#2 /var/www/html/consultorio/protected/controllers/UsuarioController.php(69): UsuarioController->render()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionActualizarInformacion()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): UsuarioController->runAction()
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/yii/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): UsuarioController->runActionWithFilters()
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): UsuarioController->run()
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /var/www/html/consultorio/index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+in /var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php (6)
+in /var/www/html/consultorio/protected/controllers/UsuarioController.php (69)
+in /var/www/html/consultorio/index.php (13)
+2021/05/15 23:18:31 [error] [exception.ParseError] ParseError: syntax error, unexpected '}' in /var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php:16
+Stack trace:
+#0 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', NULL, true)
+#1 /var/www/html/yii/framework/web/CController.php(872): CBaseController->renderFile('/var/www/html/c...', NULL, true)
+#2 /var/www/html/yii/framework/web/CController.php(785): CController->renderPartial('actualizarInfor...', NULL, true)
+#3 /var/www/html/consultorio/protected/controllers/UsuarioController.php(69): CController->render('actualizarInfor...')
+#4 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionActualizarInformacion()
+#5 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/html/yii/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('actualizarInfor...')
+#14 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario/actuali...')
+#15 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /var/www/html/consultorio/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+HTTP_REFERER=http://localhost/consultorio/index.php/site/login
+---
+2021/05/15 23:34:45 [error] [exception.Error] Error: Call to undefined function Recuperar() in /var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php:6
+Stack trace:
+#0 /var/www/html/yii/framework/web/CBaseController.php(126): require()
+#1 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', NULL, true)
+#2 /var/www/html/yii/framework/web/CController.php(872): CBaseController->renderFile('/var/www/html/c...', NULL, true)
+#3 /var/www/html/yii/framework/web/CController.php(785): CController->renderPartial('actualizarInfor...', NULL, true)
+#4 /var/www/html/consultorio/protected/controllers/UsuarioController.php(69): CController->render('actualizarInfor...')
+#5 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionActualizarInformacion()
+#6 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/html/yii/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('actualizarInfor...')
+#15 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario/actuali...')
+#16 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#17 /var/www/html/consultorio/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+HTTP_REFERER=http://localhost/consultorio/index.php/site/login
+---
+2021/05/15 23:38:03 [error] [exception.Error] Error: Call to undefined method Recuperar::class() in /var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php:6
+Stack trace:
+#0 /var/www/html/yii/framework/web/CBaseController.php(126): require()
+#1 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', NULL, true)
+#2 /var/www/html/yii/framework/web/CController.php(872): CBaseController->renderFile('/var/www/html/c...', NULL, true)
+#3 /var/www/html/yii/framework/web/CController.php(785): CController->renderPartial('actualizarInfor...', NULL, true)
+#4 /var/www/html/consultorio/protected/controllers/UsuarioController.php(69): CController->render('actualizarInfor...')
+#5 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionActualizarInformacion()
+#6 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/html/yii/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('actualizarInfor...')
+#15 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario/actuali...')
+#16 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#17 /var/www/html/consultorio/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+HTTP_REFERER=http://localhost/consultorio/index.php/site/login
+---
+2021/05/15 23:38:46 [error] [exception.Error] Error: Call to undefined function Recuperar() in /var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php:6
+Stack trace:
+#0 /var/www/html/yii/framework/web/CBaseController.php(126): require()
+#1 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', NULL, true)
+#2 /var/www/html/yii/framework/web/CController.php(872): CBaseController->renderFile('/var/www/html/c...', NULL, true)
+#3 /var/www/html/yii/framework/web/CController.php(785): CController->renderPartial('actualizarInfor...', NULL, true)
+#4 /var/www/html/consultorio/protected/controllers/UsuarioController.php(69): CController->render('actualizarInfor...')
+#5 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionActualizarInformacion()
+#6 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /var/www/html/yii/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('actualizarInfor...')
+#15 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario/actuali...')
+#16 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#17 /var/www/html/consultorio/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+HTTP_REFERER=http://localhost/consultorio/index.php/site/login
+---
+2021/05/15 23:38:55 [error] [php] Use of undefined constant Recuperar - assumed 'Recuperar' (this will throw an Error in a future version of PHP) (/var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php:6)
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(872): UsuarioController->renderFile()
+#1 /var/www/html/yii/framework/web/CController.php(785): UsuarioController->renderPartial()
+#2 /var/www/html/consultorio/protected/controllers/UsuarioController.php(69): UsuarioController->render()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionActualizarInformacion()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): UsuarioController->runAction()
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/yii/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): UsuarioController->runActionWithFilters()
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): UsuarioController->run()
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /var/www/html/consultorio/index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+in /var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php (6)
+in /var/www/html/consultorio/protected/controllers/UsuarioController.php (69)
+in /var/www/html/consultorio/index.php (13)
+2021/05/15 23:40:36 [error] [php] Object of class Recuperar could not be converted to string (/var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php:7)
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(872): UsuarioController->renderFile()
+#1 /var/www/html/yii/framework/web/CController.php(785): UsuarioController->renderPartial()
+#2 /var/www/html/consultorio/protected/controllers/UsuarioController.php(69): UsuarioController->render()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionActualizarInformacion()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): UsuarioController->runAction()
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/yii/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): UsuarioController->runActionWithFilters()
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): UsuarioController->run()
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /var/www/html/consultorio/index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+in /var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php (7)
+in /var/www/html/consultorio/protected/controllers/UsuarioController.php (69)
+in /var/www/html/consultorio/index.php (13)
+2021/05/16 00:07:02 [error] [exception.ParseError] ParseError: syntax error, unexpected 'echo' (T_ECHO) in /var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php:22
+Stack trace:
+#0 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#1 /var/www/html/yii/framework/web/CController.php(872): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#2 /var/www/html/yii/framework/web/CController.php(785): CController->renderPartial('actualizarInfor...', Array, true)
+#3 /var/www/html/consultorio/protected/controllers/UsuarioController.php(90): CController->render('actualizarInfor...', Array)
+#4 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionActualizarInformacion()
+#5 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/html/yii/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('actualizarInfor...')
+#14 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario/actuali...')
+#15 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /var/www/html/consultorio/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+HTTP_REFERER=http://localhost/consultorio/index.php/usuario/configuracion
+---
+2021/05/16 00:27:24 [error] [exception.ParseError] ParseError: syntax error, unexpected ')' in /var/www/html/consultorio/protected/controllers/UsuarioController.php:84
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(276): CWebApplication->createController('actualizarInfor...')
+#1 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario/actuali...')
+#2 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#3 /var/www/html/consultorio/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+HTTP_REFERER=http://localhost/consultorio/index.php
+---
+2021/05/16 00:29:43 [error] [php] Undefined variable: etnia (/var/www/html/consultorio/protected/controllers/UsuarioController.php:101)
+Stack trace:
+#0 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): UsuarioController->runAction()
+#1 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/yii/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#3 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#4 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/yii/framework/web/CController.php(265): UsuarioController->runActionWithFilters()
+#7 /var/www/html/yii/framework/web/CWebApplication.php(282): UsuarioController->run()
+#8 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/html/consultorio/index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+in /var/www/html/consultorio/protected/controllers/UsuarioController.php (101)
+in /var/www/html/consultorio/index.php (13)
+2021/05/16 00:29:59 [error] [exception.ParseError] ParseError: syntax error, unexpected '}' in /var/www/html/consultorio/protected/controllers/UsuarioController.php:84
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(276): CWebApplication->createController('actualizarInfor...')
+#1 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario/actuali...')
+#2 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#3 /var/www/html/consultorio/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+HTTP_REFERER=http://localhost/consultorio/index.php
+---
+2021/05/16 00:30:14 [error] [php] Undefined variable: etnia (/var/www/html/consultorio/protected/controllers/UsuarioController.php:101)
+Stack trace:
+#0 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): UsuarioController->runAction()
+#1 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/yii/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#3 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#4 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/yii/framework/web/CController.php(265): UsuarioController->runActionWithFilters()
+#7 /var/www/html/yii/framework/web/CWebApplication.php(282): UsuarioController->run()
+#8 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/html/consultorio/index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+in /var/www/html/consultorio/protected/controllers/UsuarioController.php (101)
+in /var/www/html/consultorio/index.php (13)
+2021/05/16 00:30:43 [error] [php] Undefined variable: etnia (/var/www/html/consultorio/protected/controllers/UsuarioController.php:101)
+Stack trace:
+#0 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): UsuarioController->runAction()
+#1 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/yii/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#3 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#4 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/yii/framework/web/CController.php(265): UsuarioController->runActionWithFilters()
+#7 /var/www/html/yii/framework/web/CWebApplication.php(282): UsuarioController->run()
+#8 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/html/consultorio/index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+in /var/www/html/consultorio/protected/controllers/UsuarioController.php (101)
+in /var/www/html/consultorio/index.php (13)
+2021/05/16 00:30:43 [error] [php] Undefined variable: etnia (/var/www/html/consultorio/protected/controllers/UsuarioController.php:101)
+Stack trace:
+#0 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): UsuarioController->runAction()
+#1 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/yii/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#3 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#4 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/yii/framework/web/CController.php(265): UsuarioController->runActionWithFilters()
+#7 /var/www/html/yii/framework/web/CWebApplication.php(282): UsuarioController->run()
+#8 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/html/consultorio/index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+in /var/www/html/consultorio/protected/controllers/UsuarioController.php (101)
+in /var/www/html/consultorio/index.php (13)
+2021/05/16 00:33:38 [error] [php] Undefined variable: etnia (/var/www/html/consultorio/protected/controllers/UsuarioController.php:110)
+Stack trace:
+#0 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): UsuarioController->runAction()
+#1 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/html/yii/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#3 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#4 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/html/yii/framework/web/CController.php(265): UsuarioController->runActionWithFilters()
+#7 /var/www/html/yii/framework/web/CWebApplication.php(282): UsuarioController->run()
+#8 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /var/www/html/consultorio/index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+in /var/www/html/consultorio/protected/controllers/UsuarioController.php (110)
+in /var/www/html/consultorio/index.php (13)
+2021/05/16 00:44:44 [error] [php] Undefined variable: model (/var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php:27)
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(872): UsuarioController->renderFile()
+#1 /var/www/html/yii/framework/web/CController.php(785): UsuarioController->renderPartial()
+#2 /var/www/html/consultorio/protected/controllers/UsuarioController.php(116): UsuarioController->render()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionActualizarInformacion()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): UsuarioController->runAction()
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/yii/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): UsuarioController->runActionWithFilters()
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): UsuarioController->run()
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /var/www/html/consultorio/index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+in /var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php (27)
+in /var/www/html/consultorio/protected/controllers/UsuarioController.php (116)
+in /var/www/html/consultorio/index.php (13)
+2021/05/16 00:46:49 [error] [exception.ParseError] ParseError: syntax error, unexpected '=', expecting ')' in /var/www/html/consultorio/protected/controllers/UsuarioController.php:104
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(276): CWebApplication->createController('actualizarInfor...')
+#1 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario/actuali...')
+#2 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#3 /var/www/html/consultorio/index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+HTTP_REFERER=http://localhost/consultorio/index.php/usuario/actualizarInformacion
+---
+2021/05/16 00:50:04 [error] [exception.ParseError] ParseError: syntax error, unexpected '$primerNombre' (T_VARIABLE), expecting ',' or ';' in /var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php:34
+Stack trace:
+#0 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#1 /var/www/html/yii/framework/web/CController.php(872): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#2 /var/www/html/yii/framework/web/CController.php(785): CController->renderPartial('actualizarInfor...', Array, true)
+#3 /var/www/html/consultorio/protected/controllers/UsuarioController.php(117): CController->render('actualizarInfor...', Array)
+#4 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionActualizarInformacion()
+#5 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/html/yii/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('actualizarInfor...')
+#14 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario/actuali...')
+#15 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /var/www/html/consultorio/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+HTTP_REFERER=http://localhost/consultorio/index.php/usuario/actualizarInformacion
+---
+2021/05/16 00:50:15 [error] [exception.ParseError] ParseError: syntax error, unexpected '$primerNombre' (T_VARIABLE), expecting ',' or ';' in /var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php:34
+Stack trace:
+#0 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#1 /var/www/html/yii/framework/web/CController.php(872): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#2 /var/www/html/yii/framework/web/CController.php(785): CController->renderPartial('actualizarInfor...', Array, true)
+#3 /var/www/html/consultorio/protected/controllers/UsuarioController.php(117): CController->render('actualizarInfor...', Array)
+#4 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionActualizarInformacion()
+#5 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/html/yii/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('actualizarInfor...')
+#14 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario/actuali...')
+#15 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /var/www/html/consultorio/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+HTTP_REFERER=http://localhost/consultorio/index.php/usuario/actualizarInformacion
+---
+2021/05/16 00:50:17 [error] [exception.ParseError] ParseError: syntax error, unexpected '$primerNombre' (T_VARIABLE), expecting ',' or ';' in /var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php:34
+Stack trace:
+#0 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#1 /var/www/html/yii/framework/web/CController.php(872): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#2 /var/www/html/yii/framework/web/CController.php(785): CController->renderPartial('actualizarInfor...', Array, true)
+#3 /var/www/html/consultorio/protected/controllers/UsuarioController.php(117): CController->render('actualizarInfor...', Array)
+#4 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionActualizarInformacion()
+#5 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/html/yii/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('actualizarInfor...')
+#14 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario/actuali...')
+#15 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /var/www/html/consultorio/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+HTTP_REFERER=http://localhost/consultorio/index.php/usuario/actualizarInformacion
+---
+2021/05/16 00:50:21 [error] [exception.ParseError] ParseError: syntax error, unexpected '$primerNombre' (T_VARIABLE), expecting ',' or ';' in /var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php:34
+Stack trace:
+#0 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#1 /var/www/html/yii/framework/web/CController.php(872): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#2 /var/www/html/yii/framework/web/CController.php(785): CController->renderPartial('actualizarInfor...', Array, true)
+#3 /var/www/html/consultorio/protected/controllers/UsuarioController.php(117): CController->render('actualizarInfor...', Array)
+#4 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionActualizarInformacion()
+#5 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/html/yii/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('actualizarInfor...')
+#14 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario/actuali...')
+#15 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /var/www/html/consultorio/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+HTTP_REFERER=http://localhost/consultorio/index.php
+---
+2021/05/16 00:50:36 [error] [php] A non-numeric value encountered (/var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php:34)
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(872): UsuarioController->renderFile()
+#1 /var/www/html/yii/framework/web/CController.php(785): UsuarioController->renderPartial()
+#2 /var/www/html/consultorio/protected/controllers/UsuarioController.php(117): UsuarioController->render()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionActualizarInformacion()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): UsuarioController->runAction()
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/yii/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): UsuarioController->runActionWithFilters()
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): UsuarioController->run()
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /var/www/html/consultorio/index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+in /var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php (34)
+in /var/www/html/consultorio/protected/controllers/UsuarioController.php (117)
+in /var/www/html/consultorio/index.php (13)
+2021/05/16 01:03:23 [error] [php] A non-numeric value encountered (/var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php:64)
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(872): UsuarioController->renderFile()
+#1 /var/www/html/yii/framework/web/CController.php(785): UsuarioController->renderPartial()
+#2 /var/www/html/consultorio/protected/controllers/UsuarioController.php(117): UsuarioController->render()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionActualizarInformacion()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): UsuarioController->runAction()
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/yii/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): UsuarioController->runActionWithFilters()
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): UsuarioController->run()
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /var/www/html/consultorio/index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+in /var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php (64)
+in /var/www/html/consultorio/protected/controllers/UsuarioController.php (117)
+in /var/www/html/consultorio/index.php (13)
+2021/05/16 01:03:33 [error] [exception.ParseError] ParseError: syntax error, unexpected '.' in /var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php:64
+Stack trace:
+#0 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#1 /var/www/html/yii/framework/web/CController.php(872): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#2 /var/www/html/yii/framework/web/CController.php(785): CController->renderPartial('actualizarInfor...', Array, true)
+#3 /var/www/html/consultorio/protected/controllers/UsuarioController.php(117): CController->render('actualizarInfor...', Array)
+#4 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionActualizarInformacion()
+#5 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/html/yii/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('actualizarInfor...')
+#14 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario/actuali...')
+#15 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /var/www/html/consultorio/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+HTTP_REFERER=http://localhost/consultorio/index.php
+---
+2021/05/16 01:03:45 [error] [exception.ParseError] ParseError: syntax error, unexpected '.' in /var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php:64
+Stack trace:
+#0 /var/www/html/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/html/c...', Array, true)
+#1 /var/www/html/yii/framework/web/CController.php(872): CBaseController->renderFile('/var/www/html/c...', Array, true)
+#2 /var/www/html/yii/framework/web/CController.php(785): CController->renderPartial('actualizarInfor...', Array, true)
+#3 /var/www/html/consultorio/protected/controllers/UsuarioController.php(117): CController->render('actualizarInfor...', Array)
+#4 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionActualizarInformacion()
+#5 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/html/yii/framework/web/CController.php(1148): CFilter->filter(Object(CFilterChain))
+#9 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('actualizarInfor...')
+#14 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario/actuali...')
+#15 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /var/www/html/consultorio/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+HTTP_REFERER=http://localhost/consultorio/index.php
+---
+2021/05/16 01:03:58 [error] [php] A non-numeric value encountered (/var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php:64)
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(872): UsuarioController->renderFile()
+#1 /var/www/html/yii/framework/web/CController.php(785): UsuarioController->renderPartial()
+#2 /var/www/html/consultorio/protected/controllers/UsuarioController.php(117): UsuarioController->render()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionActualizarInformacion()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): UsuarioController->runAction()
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/yii/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): UsuarioController->runActionWithFilters()
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): UsuarioController->run()
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /var/www/html/consultorio/index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+in /var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php (64)
+in /var/www/html/consultorio/protected/controllers/UsuarioController.php (117)
+in /var/www/html/consultorio/index.php (13)
+2021/05/16 01:13:40 [error] [php] Undefined variable: Pregunta1 (/var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php:123)
+Stack trace:
+#0 /var/www/html/yii/framework/web/CController.php(872): UsuarioController->renderFile()
+#1 /var/www/html/yii/framework/web/CController.php(785): UsuarioController->renderPartial()
+#2 /var/www/html/consultorio/protected/controllers/UsuarioController.php(117): UsuarioController->render()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): UsuarioController->actionActualizarInformacion()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/yii/framework/web/filters/CFilterChain.php(134): UsuarioController->runAction()
+#6 /var/www/html/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/html/yii/framework/web/CController.php(1148): CAccessControlFilter->filter()
+#8 /var/www/html/yii/framework/web/filters/CInlineFilter.php(58): UsuarioController->filterAccessControl()
+#9 /var/www/html/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /var/www/html/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/html/yii/framework/web/CController.php(265): UsuarioController->runActionWithFilters()
+#12 /var/www/html/yii/framework/web/CWebApplication.php(282): UsuarioController->run()
+#13 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/html/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /var/www/html/consultorio/index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php/usuario/actualizarInformacion
+in /var/www/html/consultorio/protected/views/usuario/actualizarInformacion.php (123)
+in /var/www/html/consultorio/protected/controllers/UsuarioController.php (117)
+in /var/www/html/consultorio/index.php (13)
