@@ -3,7 +3,7 @@ $this->pageTitle=Yii::app()->name . ' - Registro';
 $this->breadcrumbs=array('Registro');
 ?>
 
-<h1 align="center">Registro para el Login</h1><br>
+<h1 align="center" style="color:dodgerblue">Registro para el Login</h1><br>
 <div align="center">
     <h2 style="color: red"><b><?php echo $msg; ?></b></h2>
 

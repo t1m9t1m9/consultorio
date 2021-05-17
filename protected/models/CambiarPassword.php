@@ -53,4 +53,12 @@ class CambiarPassword extends CFormModel
             ),
         );
     }
+
+    public function attributeLabels()
+    {
+        return array(
+            'password'=>'Password Actual',
+
+        );
+    }
 }

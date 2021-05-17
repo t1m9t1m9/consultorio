@@ -26,7 +26,7 @@ $this->breadcrumbs=array('Cambiar Password');
         echo $form->error($model, 'password', array('class' => 'text-error'));
         ?>
     </div>
-
+<br>
     <div class="row" align="center">
         <?php
         echo $form->labelEx($model, 'nuevo_password');

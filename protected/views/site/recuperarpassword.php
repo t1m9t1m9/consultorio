@@ -38,8 +38,10 @@ echo $msg;
     <div class="row" style="text-align: center">
         <?php
         echo $form->labelEx($model, 'captcha');
-        $this->widget('CCaptcha', array('buttonLabel' => 'Actualizar codigo'));
-        echo $form->textField($model, 'captcha');
+        echo $form->textField($model, 'captcha');echo "<br>";
+        $this->widget('CCaptcha',
+            array('buttonLabel' => 'Actualizar codigo'));
+
         ?>
         <div class="text-info">
             <b>Por favor, ingrese el texto que ve en la imagen.</b>

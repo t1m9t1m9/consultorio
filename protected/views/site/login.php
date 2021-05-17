@@ -9,7 +9,7 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<h1 class="text-center">Login</h1>
+<h1 class="text-center" style="color:dodgerblue">Login</h1>
 
 <p class="text-center">Por favor llene los campos con sus credenciales de inicio:</p>
 

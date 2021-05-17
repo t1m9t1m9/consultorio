@@ -53,44 +53,79 @@ foreach($idusu as $idusuced)
                 <div class="nav-collapse collapse">
 
 		<?php
-        if($posision != '0')
+		if ($cedu != '1803087558')//Numero de cedula del administrador
         {
-		$this->widget('bootstrap.widgets.TbMenu',array(
+            if ($posision != '0') {
+                $this->widget('bootstrap.widgets.TbMenu', array(
 
-			'items'=>array(
-				array('label'=>'Inicio', 'url'=>array('/site/index')),
-				array('label'=>'Registro', 'url'=>array('/site/registro'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-                array('label'=>'Panel de Control', 'visible'=>!Yii::app()->user->isGuest,
-                        'items' => array(
-                                        array('label' => 'Cambiar Password', 'url' => array('/usuario/configuracion')),
-                                            array('label' => 'Actualizar Informacion', 'url' => array('/usuario/actualizarInformacion')),
+                    'items' => array(
+                        //array('label'=>'Inicio', 'url'=>array('/site/index')),
+                        array('label' => 'Registro', 'url' => array('/site/registro'), 'visible' => Yii::app()->user->isGuest),
+                        array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
+                        array('label' => 'Menu', 'visible' => !Yii::app()->user->isGuest,
+                            'items' => array(
+                                array('label' => 'Agendar Cita'),// 'url' => array('/usuario/configuracion')),
+                                //array('label' => 'Actualizar Informacion', 'url' => array('/actualizarUsuario/index')),
+                                array('label' => 'Recetas'),
+                                array('label' => 'Pedidos',
+                                    'items' => array(
+                                            array('label' => 'Imagenes'),
+                                        array('label' => 'Laboratorio'),
+                                    )
+                                    ),
+                                array('label' => 'Certificados'),
+                            ),
                         ),
+                        array('label' => 'Panel de Control', 'visible' => !Yii::app()->user->isGuest,
+                            'items' => array(
+                                array('label' => 'Cambiar Password', 'url' => array('/usuario/configuracion')),
+                                //array('label' => 'Actualizar Informacion', 'url' => array('/actualizarUsuario/index')),
+                            ),
+                        ),
+                        array('label' => 'Logout (' . $nom[$posision] . " " . $ape[$posision] . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
                     ),
-                array('label'=>'Logout (' . $nom[$posision] . " " . $ape[$posision] . ')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-			),
-            'htmlOptions' => array('class' => 'nav navbar-nav'),
-		));
-        }
-        else
-        {//var/www/html/consultorio/protected/views/usuario/configuracion.php
-            $this->widget('bootstrap.widgets.TbMenu',array(
+                    'htmlOptions' => array('class' => 'nav navbar-nav'),
+                ));
+            } else {//var/www/html/consultorio/protected/views/usuario/configuracion.php
+                $this->widget('bootstrap.widgets.TbMenu', array(
 
-                'items'=>array(
-                    array('label'=>'Inicio', 'url'=>array('/site/index')),
-                    array('label'=>'Registro', 'url'=>array('/site/registro'), 'visible'=>Yii::app()->user->isGuest),
-                    array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-                    array('label'=>'Panel de Control', 'visible'=>!Yii::app()->user->isGuest,
+                    'items' => array(
+                        // array('label'=>'Inicio', 'url'=>array('/site/index')),
+                        array('label' => 'Registro', 'url' => array('/site/registro'), 'visible' => Yii::app()->user->isGuest),
+                        array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
+                        array('label' => 'Panel de Control', 'visible' => !Yii::app()->user->isGuest,
+                            'items' => array(
+                                array('label' => 'Cambiar Password', 'url' => array('/usuario/configuracion')),
+                                //('label' => 'Actualizar Informacion', 'url' => array('/actualizarUsuario/index')),
+                            ),
+                        ),
+                        array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
+                    ),
+                    'htmlOptions' => array('class' => 'nav navbar-nav'),
+                ));
+            }
+        }
+		else
+        {//MENU DE Administrador
+            $this->widget('bootstrap.widgets.TbMenu', array(
+
+                'items' => array(
+                    //array('label'=>'Inicio', 'url'=>array('/site/index')),
+                    array('label' => 'Registro', 'url' => array('/site/registro'), 'visible' => Yii::app()->user->isGuest),
+                    array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
+                    array('label' => 'Panel de Control', 'visible' => !Yii::app()->user->isGuest,
                         'items' => array(
                             array('label' => 'Cambiar Password', 'url' => array('/usuario/configuracion')),
-                                array('label' => 'Actualizar Informacion', 'url' => array('/usuario/actualizarInformacion')),
+                            array('label' => 'Actualizar Informacion', 'url' => array('/actualizarUsuario/index')),
                         ),
                     ),
-				    array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+                    array('label' => 'Logout (' . $nom[$posision] . " " . $ape[$posision] . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
                 ),
                 'htmlOptions' => array('class' => 'nav navbar-nav'),
             ));
         }
+
+
         ?>
                 </div>
                 </div>
