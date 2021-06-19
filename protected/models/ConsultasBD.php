@@ -43,4 +43,54 @@ class ConsultasBD
         $resultado = $conexion->createCommand($consulta)->execute();
     }
 
+    public function guardarCita($hora, $fecha)
+    {
+        $conexion = Yii::app()->db;
+        if ($hora == '1')
+            $hora = "8:00";
+        if ($hora == '2')
+            $hora = "8:30";
+        if ($hora == '3')
+            $hora = "9:00";
+        if ($hora == '4')
+            $hora = "9:30";
+        if ($hora == '5')
+            $hora = "10:00";
+        if ($hora == '6')
+            $hora = "10:30";
+        if ($hora == '7')
+            $hora = "11:00";
+        if ($hora == '8')
+            $hora = "11:30";
+        if ($hora == '9')
+            $hora = "12:00";
+        if ($hora == '10')
+            $hora = "12:30";
+        if ($hora == '11')
+            $hora = "13:00";
+        if ($hora == '12')
+            $hora = "13:30";
+        if ($hora == '13')
+            $hora = "14:00";
+        if ($hora == '14')
+            $hora = "14:30";
+        if ($hora == '15')
+            $hora = "15:00";
+        if ($hora == '16')
+            $hora = "15:30";
+        if ($hora == '17')
+            $hora = "16:00";
+        if ($hora == '18')
+            $hora = "16:30";
+        if ($hora == '19')
+            $hora = "17:00";
+        if ($hora == '20')
+            $hora = "17:30";
+        $ci = Yii::app()->user->name;
+        $consulta = "INSERT INTO agenda(id, hora, fecha, confirmacion, ciUsuario)";
+        $consulta .= " VALUES ";
+        $consulta .= "(NULL,'$hora', '$fecha', 'NO', '$ci')";
+        $resultado = $conexion->createCommand($consulta)->execute();
+    }
+
 }

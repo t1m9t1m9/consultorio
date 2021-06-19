@@ -250,4 +250,46 @@ class SiteController extends Controller
         }
         $this->render('recuperarpassword', array('model'=>$model, 'msg' => $msg, 'msg1' => $msg1));
     }
+
+    public function actionAgendarCita()
+    {
+        $model = new AgendarCita;
+        $msg = "";
+        if(isset($_POST['ajax']) && $_POST['ajax']==='form')
+        {
+            echo CActiveForm::validate($model);
+            Yii::app()->end();
+        }
+        if(isset($_POST['AgendarCita']))
+        {
+            $model->attributes=$_POST['AgendarCita'];
+            if(!$model->validate())
+            {
+                $model->addError('hora', 'Error al enviar el Formulario');
+            }
+            else
+            {
+                //Guardar el nuevo usuario en la base de datos
+                $guardar = new ConsultasBD;
+                $guardar->guardarCita(
+                    $model->hora,
+                    $model->fecha
+                );
+
+                //Refrescar Pagina
+                $model->hora = '';
+                //$model->fecha = '';
+                //Mensaje de confirmacion de registro
+                $msg = 'Se registro exitosamente su Cita, espera la confirmacion.';
+            }
+        }
+        $this->render('agendarcita', array('model'=>$model, 'msg'=> $msg));
+    }
+
+    public function actionCalendario()
+    {
+
+        $this->render('calendario');
+    }
 }
+
