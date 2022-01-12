@@ -8,7 +8,7 @@ return array(
 	'connectionString' => 'mysql:host=localhost;dbname=consultorio',
 	'emulatePrepare' => true,
 	'username' => 'root',
-	'password' => 'glim',
+	'password' => '',
 	'charset' => 'utf8',
 
 );
