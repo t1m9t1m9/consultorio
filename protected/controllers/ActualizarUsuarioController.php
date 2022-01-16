@@ -122,11 +122,19 @@ class ActualizarUsuarioController extends Controller
 	 * Lists all models.
 	 */
 	public function actionIndex()
-	{
-		$dataProvider=new CActiveDataProvider('ActualizarUsuario');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
+    {
+        if (Yii::app()->user->isGuest)
+        {
+            $this->redirect(Yii::app()->homeUrl);
+        }
+        else
+        {
+
+        $dataProvider = new CActiveDataProvider('ActualizarUsuario');
+        $this->render('index', array(
+            'dataProvider' => $dataProvider,
+        ));
+    }
 	}
 
 	/**

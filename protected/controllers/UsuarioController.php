@@ -20,7 +20,7 @@ class UsuarioController extends Controller
                             'actions' => array('actualizarInformacion'),
                             'users' => array('?'),
                         ),
-        );
+                    );
     }
 
     public function actionConfiguracion()

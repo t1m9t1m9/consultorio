@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Listado de Usuarios', 'url'=>array('index')),
+	array('label'=>'Lista de Usuarios', 'url'=>array('index')),
 	array('label'=>'Crear Usuario', 'url'=>array('create')),
 );
 
@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Actualizar Usuarios</h1>
+<h1>Administrar Usuarios</h1>
 
 <!--<p>-->
 <!--You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>-->

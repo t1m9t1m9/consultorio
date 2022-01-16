@@ -253,42 +253,45 @@ class SiteController extends Controller
 
     public function actionAgendarCita()
     {
-        $model = new AgendarCita;
-        $msg = "";
-        if(isset($_POST['ajax']) && $_POST['ajax']==='form')
+        if(Yii::app()->user->isGuest)
         {
-            echo CActiveForm::validate($model);
-            Yii::app()->end();
+            $this->redirect(Yii::app()->homeUrl);
         }
-        if(isset($_POST['AgendarCita']))
-        {
-            $model->attributes=$_POST['AgendarCita'];
-            if(!$model->validate())
-            {
-                $model->addError('hora', 'Error al enviar el Formulario');
+        else {
+            $model = new AgendarCita;
+            $msg = "";
+            if (isset($_POST['ajax']) && $_POST['ajax'] === 'form') {
+                echo CActiveForm::validate($model);
+                Yii::app()->end();
             }
-            else
-            {
-                //Guardar el nuevo usuario en la base de datos
-                $guardar = new ConsultasBD;
-                $guardar->guardarCita(
-                    $model->hora,
-                    $model->fecha
-                );
+            if (isset($_POST['AgendarCita'])) {
+                $model->attributes = $_POST['AgendarCita'];
+                if (!$model->validate()) {
+                    $model->addError('hora', 'Error al enviar el Formulario');
+                } else {
+                    //Guardar el nuevo usuario en la base de datos
+                    $guardar = new ConsultasBD;
+                    $guardar->guardarCita(
+                        $model->hora,
+                        $model->fecha
+                    );
 
-                //Refrescar Pagina
-                $model->hora = '';
-                //$model->fecha = '';
-                //Mensaje de confirmacion de registro
-                $msg = 'Se registro exitosamente su Cita, espera la confirmacion.';
+                    //Refrescar Pagina
+                    $model->hora = '';
+                    //$model->fecha = '';
+                    //Mensaje de confirmacion de registro
+                    $msg = 'Se registro exitosamente su Cita, espera la confirmacion.';
+                }
             }
+            $this->render('agendarcita', array('model' => $model, 'msg' => $msg));
         }
-        $this->render('agendarcita', array('model'=>$model, 'msg'=> $msg));
-    }
+        }
 
     public function actionCalendario()
     {
-
+        if (Yii::app()->user->isGuest)
+        $this->redirect(Yii::app()->homeUrl);
+        else
         $this->render('calendario');
     }
 }

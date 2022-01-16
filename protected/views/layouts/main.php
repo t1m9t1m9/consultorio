@@ -65,6 +65,7 @@ foreach($idusu as $idusuced)
                         array('label' => 'Menu', 'visible' => !Yii::app()->user->isGuest,
                             'items' => array(
                                 array('label' => 'Agendar Cita', 'url' => array('/site/agendarcita')),
+                                array('label' => 'Calendario', 'url' => array('/site/calendario')),
                                 //array('label' => 'Actualizar Informacion', 'url' => array('/actualizarUsuario/index')),
                                 array('label' => 'Recetas'),
                                 array('label' => 'Pedidos',
@@ -127,12 +128,22 @@ foreach($idusu as $idusuced)
                     //array('label'=>'Inicio', 'url'=>array('/site/index')),
                     array('label' => 'Registro', 'url' => array('/site/registro'), 'visible' => Yii::app()->user->isGuest),
                     array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
+                    array('label' => 'Menu', 'visible' => !Yii::app()->user->isGuest,
+                        'items' => array(
+                            //array('label' => 'Cambiar Password', 'url' => array('/usuario/configuracion')),
+                            array('label' => 'Actualizar Informacion', 'url' => array('/actualizarUsuario/index')),
+                            array('label' => 'Historia Clinica', 'url' => array('/historiaclinica/index')),
+                            array('label' => 'Agendar Cita', 'url' => array('/agendarcitas/index')),
+                        ),
+                    ),
                     array('label' => 'Panel de Control', 'visible' => !Yii::app()->user->isGuest,
                         'items' => array(
                             array('label' => 'Cambiar Password', 'url' => array('/usuario/configuracion')),
-                            array('label' => 'Actualizar Informacion', 'url' => array('/actualizarUsuario/index')),
+                           // array('label' => 'Actualizar Informacion', 'url' => array('/actualizarUsuario/index')),
+                           // array('label' => 'Historia Clinica', 'url' => array('/historiaclinica/index')),
+                           // array('label' => 'Agendar Cita', 'url' => array('/agendarcitas/index')),
+                                        ),
                         ),
-                    ),
                     array('label' => 'Logout (' . $nom[$posision] . " " . $ape[$posision] . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
                 ),
                 'htmlOptions' => array('class' => 'nav navbar-nav'),

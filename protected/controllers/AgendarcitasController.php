@@ -123,10 +123,17 @@ class AgendarcitasController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Agenda');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
+        if (Yii::app()->user->isGuest)
+        {
+            $this->redirect(Yii::app()->homeUrl);
+        }
+        else
+        {
+            $dataProvider = new CActiveDataProvider('Agenda');
+            $this->render('index', array(
+                'dataProvider' => $dataProvider,
+            ));
+        }
 	}
 
 	/**

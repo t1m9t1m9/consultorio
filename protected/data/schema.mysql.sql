@@ -60,22 +60,6 @@ CREATE TABLE `certificados` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `historia`
---
-
-CREATE TABLE `historia` (
-                            `id` int NOT NULL,
-                            `imagen` mediumblob,
-                            `hora` varchar(6) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-                            `fecha` date NOT NULL,
-                            `historia` longtext COLLATE utf8_unicode_ci NOT NULL,
-                            `ciUsuario` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
 --
 -- Estructura de tabla para la tabla `imagenes`
 --
@@ -156,57 +140,32 @@ INSERT INTO `usuario` (`ci`, `primerNombre`, `segundoNombre`, `primerApellido`, 
 -- Indices de la tabla `agenda`
 --
 ALTER TABLE `agenda`
-    ADD PRIMARY KEY (`id`),
-  ADD KEY `ciUsuario` (`ciUsuario`);
+    ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `certificados`
 --
 ALTER TABLE `certificados`
-    ADD PRIMARY KEY (`id`),
-  ADD KEY `ciUsuario` (`ciUsuario`);
-
---
--- Indices de la tabla `historia`
---
-ALTER TABLE `historia`
-    ADD PRIMARY KEY (`id`),
-  ADD KEY `ciUsuario` (`ciUsuario`);
-
+    ADD PRIMARY KEY (`id`);
 --
 -- Indices de la tabla `imagenes`
 --
 ALTER TABLE `imagenes`
-    ADD PRIMARY KEY (`id`),
-  ADD KEY `ciUsuario` (`ciUsuario`);
+    ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `laboratorio`
 --
 ALTER TABLE `laboratorio`
-    ADD PRIMARY KEY (`id`),
-  ADD KEY `ciUsuario` (`ciUsuario`);
+    ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `recetas`
 --
 ALTER TABLE `recetas`
-    ADD PRIMARY KEY (`id`),
-  ADD KEY `ciUsuario` (`ciUsuario`);
+    ADD PRIMARY KEY (`id`);
 
---
--- Indices de la tabla `usuario`
---
-ALTER TABLE `usuario`
-    ADD PRIMARY KEY (`ci`);
 
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `agenda`
---
 ALTER TABLE `agenda`
     MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
@@ -219,9 +178,6 @@ ALTER TABLE `certificados`
 --
 -- AUTO_INCREMENT de la tabla `historia`
 --
-ALTER TABLE `historia`
-    MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT de la tabla `imagenes`
 --
