@@ -1,5 +1,4 @@
 <?php
-
 class UsuarioController extends Controller
 {
     public function filters()
@@ -14,7 +13,6 @@ class UsuarioController extends Controller
                             'actions' => array('configuracion'),
                             'users' => array('?'),
                         ),
-
                         array(
                             'deny',
                             'actions' => array('actualizarInformacion'),

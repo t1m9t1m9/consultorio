@@ -1,7 +1,7 @@
 <?php
 $this->pageTitle=Yii::app()->name . ' - Calendario';
 $this->breadcrumbs=array('Calendario');
-//echo $cedu=Yii::app()->user->name;
+//$cedu=Yii::app()->user->name;
 //$idusu = Usuario::model()->findAll();
 //$i1 = 1;
 //$posision = 0;
@@ -13,7 +13,25 @@ $this->breadcrumbs=array('Calendario');
 //    }
 //    $nom[$i1]="$idusuced->primerNombre";
 //    $ape[$i1]="$idusuced->primerApellido";
+//}?>
+<!--<br>-->
+<?php
+//$citas = Agenda::model()->findAll();
+//$i1 = 1;
+//$posision = 0;
+//foreach ($citas as $cita)
+//{
+//    if($cedu == $ced[$i1++]="$cita->ciUsuario")
+//    {
+//        $posision=$i1;
+//    }
+//    $fecha[$i1]="$cita->fecha";
+////    echo "T";
+//    $hora[$i1]="$cita->hora";
 //}
+//echo $fecha[$posision];
+//echo "T";
+//echo $hora[$posision];
 ?>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/fullcalendar@5.7.0/main.min.css,npm/fullcalendar@5.7.0/main.min.css">
@@ -27,6 +45,14 @@ $this->breadcrumbs=array('Calendario');
                     initialView: 'dayGridMonth',
                     locale: 'es',
                     headerToolbar: {left: '', center: 'title', right: ''},
+                    // headerToolbar: {
+                    //     left: '',
+                    //     // left: 'prev,next today',
+                    //     center: 'title',
+                    //     locale: 'es',
+                    //     right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                    //     //right: ''
+                    // },
                 });
             calendar.addEvent({title: 'CITA MEDICA',
                     start: '<?php
@@ -34,18 +60,27 @@ $this->breadcrumbs=array('Calendario');
                         $citas = Agenda::model()->findAll();
                         $i1 = 1;
                         $posision = 0;
+
                         foreach ($citas as $cita)
                         {
-                            if($cedu == $ced[$i1++]="$cita->ciUsuario")
+                            if($cedu == $ced[$i1++]="$cita->ciUsuario" && $cita->confirmacion == "SI")
                             {
-                                $posision=$i1;
+                               $posision=$i1;
+
                             }
                             $fecha[$i1]="$cita->fecha";
                             $hora[$i1]="$cita->hora";
                         }
-                        echo $fecha[$posision];
-                        echo "T";
-                        echo $hora[$posision];
+                        if($posision == 0)
+                        {
+
+                        }
+                        else
+                        {
+                            echo $fecha[$posision];
+                            echo "T";
+                            echo $hora[$posision];
+                        }
                         ?>',
                     color: 'red'});
             calendar.render();

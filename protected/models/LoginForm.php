@@ -1,5 +1,4 @@
 <?php
-
 /**
  * LoginForm class.
  * LoginForm is the data structure for keeping
@@ -10,9 +9,7 @@ class LoginForm extends CFormModel
 	public $username;
 	public $password;
 	public $rememberMe;
-
 	private $_identity;
-
 	/**
 	 * Declares the validation rules.
 	 * The rules state that username and password are required,

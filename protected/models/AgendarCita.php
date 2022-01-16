@@ -1,6 +1,4 @@
 <?php
-
-
 class AgendarCita extends CFormModel
 {
     public $fecha;

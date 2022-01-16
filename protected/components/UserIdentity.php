@@ -1,5 +1,4 @@
 <?php
-
 /**
  * UserIdentity represents the data needed to identity a user.
  * It contains the authentication method that checks if the provided
@@ -18,16 +17,12 @@ class UserIdentity extends CUserIdentity
     public function authenticate()
 {
     $conexion = Yii::app()->db;
-
     $consulta = "SELECT ci, password FROM usuario ";
     $consulta .= "WHERE ci='".$this->username ."' AND ";
     $consulta .= "password='".md5($this->password)."'";
-
     $resultado = $conexion->createCommand($consulta)->query();
-
     $resultado->bindColumn(1, $this->username);
     $resultado->bindColumn(2, $this->password);
-
     while($resultado->read()!==false)
     {
         $this->errorCode = self::ERROR_NONE;

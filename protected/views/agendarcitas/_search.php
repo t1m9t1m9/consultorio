@@ -26,7 +26,7 @@
 		<?php echo $form->textField($model,'fecha'); ?>
 	</div>
 
-	<div class="row">
+    <div class="row">
 		<?php echo $form->label($model,'confirmacion'); ?>
 		<?php echo $form->textField($model,'confirmacion',array('size'=>2,'maxlength'=>2)); ?>
 	</div>

@@ -269,7 +269,7 @@ class SiteController extends Controller
                 if (!$model->validate()) {
                     $model->addError('hora', 'Error al enviar el Formulario');
                 } else {
-                    //Guardar el nuevo usuario en la base de datos
+                    //Guardar la cita en la base de datos
                     $guardar = new ConsultasBD;
                     $guardar->guardarCita(
                         $model->hora,
