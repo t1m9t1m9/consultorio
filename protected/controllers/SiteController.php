@@ -112,8 +112,8 @@ class SiteController extends Controller
     {
         $model = new ValidarRegistro;
         $msg = '';
-        $model->sexo = '1';
-        $model->etnia = '1';
+//        $model->sexo = '1';
+//        $model->etnia = '1';
         // if it is ajax validation request
         if(isset($_POST['ajax']) && $_POST['ajax']==='form')
         {
@@ -135,36 +135,36 @@ class SiteController extends Controller
                 $guardar->guardarUsuario(
                     $model->ci,
                     $model->nombre1,
-                    $model->nombre2,
+                    $model->nombre2 = "",
                     $model->apellido1,
-                    $model->apellido2,
-                    $model->edad,
-                    $model->sexo,
-                    $model->etnia,
+                    $model->apellido2 = "",
+                    $model->edad = 0,
+                    $model->sexo = 1,
+                    $model->etnia = 1,
                     $model->email,
-                    $model->celular,
-                    $model->direccion,
-                    $model->pregunta1,
-                    $model->pregunta2,
-                    $model->pregunta3,
+                    $model->celular = 0,
+                    $model->direccion = "",
+                    $model->pregunta1 = "",
+                    $model->pregunta2 = "",
+                    $model->pregunta3 = "",
                     $model->password
                 );
 
                     //Refrescar Pagina
                     $model->ci = '';
                     $model->nombre1 = '';
-                    $model->nombre2 = '';
+//                    $model->nombre2 = '';
                     $model->apellido1 = '';
-                    $model->apellido2 = '';
-                    $model->edad = '';
-                    $model->sexo = '';
-                    $model->etnia = '';
+//                    $model->apellido2 = '';
+//                    $model->edad = '';
+//                    $model->sexo = '';
+//                    $model->etnia = '';
                     $model->email = '';
-                    $model->celular = '';
-                    $model->direccion = '';
-                    $model->pregunta1 = '';
-                    $model->pregunta2 = '';
-                    $model->pregunta3 = '';
+//                    $model->celular = '';
+//                    $model->direccion = '';
+//                    $model->pregunta1 = '';
+//                    $model->pregunta2 = '';
+//                    $model->pregunta3 = '';
                     $model->password = '';
                     $model->repetir_password = '';
 
