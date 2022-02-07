@@ -5,14 +5,14 @@
 $this->breadcrumbs=array(
 	'Agendas'=>array('index'),
 	$model->id=>array('view','id'=>$model->id),
-	'Update',
+	'Actulizar',
 );
 
 $this->menu=array(
-	array('label'=>'List Agenda', 'url'=>array('index')),
-	array('label'=>'Create Agenda', 'url'=>array('create')),
-	array('label'=>'View Agenda', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Agenda', 'url'=>array('admin')),
+	array('label'=>'Lista de Citas Agendadas', 'url'=>array('index')),
+	array('label'=>'Crear Cita', 'url'=>array('create')),
+	array('label'=>'Ver Citas Agendadas', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'Administar Citas Agendadas', 'url'=>array('admin')),
 );
 ?>
 

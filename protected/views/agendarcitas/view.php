@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Agenda', 'url'=>array('index')),
-	array('label'=>'Create Agenda', 'url'=>array('create')),
-	array('label'=>'Update Agenda', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Agenda', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Agenda', 'url'=>array('admin')),
+	array('label'=>'Lista de Citas Agendadas', 'url'=>array('index')),
+	array('label'=>'Crear Cita Medica', 'url'=>array('create')),
+	array('label'=>'Actualizar Cita Agendada', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Eliminar Cita Agendada', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Esta seguro de borrar?')),
+	array('label'=>'Administrar Citas Agendadas', 'url'=>array('admin')),
 );
 ?>
 

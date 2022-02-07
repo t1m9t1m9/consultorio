@@ -4,15 +4,15 @@
 
 $this->breadcrumbs=array(
 	'Agendas'=>array('index'),
-	'Create',
+	'Crear Citas Medicas',
 );
 
 $this->menu=array(
-	array('label'=>'List Agenda', 'url'=>array('index')),
-	array('label'=>'Manage Agenda', 'url'=>array('admin')),
+	array('label'=>'Lista de Citas Agendadas', 'url'=>array('index')),
+	array('label'=>'Administrar Citas Agendadas', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Agenda</h1>
+<h1>Crear Cita</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

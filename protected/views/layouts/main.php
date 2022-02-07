@@ -131,7 +131,8 @@ foreach($idusu as $idusuced)
                     array('label' => 'Menu', 'visible' => !Yii::app()->user->isGuest,
                         'items' => array(
                             //array('label' => 'Cambiar Password', 'url' => array('/usuario/configuracion')),
-                            array('label' => 'Actualizar Informacion', 'url' => array('/actualizarUsuario/index')),
+//                            array('label' => 'Actualizar Informacion', 'url' => array('/actualizarUsuario/index')),
+                            array('label' => 'Calendario', 'url' => array('/site/calendarioDoctora')),
                             array('label' => 'Historia Clinica', 'url' => array('/historiaclinica/index')),
                             array('label' => 'Agendar Cita', 'url' => array('/agendarcitas/index')),
                         ),

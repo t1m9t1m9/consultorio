@@ -44,10 +44,10 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'cedula'); ?>
-		<?php echo $ced = $form->textField($model,'cedula',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->textField($model,'cedula',array('size'=>10,'maxlength'=>10)); ?>
 		<?php echo $form->error($model,'cedula'); ?>
 	</div>
-    <?php echo "gfgfg".$ced;?>
+
 	<div class="row" style = "float: left; display:inline-block; margin-top: 50px;">
 		<?php echo $form->labelEx($model,'apellidoPaterno'); ?>
 		<?php echo $form->textField($model,'apellidoPaterno',array('size'=>32,'maxlength'=>32)); ?>
@@ -596,8 +596,8 @@
 		<?php echo $form->error($model,'tratamiento'); ?>
 	</div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Guardar'); ?>
+	<div class="row buttons" align="center">
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Guardar',array("class" => "btn btn-primary")); ?>
 
 	</div>
 

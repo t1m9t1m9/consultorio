@@ -294,5 +294,13 @@ class SiteController extends Controller
         else
         $this->render('calendario');
     }
+
+    public function actionCalendarioDoctora()
+    {
+        if (Yii::app()->user->isGuest)
+            $this->redirect(Yii::app()->homeUrl);
+        else
+            $this->render('calendarioDoctora');
+    }
 }
 
