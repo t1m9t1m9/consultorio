@@ -47,13 +47,13 @@ class ConsultasBD
     {
         $conexion = Yii::app()->db;
         if ($hora == '1')
-            $hora = "8:00";
+            $hora = "08:00";
         if ($hora == '2')
-            $hora = "8:30";
+            $hora = "08:30";
         if ($hora == '3')
-            $hora = "9:00";
+            $hora = "09:00";
         if ($hora == '4')
-            $hora = "9:30";
+            $hora = "09:30";
         if ($hora == '5')
             $hora = "10:00";
         if ($hora == '6')

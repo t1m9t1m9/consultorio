@@ -54,8 +54,8 @@ $this->breadcrumbs=array('Agendar Cita');
     <div class="row" align="center">
         <?php echo $form->labelEx($model,'hora'); ?>
         <?php echo $form->dropDownList($model,'hora', array(
-                "1"=>"8:00", "2"=>"8:30",
-                "3"=>"9:00", "4"=>"9:30",
+                "1"=>"08:00", "2"=>"08:30",
+                "3"=>"09:00", "4"=>"09:30",
                 "5"=>"10:00","6"=>"10:30",
                 "7"=>"11:00","8"=>"11:30",
                 "9"=>"12:00", "10"=>"12:30",
