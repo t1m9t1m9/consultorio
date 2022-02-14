@@ -34,13 +34,7 @@ foreach($idusu as $idusuced)
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
-<!--                <button type="button" class="btn btn-navbar" data-toogle="collapse" data-target=".nav-collapse">-->
-<!--                    <span class="icon-bar"></span>-->
-<!--                    <span class="icon-bar"></span>-->
-<!--                    <span class="icon-bar"></span>-->
-<!--                </button>-->
                 <button class="btn btn-navbar" type="button" data-toggle="collapse" data-target=".nav-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-<!--                    <span class="navbar-toggler-icon"></span>-->
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -59,14 +53,12 @@ foreach($idusu as $idusuced)
                 $this->widget('bootstrap.widgets.TbMenu', array(
 
                     'items' => array(
-                        //array('label'=>'Inicio', 'url'=>array('/site/index')),
                         array('label' => 'Registro', 'url' => array('/site/registro'), 'visible' => Yii::app()->user->isGuest),
                         array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
                         array('label' => 'Menu', 'visible' => !Yii::app()->user->isGuest,
                             'items' => array(
                                 array('label' => 'Agendar Cita', 'url' => array('/site/agendarcita')),
                                 array('label' => 'Calendario', 'url' => array('/site/calendario')),
-                                //array('label' => 'Actualizar Informacion', 'url' => array('/actualizarUsuario/index')),
                                 array('label' => 'Recetas'),
                                 array('label' => 'Pedidos',
                                     'items' => array(
@@ -80,24 +72,21 @@ foreach($idusu as $idusuced)
                         array('label' => 'Panel de Control', 'visible' => !Yii::app()->user->isGuest,
                             'items' => array(
                                 array('label' => 'Cambiar Password', 'url' => array('/usuario/configuracion')),
-                                //array('label' => 'Actualizar Informacion', 'url' => array('/actualizarUsuario/index')),
                             ),
                         ),
                         array('label' => 'Logout (' . $nom[$posision] . " " . $ape[$posision] . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
                     ),
                     'htmlOptions' => array('class' => 'nav navbar-nav'),
                 ));
-            } else {//var/www/html/consultorio/protected/views/usuario/configuracion.php
+            } else {
                 $this->widget('bootstrap.widgets.TbMenu', array(
 
                     'items' => array(
-                        //array('label'=>'Inicio', 'url'=>array('/site/index')),
                         array('label' => 'Registro', 'url' => array('/site/registro'), 'visible' => Yii::app()->user->isGuest),
                         array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
                         array('label' => 'Menu', 'visible' => !Yii::app()->user->isGuest,
                             'items' => array(
                                 array('label' => 'Agendar Cita', 'url' => array('/site/agendarcita')),
-                                //array('label' => 'Actualizar Informacion', 'url' => array('/actualizarUsuario/index')),
                                 array('label' => 'Recetas'),
                                 array('label' => 'Pedidos',
                                     'items' => array(
@@ -111,10 +100,8 @@ foreach($idusu as $idusuced)
                         array('label' => 'Panel de Control', 'visible' => !Yii::app()->user->isGuest,
                             'items' => array(
                                 array('label' => 'Cambiar Password', 'url' => array('/usuario/configuracion')),
-                                //array('label' => 'Actualizar Informacion', 'url' => array('/actualizarUsuario/index')),
                             ),
                         ),
-//                        array('label' => 'Logout (' . $nom[$posision] . " " . $ape[$posision] . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
                     ),
                     'htmlOptions' => array('class' => 'nav navbar-nav'),
                 ));
@@ -125,13 +112,25 @@ foreach($idusu as $idusuced)
             $this->widget('bootstrap.widgets.TbMenu', array(
 
                 'items' => array(
-                    //array('label'=>'Inicio', 'url'=>array('/site/index')),
+
+                    array('label' => 'Solicitudes', 'visible' => !Yii::app()->user->isGuest,
+                        'items' => array(
+                            array('label' => 'Revisar Solicitudes Recibidas', 'url' => array('/solicitudesrecibidas/index')),
+                            array('label' => 'Subir Recetas', 'url' => array('/recetas/index')),
+                            array('label' => 'Subir Pedidos',
+                                'items' => array(
+                                    array('label' => 'Imagenes', 'url' => array('/imagenes/index')),
+                                    array('label' => 'Laboratorio', 'url' => array('/laboratorio/index')),
+                                )
+                            ),
+                            array('label' => 'Subir Certificados', 'url' => array('/certificados/index')),
+                        ),
+                    ),
+
                     array('label' => 'Registro', 'url' => array('/site/registro'), 'visible' => Yii::app()->user->isGuest),
                     array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
                     array('label' => 'Menu', 'visible' => !Yii::app()->user->isGuest,
                         'items' => array(
-                            //array('label' => 'Cambiar Password', 'url' => array('/usuario/configuracion')),
-//                            array('label' => 'Actualizar Informacion', 'url' => array('/actualizarUsuario/index')),
                             array('label' => 'Calendario', 'url' => array('/site/calendarioDoctora')),
                             array('label' => 'Historia Clinica', 'url' => array('/historiaclinica/index')),
                             array('label' => 'Agendar Cita', 'url' => array('/agendarcitas/index')),
@@ -140,9 +139,7 @@ foreach($idusu as $idusuced)
                     array('label' => 'Panel de Control', 'visible' => !Yii::app()->user->isGuest,
                         'items' => array(
                             array('label' => 'Cambiar Password', 'url' => array('/usuario/configuracion')),
-                           // array('label' => 'Actualizar Informacion', 'url' => array('/actualizarUsuario/index')),
-                           // array('label' => 'Historia Clinica', 'url' => array('/historiaclinica/index')),
-                           // array('label' => 'Agendar Cita', 'url' => array('/agendarcitas/index')),
+                            array('label' => 'Actualizar y Crear Usuarios', 'url' => array('/actualizarUsuario/admin')),
                                         ),
                         ),
                     array('label' => 'Logout (' . $nom[$posision] . " " . $ape[$posision] . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
