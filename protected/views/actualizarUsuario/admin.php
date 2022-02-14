@@ -47,21 +47,9 @@ $('.search-form form').submit(function(){
 	'columns'=>array(
 		'ci',
 		'primerNombre',
-		'segundoNombre',
 		'primerApellido',
-		'segundoApellido',
-		/*'edad',
-
-		'sexo',
-		'etnia',
 		'email',
-		'celular',
-		'direccion',
-		'pregunta1',
-		'pregunta2',
-		'pregunta3',
 		'password',
-		*/
 		array(
 			'class'=>'CButtonColumn',
 		),

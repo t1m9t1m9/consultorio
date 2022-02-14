@@ -62,59 +62,51 @@ class UsuarioController extends Controller
         $this->render('configuracion', array('model' => $model, 'msg' => $msg));
     }
 
-//    public function actionActualizarInformacion()
-//    {
-//        $model = new ValidarRegistro;
-//        $idUsuario = Usuario::model()->findAll();
-//        $cedula = Yii::app()->user->name;
-//        foreach ($idUsuario as $valores)
-//        {
-//            if ($cedula === $valores->ci)
-//            {
-//                $primerNombre = $valores->primerNombre;
-//                $segundoNombre = $valores->segundoNombre;
-//                $primerApellido = $valores->primerApellido;
-//                $segundoApellido = $valores->segundoApellido;
-//                $edad = $valores->edad;
-//                if($valores->sexo == 1)
-//                {$sexo = "MASCULINO";}
-//                if($valores->sexo == 2)
-//                {$sexo = "FEMENINO";}
-//                if($valores->etnia == 1)
-//                {$etnia = "BLANCO";}
-//                if($valores->etnia == 2)
-//                {$etnia = "MESTIZO";}
-//                if($valores->etnia == 3)
-//                {$etnia = "INDIGENA";}
-//                if($valores->etnia == 4)
-//                {$etnia = "AFROECUATORIANO";}
-//                if($valores->etnia == 5)
-//                {$etnia = "MONTUBIO";}
-//                $celular = $valores->celular;
-//                $email = $valores->email;
-//                $direccion = $valores->direccion;
-//                $pregunta1 = $valores->pregunta1;
-//                $pregunta2 = $valores->pregunta2;
-//                $pregunta3 = $valores->pregunta3;
-//            }
-//        }
-//        $this->render('actualizarInformacion',
-//            array('model' => $model,
+    public function actionActualizarInformacion()
+    {
+        $model = new ValidarRegistro;
+        $msg = '';
+        $cedula = Yii::app()->user->name;
+
+        // if it is ajax validation request
+        if (isset($_POST['ajax']) && $_POST['ajax'] === 'form') {
+            echo CActiveForm::validate($model);
+            Yii::app()->end();
+        }
+
+        if (isset($_POST['ValidarRegistro'])) {
+            $model->attributes = $_POST['ValidarRegistro'];
+            if (!$model->validate()) {
+                $model->addError('ci', 'Error al enviar el Formulario');
+            } else {
+                //Guardar el nuevo usuario en la base de datos
+                $guardar = new ConsultasBD;
+                $guardar->actualizarUsuario(
+                    $model->ci=$cedula,
+                    $model->primerApellido,
+                    $model->primerApellido,
+                    $model->email
+                );
+
+                //Refrescar Pagina
+//                $model->ci = '';
+//                $model->nombre1 = '';
+//                $model->apellido1 = '';
+//                $model->email = '';
+
+                //Mensaje de confirmacion de registro
+                $msg = 'Se actualizo exitosamente';
+            }
+        }
+
+        $this->render('actualizarInformacion',
+            array('model' => $model,
 //                'cedula' => $cedula,
 //                'primerNombre'=> $primerNombre,
-//                'segundoNombre' => $segundoNombre,
 //                'primerApellido' => $primerApellido,
-//                'segundoApellido' => $segundoApellido,
-//                'edad' => $edad,
-//                'sexo' => $sexo,
-//                'etnia' => $etnia,
-//                'celular' => $celular,
 //                'email' => $email,
-//                'direccion' => $direccion,
-//                'pregunta1' => $pregunta1,
-//                'pregunta2' => $pregunta2,
-//                'pregunta3' => $pregunta3,
-//            ));
-//    }
+                'msg' => $msg
+            ));
+    }
 
 }

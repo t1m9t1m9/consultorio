@@ -107,8 +107,6 @@ class SiteController extends Controller
     {
         $model = new ValidarRegistro;
         $msg = '';
-//        $model->sexo = '1';
-//        $model->etnia = '1';
         // if it is ajax validation request
         if (isset($_POST['ajax']) && $_POST['ajax'] === 'form') {
             echo CActiveForm::validate($model);
@@ -125,36 +123,16 @@ class SiteController extends Controller
                 $guardar->guardarUsuario(
                     $model->ci,
                     $model->nombre1,
-                    $model->nombre2 = "",
                     $model->apellido1,
-                    $model->apellido2 = "",
-                    $model->edad = 0,
-                    $model->sexo = 1,
-                    $model->etnia = 1,
                     $model->email,
-                    $model->celular = 0,
-                    $model->direccion = "",
-                    $model->pregunta1 = "",
-                    $model->pregunta2 = "",
-                    $model->pregunta3 = "",
                     $model->password
                 );
 
                 //Refrescar Pagina
                 $model->ci = '';
                 $model->nombre1 = '';
-//                    $model->nombre2 = '';
                 $model->apellido1 = '';
-//                    $model->apellido2 = '';
-//                    $model->edad = '';
-//                    $model->sexo = '';
-//                    $model->etnia = '';
                 $model->email = '';
-//                    $model->celular = '';
-//                    $model->direccion = '';
-//                    $model->pregunta1 = '';
-//                    $model->pregunta2 = '';
-//                    $model->pregunta3 = '';
                 $model->password = '';
                 $model->repetir_password = '';
 
@@ -164,19 +142,6 @@ class SiteController extends Controller
         }
         $this->render('registro', array('model' => $model, 'msg' => $msg));
     }
-
-    //valida una pagina para que solo se tenga acceso si estas logeado en el sistema
-//    public function actionPanel()
-//    {
-//        if (Yii::app()->user->isGuest)
-//        {
-//            $this->redirect(Yii::app()->homeUrl);
-//        }
-//        else
-//        {
-//            $this->render('panel');
-//        }
-//    }
 
     public function actionRecuperarPassword()
     {
@@ -259,9 +224,7 @@ class SiteController extends Controller
 
                     //Refrescar Pagina
                     $model->hora = '';
-                    //$model->fecha = '';
-                    //Mensaje de confirmacion de registro
-                    $msg = 'Se registro exitosamente su Cita, espera la confirmacion.';
+                    $msg = 'Se registro exitosamente su Cita, Revise su confirmacion en el Calendario.';
                 }
             }
             $this->render('agendarcita', array('model' => $model, 'msg' => $msg));

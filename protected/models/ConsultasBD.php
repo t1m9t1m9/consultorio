@@ -1,37 +1,26 @@
 <?php
 class ConsultasBD
 {
-    public function guardarUsuario($cedula, $primerNombre, $segundoNombre, $primerApellido, $segundoApellido, $edad, $sexo, $etnia, $email, $celular, $direccion, $pregunta1, $pregunta2, $pregunta3, $password)
+    public function guardarUsuario($cedula, $primerNombre, $primerApellido, $email, $password)
     {
-        if($sexo == 1)
-            $sexo = 'MASCULINO';
-        if($sexo == 2)
-            $sexo = 'FEMENINO';
-        if($etnia == 1)
-            $etnia = 'BLANCO';
-        if($etnia == 2)
-            $etnia = 'MESTIZO';
-        if($etnia == 3)
-            $etnia = 'INDIGENA';
-        if($etnia == 4)
-            $etnia = 'AFROECUATORIANO';
-        if($etnia == 5)
-            $etnia = 'MONTUBIO';
-
         $primerNombre = strtoupper($primerNombre);
-        $segundoNombre = strtoupper($segundoNombre);
         $primerApellido = strtoupper($primerApellido);
-        $segundoApellido = strtoupper($segundoApellido);
-        $direccion = strtoupper($direccion);
-        $pregunta1 = strtoupper($pregunta1);
-        $pregunta2 = strtoupper($pregunta2);
-        $pregunta3 = strtoupper($pregunta3);
 
         $conexion = Yii::app()->db;
         $password = md5($password);
-        $consulta = "INSERT INTO usuario(ci, primerNombre, segundoNombre, primerApellido, segundoApellido, edad, sexo, etnia, email, celular, direccion, pregunta1, pregunta2, pregunta3, password)";
+        $consulta = "INSERT INTO usuario(ci, primerNombre, primerApellido, email, password)";
         $consulta .= " VALUES ";
-        $consulta .= "('$cedula', '$primerNombre', '$segundoNombre', '$primerApellido', '$segundoApellido', '$edad', '$sexo', '$etnia', '$email', '$celular', '$direccion', '$pregunta1', '$pregunta2', '$pregunta3', '$password')";
+        $consulta .= "('$cedula', '$primerNombre', '$primerApellido', '$email', '$password')";
+        $resultado = $conexion->createCommand($consulta)->execute();
+    }
+
+    public function actualizarUsuario($cedula, $primerNombre, $primerApellido, $email)
+    {
+        $primerNombre = strtoupper($primerNombre);
+        $primerApellido = strtoupper($primerApellido);
+
+        $conexion = Yii::app()->db;
+        $consulta = "UPDATE usuario SET primerNombre='$primerNombre', primerApellido='$primerApellido', email='$email' WHERE ci='$cedula' ";
         $resultado = $conexion->createCommand($consulta)->execute();
     }
 

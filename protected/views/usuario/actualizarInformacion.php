@@ -2,10 +2,24 @@
 /* @var $this UsuarioController */
 $this->pageTitle=Yii::app()->name . ' - Actualizar Informacion';
 $this->breadcrumbs=array('Actualizar Informacion');
+
+$idUsuario1 = Usuario::model()->findAll();
+$cedula1 = Yii::app()->user->name;
+$msg = '';
+foreach ($idUsuario1 as $valores)
+{
+    if ($cedula1 === $valores->ci)
+    {
+        $primerNombre1 = $valores->primerNombre;
+        $primerApellido1 = $valores->primerApellido;
+        $email1 = $valores->email;
+    }
+}
+
 ?>
 <h3 align="center" style="color:dodgerblue;">Actualizar Informacion</h3>
 
-<!--<strong class = 'text-info'>--><?php //echo $msg; ?><!--</strong>-->
+<strong class = 'text-info'><?php echo $msg; ?></strong>
 
 <div class="form">
     <?php
@@ -24,121 +38,33 @@ $this->breadcrumbs=array('Actualizar Informacion');
     <p class="note" align="center">Los campos con <span class="required">*</span> son requeridos.</p>
 
     <div class="row" align="center">
-        <?php echo $form->labelEx($model,'ci'); ?>
-        <?php echo "<b style='color: #ffffff; background: #0e819e'> Valor Actual:</b>";echo " "; echo $cedula;?>
+        <?php echo $form->labelEx($model,'Cedula'); ?>
+        <?php echo $form->textField($model,'ci',array("value"=>$cedula1));?>
         <?php echo $form->error($model,'ci', array("class" => "text-error")); ?>
     </div>
 <br>
-    <div class="row" align="center">
-        <?php echo $form->labelEx($model,'nombre1'); ?>
-        <?php echo $form->textField($model,'nombre1');echo "<br>"; echo "<b style='color: #ffffff; background: #0e819e'> Valor Actual:</b>";echo " "; echo $primerNombre; ?>
-        <?php echo $form->error($model,'nombre1', array("class" => "text-error")); ?>
-    </div>
-<br>
-    <div class="row" align="center">
-        <?php echo $form->labelEx($model,'nombre2'); ?>
-        <?php echo $form->textField($model,'nombre2');echo "<br>"; echo "<b style='color: #ffffff; background: #0e819e'> Valor Actual:</b>";echo " "; echo $segundoNombre;?>
-        <?php echo $form->error($model,'nombre2', array("class" => "text-error")); ?>
-    </div>
-<br>
-    <div class="row" align="center">
-        <?php echo $form->labelEx($model,'apellido1'); ?>
-        <?php echo $form->textField($model,'apellido1');echo "<br>"; echo "<b style='color: #ffffff; background: #0e819e'> Valor Actual:</b>";echo " "; echo $primerApellido;?>
-        <?php echo $form->error($model,'apellido1', array("class" => "text-error")); ?>
-    </div>
-<br>
-    <div class="row" align="center">
-        <?php echo $form->labelEx($model,'apellido2'); ?>
-        <?php echo $form->textField($model,'apellido2');echo "<br>"; echo "<b style='color: #ffffff; background: #0e819e'> Valor Actual:</b>";echo " "; echo $segundoApellido;?>
-        <?php echo $form->error($model,'apellido2', array("class" => "text-error")); ?>
-    </div>
-<br>
-    <div class="row" align="center">
-        <?php echo $form->labelEx($model,'edad'); ?>
-        <?php echo $form->numberField($model,'edad');echo "<br>"; echo "<b style='color: #ffffff; background: #0e819e'> Valor Actual:</b>";echo " "; echo $edad;?>
-        <?php echo $form->error($model,'edad', array("class" => "text-error")); ?>
-    </div>
- <br>   <!--SEXO-->
-    <div class="row" align="center">
-        <?php
-        echo $form->labelEx($model, 'sexo');
-        echo $form->radioButtonList(
-            $model,
-            'sexo',
-            array('1' => 'MASCULINO', '2' => 'FEMENINO'),
-            array(
-                'labelOptions' => array('style' => 'display:inline'),
-                'separator' => '<br>',
-                'template' => ' {label}: {input} ',
-            )
-        );
-        echo "<br>";echo "<b style='color: #ffffff; background: #0e819e'> Valor Actual:</b>";echo " "; echo $sexo;
-        ?>
 
-    </div>
-    <br>
-    <!--ETNIA-->
     <div class="row" align="center">
-        <?php
-        echo $form->labelEx($model, 'etnia');
-        echo $form->radioButtonList(
-            $model,
-            'etnia',
-            array('1' => 'BLANCO', '2' => 'MESTIZO', '3' => 'INDIGENA', '4' => 'AFROECUATORIANO', '5' => 'MONTUBIO'),
-            array(
-                'labelOptions' => array('style' => 'display:inline'),
-                'separator' => '<br> ',
-                'template' => ' {label}: {input} ',
-            )
-        );
-        echo "<br>"; echo "<b style='color: #ffffff; background: #0e819e'> Valor Actual:</b>";echo " "; echo $etnia;
-        ?>
+        <?php echo $form->labelEx($model,'primerNombre'); ?>
+        <?php echo $form->textField($model,'primerNombre',array("value"=>$primerNombre1)); ?>
+        <?php echo $form->error($model,'primerNombre', array("class" => "text-error")); ?>
     </div>
-    <br>
+<br>
+    <div class="row" align="center">
+        <?php echo $form->labelEx($model,'primerApellido'); ?>
+        <?php echo $form->textField($model,'primerApellido',array("value"=>$primerApellido1));?>
+        <?php echo $form->error($model,'primerApellido', array("class" => "text-error")); ?>
+    </div>
+<br>
     <div class="row" align="center">
         <?php echo $form->labelEx($model,'email'); ?>
-        <?php echo $form->textField($model,'email');echo "<br>"; echo "<b style='color: #ffffff; background: #0e819e'> Valor Actual:</b>";echo " "; echo $email;?>
+        <?php echo $form->textField($model,'email',array("value"=>$email1));?>
         <?php echo $form->error($model,'email', array("class" => "text-error")); ?>
     </div>
 <br>
-    <div class="row" align="center">
-        <?php echo $form->labelEx($model,'celular'); ?>
-        <?php echo $form->textField($model,'celular');echo "<br>"; echo "<b style='color: #ffffff; background: #0e819e'> Valor Actual:</b>";echo " "; echo $celular;?>
-        <?php echo $form->error($model,'celular', array("class" => "text-error")); ?>
-    </div>
-<br>
-    <div class="row" align="center">
-        <?php echo $form->labelEx($model,'direccion'); ?>
-        <?php echo $form->textField($model,'direccion');echo "<br>"; echo "<b style='color: #ffffff; background: #0e819e'> Valor Actual:</b>";echo " "; echo $direccion;?>
-        <?php echo $form->error($model,'direccion', array("class" => "text-error")); ?>
-    </div>
-
-    <br>
-
-    <div class="row" align="center">
-        <h4>Preguntas de seguridad</h4>
-        <?php echo $form->labelEx($model,'pregunta1'); ?>
-        <?php echo $form->textField($model,'pregunta1');echo "<br>"; echo "<b style='color: #ffffff; background: #0e819e'> Valor Actual:</b>";echo " "; echo $pregunta1;?>
-        <?php echo $form->error($model,'pregunta1', array("class" => "text-error")); ?>
-    </div>
-<br>
-    <div class="row" align="center">
-        <?php echo $form->labelEx($model,'pregunta2'); ?>
-        <?php echo $form->textField($model,'pregunta2');echo "<br>"; echo "<b style='color: #ffffff; background: #0e819e'> Valor Actual:</b>";echo " "; echo $pregunta2;?>
-        <?php echo $form->error($model,'pregunta2', array("class" => "text-error")); ?>
-    </div>
-<br>
-    <div class="row" align="center">
-        <?php echo $form->labelEx($model,'pregunta3'); ?>
-        <?php echo $form->textField($model,'pregunta3');echo "<br>"; echo "<b style='color: #ffffff; background: #0e819e'> Valor Actual:</b>";echo " "; echo $pregunta3;?>
-        <?php echo $form->error($model,'pregunta3', array("class" => "text-error")); ?>
-    </div>
-<br>
-
 
     <div class="row buttons" align="center">
-
-        <?php echo CHtml::submitButton('Actualizar', array('class' => 'btn btn-danger')); ?>
+        <?php echo CHtml::submitButton('Actualizar Informacion', array('class' => 'btn btn-danger')); ?>
     </div>
 
     <?php $this->endWidget(); ?>

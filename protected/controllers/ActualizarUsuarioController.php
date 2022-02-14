@@ -71,6 +71,7 @@ class ActualizarUsuarioController extends Controller
 		if(isset($_POST['ActualizarUsuario']))
 		{
 			$model->attributes=$_POST['ActualizarUsuario'];
+            $model->password=md5($model->password); //para guardar en md5 desde el crud
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->ci));
 		}
@@ -95,6 +96,7 @@ class ActualizarUsuarioController extends Controller
 		if(isset($_POST['ActualizarUsuario']))
 		{
 			$model->attributes=$_POST['ActualizarUsuario'];
+            $model->password=md5($model->password); //para guardar en md5 desde el crud
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->ci));
 		}

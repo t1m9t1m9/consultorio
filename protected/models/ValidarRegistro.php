@@ -4,29 +4,15 @@ class ValidarRegistro extends CFormModel
 {
     public $ci;
     public $nombre1;
-    public $nombre2;
     public $apellido1;
-    public $apellido2;
     public $email;
-    public $celular;
-    public $direccion;
-    public $pregunta1;
-    public $pregunta2;
-    public $pregunta3;
     public $password;
     public $repetir_password;
-    public $edad;
-    public $sexo;
-    public $etnia;
 
     public function rules()
     {
         return array(
 
-//            array('ci, nombre1, nombre2, apellido1, apellido2,
-//                   edad, sexo, etnia, email, celular, direccion,
-//                   pregunta1, pregunta2, pregunta3, password,
-//                   repetir_password',
             array('ci, nombre1, apellido1, email, password, repetir_password',
                   'required',
                   'message' => 'Este campo es requerido',
@@ -61,22 +47,6 @@ class ValidarRegistro extends CFormModel
                 'max' => 50,
                 'tooLong' => 'El maximo de letras es 50',
             ),
-//
-//            array(
-//                'nombre2',
-//                'match',
-//                'pattern' => '/^[a-zA-Záéíóúñ\s]+$/i',
-//                'message' => 'Error, solo letras.',
-//            ),
-//            array(
-//                'nombre2',
-//                'length',
-//                'min' => 3,
-//                'tooShort' => 'Debe tener minimo 3 letras',
-//                'max' => 50,
-//                'tooLong' => 'El maximo de letras es 50',
-//            ),
-//
             array(
                 'apellido1',
                 'match',
@@ -91,119 +61,11 @@ class ValidarRegistro extends CFormModel
                 'max' => 50,
                 'tooLong' => 'El maximo de letras es 50',
             ),
-//
-//            array(
-//                'apellido2',
-//                'match',
-//                'pattern' => '/^[a-zA-Záéíóúñ\s]+$/i',
-//                'message' => 'Error, solo letras.',
-//            ),
-//            array(
-//                'apellido2',
-//                'length',
-//                'min' => 3,
-//                'tooShort' => 'Debe tener minimo 3 letras',
-//                'max' => 50,
-//                'tooLong' => 'El maximo de letras es 50',
-//            ),
-//
-//            array(
-//                'edad',
-//                'match',
-//                'pattern' => '/^[0-9]+$/i',
-//                'message' => 'Error, solo numeros.',
-//            ),
-//            array(
-//                'edad',
-//                'length',
-//                'min' => 1,
-//                'tooShort' => 'Minimo un digito',
-//                'max' => 2,
-//                'tooLong' => 'Maximo dos digitos',
-//            ),
-//
-//
-//            array(
-//              'sexo',
-//              'match',
-//                'pattern' => '/^[0-9]/',
-//                'message' => 'El tipo de dato que quieres enviar es incorrecto',
-//            ),
-//
-//            array(
-//                'etnia',
-//                'match',
-//                'pattern' => '/^[0-9]/',
-//                'message' => 'El tipo de dato que quieres enviar es incorrecto',
-//            ),
-
             array(
                 'email',
                 'email',
                 'message' => 'El formato de email no es correcto'
             ),
-
-//            array(
-//                'celular',
-//                'length',
-//                'min' => 10,
-//                'tooShort' => 'El numero celular tiene 10 digitos',
-//                'max' => 10,
-//                'tooLong' => 'El numero celular tiene 10 digitos',
-//            ),
-//
-//            array(
-//                'direccion',
-//                'match',
-//                'pattern' => '/^[a-z0-9áéíóúñ\s]+$/i',
-//                'message' => 'Error, solo letras, numeros y guiones',
-//            ),
-//
-//            array(
-//                'pregunta1',
-//                'match',
-//                'pattern' => '/^[a-zA-Záéíóúñ\s]+$/i',
-//                'message' => 'Error, solo letras.',
-//            ),
-//            array(
-//                'pregunta1',
-//                'length',
-//                'min' => 3,
-//                'tooShort' => 'Debe tener minimo 3 letras',
-//                'max' => 50,
-//                'tooLong' => 'El maximo de letras es 32',
-//            ),
-//
-//            array(
-//                'pregunta2',
-//                'match',
-//                'pattern' => '/^[a-zA-Záéíóúñ\s]+$/i',
-//                'message' => 'Error, solo letras.',
-//            ),
-//            array(
-//                'pregunta2',
-//                'length',
-//                'min' => 3,
-//                'tooShort' => 'Debe tener minimo 3 letras',
-//                'max' => 50,
-//                'tooLong' => 'El maximo de letras es 32',
-//            ),
-//
-//            array(
-//                'pregunta3',
-//                'match',
-//                'pattern' => '/^[a-zA-Záéíóúñ\s]+$/i',
-//                'message' => 'Error, solo letras.',
-//            ),
-//            array(
-//                'pregunta3',
-//                'length',
-//                'min' => 3,
-//                'tooShort' => 'Debe tener minimo 3 letras',
-//                'max' => 50,
-//                'tooLong' => 'El maximo de letras es 32',
-//            ),
-
             array(
                 'password',
                 'match',
@@ -234,20 +96,10 @@ class ValidarRegistro extends CFormModel
         return array(
             'ci'=>'Cedula',
             'nombre1'=>'Primer Nombre',
-            'nombre2'=>'Segundo Nombre',
             'apellido1'=>'Primer Apellido',
-            'apellido2'=>'Segundo Apellido',
             'email'=>'Correo Electronico',
-            'celular'=>'Telefono Celular',
-            'direccion'=>'Direccion',
-            'pregunta1'=>'En que ciudad nacio?',
-            'pregunta2'=>'Nombre de su mascota?',
-            'pregunta3'=>'Libro favorito?',
             'password'=>'Password',
             'repetir_password'=>'Repetir Password',
-            'edad'=>'Edad',
-            'sexo'=>'Sexo',
-            'etnia'=>'Etnia',
         );
     }
 
