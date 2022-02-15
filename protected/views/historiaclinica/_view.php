@@ -9,29 +9,31 @@
 	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('fechaHistoria')); ?>:</b>
-	<?php echo CHtml::encode($data->fechaHistoria); ?>
-	<br />
+<!--	<b>--><?php //echo CHtml::encode($data->getAttributeLabel('fechaHistoria')); ?><!--:</b>-->
+<!--	--><?php //echo CHtml::encode($data->fechaHistoria); ?>
+<!--	<br />-->
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('cedula')); ?>:</b>
 	<?php echo CHtml::encode($data->cedula); ?>
 	<br />
 
+    <b><?php echo CHtml::encode($data->getAttributeLabel('primerNombre')); ?>:</b>
+    <?php echo CHtml::encode($data->primerNombre); ?>
+    <br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('apellidoPaterno')); ?>:</b>
 	<?php echo CHtml::encode($data->apellidoPaterno); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('apellidoMaterno')); ?>:</b>
-	<?php echo CHtml::encode($data->apellidoMaterno); ?>
-	<br />
+<!--	<b>--><?php //echo CHtml::encode($data->getAttributeLabel('apellidoMaterno')); ?><!--:</b>-->
+<!--	--><?php //echo CHtml::encode($data->apellidoMaterno); ?>
+<!--	<br />-->
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('primerNombre')); ?>:</b>
-	<?php echo CHtml::encode($data->primerNombre); ?>
-	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('segundoNombre')); ?>:</b>
-	<?php echo CHtml::encode($data->segundoNombre); ?>
-	<br />
+
+<!--	<b>--><?php //echo CHtml::encode($data->getAttributeLabel('segundoNombre')); ?><!--:</b>-->
+<!--	--><?php //echo CHtml::encode($data->segundoNombre); ?>
+<!--	<br />-->
 <br>
 	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('direccion')); ?>:</b>
