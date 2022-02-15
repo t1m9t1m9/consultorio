@@ -21,7 +21,6 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'hora'); ?>
-<!--		--><?php //echo $form->textField($model,'hora',array('size'=>6,'maxlength'=>6)); ?>
         <?php echo $form->dropDownList($model,'hora', array(
             "08:00"=>"08:00", "08:30"=>"08:30",
             "09:00"=>"09:00", "09:30"=>"09:30",
@@ -49,8 +48,6 @@
                 "dateFormat"=>"yy-mm-dd",
                 'showButtonPanel' => true,
                 'changeYear' => true,
-                //  'changeMonth' => true,
-                // 'changeYear' => true,
                 'yearRange' => '-0:2',
                 'minDate' => '-0Y',
                 'maxDate' => '2Y',
@@ -62,7 +59,6 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'confirmacion'); ?>
-<!--		--><?php //echo $form->textField($model,'confirmacion',array('size'=>2,'maxlength'=>2)); ?>
         <?php echo $form->dropDownList($model,'confirmacion', array('SI' => 'SI', 'NO' => 'NO'),array('selected' => 'Choose')); ?>
 		<?php echo $form->error($model,'confirmacion'); ?>
 	</div>
