@@ -62,10 +62,18 @@
 		<?php echo $form->error($model,'confirmacion'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'ciUsuario'); ?>
-		<?php echo $form->textField($model,'ciUsuario',array('size'=>10,'maxlength'=>10,'readonly'=> true)); ?>
-		<?php echo $form->error($model,'ciUsuario'); ?>
+<!--	<div class="row">-->
+<!--		--><?php //echo $form->labelEx($model,'ciUsuario'); ?>
+<!--		--><?php //echo $form->textField($model,'ciUsuario',array('size'=>10,'maxlength'=>10,'readonly'=> false)); ?>
+<!--		--><?php //echo $form->error($model,'ciUsuario'); ?>
+
+        <div class="row">
+            <?php echo $form->labelEx($model,'ciUsuario'); ?>
+            <?php echo $form->dropDownList($model,'ciUsuario',
+                CHtml::listData(Usuario::model()->findAll(), 'ci', 'primerNombre.primerApellido'),
+                array('empty'=>'Seleccione un Usuario'));?>
+            <?php echo $form->error($model,'ciUsuario'); ?>
+
 
     <?php
     $cedu = Yii::app()->user->name;

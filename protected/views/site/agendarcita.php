@@ -37,7 +37,7 @@ $this->breadcrumbs=array('Agendar Cita');
                 "model" => $model,
                 "language" => "es",
                 "options" => array(
-                    "dateFormat"=>"yy-mm-dd",
+                    'dateFormat'=>'yy-mm-dd',
                     'showButtonPanel' => true,
                     'changeYear' => true,
                   //  'changeMonth' => true,
@@ -45,25 +45,19 @@ $this->breadcrumbs=array('Agendar Cita');
                  'yearRange' => '-0:2',
                  'minDate' => '-0Y',
                  'maxDate' => '2Y',
-                )
-                ));
+                )));
+
     ?>
+
     <?php echo $form->error($model,'fecha', array("class" => "text-error")); ?>
 </div>
 
     <div class="row" align="center">
         <?php echo $form->labelEx($model,'hora'); ?>
         <?php echo $form->dropDownList($model,'hora', array(
-                "1"=>"08:00", "2"=>"08:30",
-                "3"=>"09:00", "4"=>"09:30",
-                "5"=>"10:00","6"=>"10:30",
-                "7"=>"11:00","8"=>"11:30",
-                "9"=>"12:00", "10"=>"12:30",
-                "11"=>"13:00", "12"=>"13:30",
-                "13"=>"14:00", "14"=>"14:30",
-                "15"=>"15:00", "16"=>"15:30",
-                "17"=>"16:00", "18"=>"16:30",
-                "19"=>"17:00", "20"=>"17:30",
+                "1"=>"08:00", "2"=>"08:30",   "3"=>"09:00", "4"=>"09:30",   "5"=>"10:00","6"=>"10:30",    "7"=>"11:00","8"=>"11:30",
+                "9"=>"12:00", "10"=>"12:30",  "11"=>"13:00", "12"=>"13:30", "13"=>"14:00", "14"=>"14:30", "15"=>"15:00", "16"=>"15:30",
+                "17"=>"16:00", "18"=>"16:30", "19"=>"17:00", "20"=>"17:30",
         )); ?>
         <?php echo $form->error($model,'hora', array("class" => "text-error")); ?>
     </div>

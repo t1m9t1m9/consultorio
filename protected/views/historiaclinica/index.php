@@ -12,7 +12,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>Historias Clinicas</h1>
+<h1 align="center">Historias Clinicas</h1>
 
 <?php
 $dataProvider->pagination->pageSize = 5;
