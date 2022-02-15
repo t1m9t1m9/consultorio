@@ -21,7 +21,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'ci'); ?>
-		<?php echo $form->textField($model,'ci',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->textField($model,'ci',array('size'=>10,'maxlength'=>10,'readonly'=> true)); ?>
 		<?php echo $form->error($model,'ci', array("class" => "text-error")); ?>
 	</div>
 

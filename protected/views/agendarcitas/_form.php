@@ -69,7 +69,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'ciUsuario'); ?>
-		<?php echo $form->textField($model,'ciUsuario',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->textField($model,'ciUsuario',array('size'=>10,'maxlength'=>10,'readonly'=> true)); ?>
 		<?php echo $form->error($model,'ciUsuario'); ?>
 
     <?php
@@ -83,8 +83,8 @@
     if($cedulaActual == $ced[$i1++]="$infoPersonal->ci")
     {
         echo " ";echo " ";
-        echo $infoPersonal->primerNombre." ". $infoPersonal->segundoNombre." ";
-        echo $infoPersonal->primerApellido." ". $infoPersonal->segundoApellido;
+        echo $infoPersonal->primerNombre." ";
+        echo $infoPersonal->primerApellido;
     }
     }
     ?>
