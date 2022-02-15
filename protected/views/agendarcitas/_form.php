@@ -38,7 +38,6 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'fecha'); ?>
-<!--		--><?php //echo $form->textField($model,'fecha'); ?>
         <?php
         $this->widget("zii.widgets.jui.CJuiDatePicker", array(
             "attribute" => "fecha",

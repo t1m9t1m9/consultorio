@@ -21,7 +21,6 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'fechaHistoria'); ?>
-<!--		--><?php //echo $form->textField($model,'fechaHistoria'); ?>
         <?php
         $this->widget("zii.widgets.jui.CJuiDatePicker", array(
             "attribute" => "fechaHistoria",
@@ -30,9 +29,6 @@
             "options" => array(
                 "dateFormat"=>"yy-mm-dd",
                 'showButtonPanel' => true,
-//                'changeYear' => true,
-//                  'changeMonth' => true,
-//                 'changeYear' => true,
                 'yearRange' => '-0:2',
                 'minDate' => '-0Y',
                 'maxDate' => '2Y',
@@ -104,7 +100,6 @@
 
 	<div class="row" style = "float: left; display:inline-block; margin-top: 50px; padding-left: 40px;">
 		<?php echo $form->labelEx($model,'fechaNacimiento'); ?>
-<!--		--><?php //echo $form->textField($model,'fechaNacimiento'); ?>
         <?php
         $this->widget("zii.widgets.jui.CJuiDatePicker", array(
             "attribute" => "fechaNacimiento",
@@ -116,8 +111,6 @@
                 'changeYear' => true,
                   'changeMonth' => true,
                  'changeYear' => true,
-//                'yearRange' => '-0:2',
-//                'minDate' => '-0Y',
                 'maxDate' => '0Y',
             )
         ));
@@ -139,7 +132,6 @@
     <div class="row"></div>
 	<div class="row" style = "float: left; display:inline-block; margin-top: 50px;">
 		<?php echo $form->labelEx($model,'grupoCultural'); ?>
-<!--		--><?php //echo $form->textField($model,'grupoCultural',array('size'=>32,'maxlength'=>32)); ?>
         <?php echo $form->dropDownList($model,'grupoCultural', array(
             "BLANCO"=>"BLANCO",
             "MESTIZO"=>"MESTIZO",
@@ -158,7 +150,6 @@
 
 	<div class="row" style = "float: left; display:inline-block; margin-top: 50px; padding-left: 40px;">
 		<?php echo $form->labelEx($model,'sexo'); ?>
-<!--		--><?php //echo $form->textField($model,'sexo',array('size'=>32,'maxlength'=>32)); ?>
         <?php echo $form->dropDownList($model,'sexo', array(
             "MASCULINO"=>"MASCULINO",
             "FEMENINO"=>"FEMENINO",
@@ -168,7 +159,6 @@
 
 	<div class="row" style = "float: left; display:inline-block; margin-top: 50px; padding-left: 40px;">
 		<?php echo $form->labelEx($model,'estadoCivil'); ?>
-<!--		--><?php //echo $form->textField($model,'estadoCivil',array('size'=>32,'maxlength'=>32)); ?>
         <?php echo $form->dropDownList($model,'estadoCivil', array(
             "CASADO"=>"CASADO",
             "CASADA"=>"CASADA",
@@ -185,7 +175,6 @@
     <div class="row"></div>
 	<div class="row" style = "float: left; display:inline-block; margin-top: 50px;">
 		<?php echo $form->labelEx($model,'instruccionAprobada'); ?>
-<!--		--><?php //echo $form->textField($model,'instruccionAprobada',array('size'=>32,'maxlength'=>32)); ?>
         <?php echo $form->dropDownList($model,'instruccionAprobada', array(
             "PREESCOLAR"=>"PREESCOLAR",
             "PRIMARIA"=>"PRIMARIA",
@@ -213,7 +202,6 @@
     <div class="row"></div>
 	<div class="row" style = "float: left; display:inline-block; margin-top: 50px;">
 		<?php echo $form->labelEx($model,'convulsiones'); ?>
-<!--		--><?php //echo $form->textField($model,'convulsiones'); ?>
         <?php echo $form->dropDownList($model,'convulsiones', array(
             "1"=>"SI",
             "0"=>"NO",
@@ -223,7 +211,6 @@
 
     <div class="row" style = "float: left; display:inline-block; margin-top: 50px; padding-left: 40px;">
 		<?php echo $form->labelEx($model,'tosConFlemaConSangre'); ?>
-<!--		--><?php //echo $form->textField($model,'tosConFlemaConSangre'); ?>
         <?php echo $form->dropDownList($model,'tosConFlemaConSangre', array(
             "1"=>"SI",
             "0"=>"NO",
@@ -233,7 +220,6 @@
 
     <div class="row" style = "float: left; display:inline-block; margin-top: 50px; padding-left: 40px;">
 		<?php echo $form->labelEx($model,'fracturas'); ?>
-<!--		--><?php //echo $form->textField($model,'fracturas'); ?>
         <?php echo $form->dropDownList($model,'fracturas', array(
             "1"=>"SI",
             "0"=>"NO",
@@ -243,7 +229,6 @@
 
     <div class="row" style = "float: left; display:inline-block; margin-top: 50px; padding-left: 40px;">
 		<?php echo $form->labelEx($model,'cirugia'); ?>
-<!--		--><?php //echo $form->textField($model,'cirugia'); ?>
         <?php echo $form->dropDownList($model,'cirugia', array(
             "1"=>"SI",
             "0"=>"NO",
@@ -253,7 +238,6 @@
     <div class="row"></div>
     <div class="row" style = "float: left; display:inline-block; margin-top: 50px;">
 		<?php echo $form->labelEx($model,'alergia'); ?>
-<!--		--><?php //echo $form->textField($model,'alergia'); ?>
         <?php echo $form->dropDownList($model,'alergia', array(
             "1"=>"SI",
             "0"=>"NO",
@@ -263,7 +247,6 @@
 
     <div class="row" style = "float: left; display:inline-block; margin-top: 50px; padding-left: 40px;">
 		<?php echo $form->labelEx($model,'ira'); ?>
-<!--		--><?php //echo $form->textField($model,'ira'); ?>
         <?php echo $form->dropDownList($model,'ira', array(
             "1"=>"SI",
             "0"=>"NO",
@@ -273,7 +256,6 @@
 
     <div class="row" style = "float: left; display:inline-block; margin-top: 50px; padding-left: 40px;">
 		<?php echo $form->labelEx($model,'hospitalizacion'); ?>
-<!--		--><?php //echo $form->textField($model,'hospitalizacion'); ?>
         <?php echo $form->dropDownList($model,'hospitalizacion', array(
             "1"=>"SI",
             "0"=>"NO",

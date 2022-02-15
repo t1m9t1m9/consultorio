@@ -166,11 +166,11 @@ foreach($idusu as $idusuced)
 </div>
 	<?php echo $content; ?>
 
-		<div class="footer text-center">
-		Copyright &copy; <?php echo date('Y'); ?> by Liz Jurado.<br/>
-		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
-	</div><!-- footer -->
+<!--		<div class="footer text-center">-->
+<!--		Copyright &copy; --><?php //echo date('Y'); ?><!-- by Liz Jurado.<br/>-->
+<!--		All Rights Reserved.<br/>-->
+<!--		--><?php //echo Yii::powered(); ?>
+<!--	</div><!-- footer -->-->
 
 </div><!-- page -->
 
