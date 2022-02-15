@@ -45,11 +45,11 @@ $('.search-form form').submit(function(){
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
-		'fechaHistoria',
+//		'id'
+//		'fechaHistoria',
 		'cedula',
 		'apellidoPaterno',
-		'apellidoMaterno',
+//		'apellidoMaterno',
 		'primerNombre',
 		/*
 		'segundoNombre',
