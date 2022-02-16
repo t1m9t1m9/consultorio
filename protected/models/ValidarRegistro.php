@@ -87,7 +87,8 @@ class ValidarRegistro extends CFormModel
                 'compareAttribute' => 'password',
                 'message' => 'El password no coincide',
             ),
-                array('ci', 'comprobar_cedula')
+                array('ci', 'comprobar_cedula'),
+                array('ci', 'validar_cedula')
         );
     }
 
@@ -95,8 +96,8 @@ class ValidarRegistro extends CFormModel
     {
         return array(
             'ci'=>'Cedula',
-            'nombre1'=>'Primer Nombre',
-            'apellido1'=>'Primer Apellido',
+            'nombre1'=>'Nombre',
+            'apellido1'=>'Apellido',
             'email'=>'Correo Electronico',
             'password'=>'Password',
             'repetir_password'=>'Repetir Password',
@@ -120,8 +121,50 @@ class ValidarRegistro extends CFormModel
                 $this->addError('ci', 'Su cedula ya se encuentra registrada');
                 break;
             }
+
         }
 
     }
 
+    public function validar_cedula($attributes, $params)
+    {
+        $cedulaActual = $this->ci;
+        $verificar = intval($cedulaActual[9]);
+        $a1=intval($cedulaActual[0])*2;
+        if($a1 >= 10)
+            $a1=$a1-9;
+        $a2=intval($cedulaActual[1]);;
+        $a3=intval($cedulaActual[2])*2;;
+        if($a3 >= 10)
+            $a3=$a3-9;
+        $a4=intval($cedulaActual[3]);;
+        $a5=intval($cedulaActual[4])*2;
+        if($a5 >= 10)
+            $a5=$a5-9;
+        $a6=intval($cedulaActual[5]);
+        $a7=intval($cedulaActual[6])*2;
+        if($a7 >= 10)
+            $a7=$a7-9;
+        $a8=intval($cedulaActual[7]);
+        $a9=intval($cedulaActual[8])*2;
+        if($a9 >= 10)
+            $a9=$a9-9;
+        $suma = $a1+$a2+$a3+$a4+$a5+$a6+$a7+$a8+$a9;
+        $digitoFinal = substr($suma,1,1);
+        if ($digitoFinal == 0)
+            $digitoVerificador = 0;
+        else
+            $digitoVerificador = 10 - $digitoFinal;
+
+        if ($digitoVerificador === $verificar)
+        {
+
+        }
+        else
+        {
+            $this->addError('ci', 'Cedula incorrecta');
+
+        }
+
+    }
 }

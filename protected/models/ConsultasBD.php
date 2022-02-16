@@ -5,12 +5,12 @@ class ConsultasBD
     {
         $primerNombre = strtoupper($primerNombre);
         $primerApellido = strtoupper($primerApellido);
-
+        $nombreCompleto = $primerNombre." ".$primerApellido;
         $conexion = Yii::app()->db;
         $password = md5($password);
-        $consulta = "INSERT INTO usuario(ci, primerNombre, primerApellido, email, password)";
+        $consulta = "INSERT INTO usuario(ci, primerNombre, primerApellido, email, password, nombreCompleto)";
         $consulta .= " VALUES ";
-        $consulta .= "('$cedula', '$primerNombre', '$primerApellido', '$email', '$password')";
+        $consulta .= "('$cedula', '$primerNombre', '$primerApellido', '$email', '$password', '$nombreCompleto')";
         $resultado = $conexion->createCommand($consulta)->execute();
     }
 

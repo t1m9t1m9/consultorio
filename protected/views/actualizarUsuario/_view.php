@@ -24,6 +24,10 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('password')); ?>:</b>
 	<?php echo CHtml::encode($data->password); ?>
 	<br />
-    <br>
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('nombreCompleto')); ?>:</b>
+	<?php echo CHtml::encode($data->nombreCompleto); ?>
+	<br />
+
 
 </div>

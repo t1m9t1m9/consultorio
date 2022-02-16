@@ -9,6 +9,7 @@
  * @property string $primerApellido
  * @property string $email
  * @property string $password
+ * @property string $nombreCompleto
  */
 class ActualizarUsuario extends CActiveRecord
 {
@@ -29,13 +30,13 @@ class ActualizarUsuario extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('ci, primerNombre, primerApellido, email, password', 'required'),
-            array('ci', 'length', 'max'=>10),
+			array('ci', 'length', 'max'=>10),
 			array('primerNombre, primerApellido', 'length', 'max'=>32),
-			array('email', 'length', 'max'=>128),
-            array('email', 'email', 'message' => 'El formato de email no es correcto'),
+			array('email, password', 'length', 'max'=>128),
+			array('nombreCompleto', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('ci, primerNombre, primerApellido, email, password', 'safe', 'on'=>'search'),
+			array('ci, primerNombre, primerApellido, email, password, nombreCompleto', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -56,11 +57,12 @@ class ActualizarUsuario extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-            'ci' => 'Cedula',
+			'ci' => 'Ci',
 			'primerNombre' => 'Primer Nombre',
 			'primerApellido' => 'Primer Apellido',
 			'email' => 'Email',
-            'password' => 'Password'
+			'password' => 'Password',
+			'nombreCompleto' => 'Nombre Completo',
 		);
 	}
 
@@ -81,11 +83,13 @@ class ActualizarUsuario extends CActiveRecord
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
-        $criteria->compare('ci',$this->ci,true);
+
+		$criteria->compare('ci',$this->ci,true);
 		$criteria->compare('primerNombre',$this->primerNombre,true);
 		$criteria->compare('primerApellido',$this->primerApellido,true);
 		$criteria->compare('email',$this->email,true);
-        $criteria->compare('password',$this->password, true);
+		$criteria->compare('password',$this->password,true);
+		$criteria->compare('nombreCompleto',$this->nombreCompleto,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

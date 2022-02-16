@@ -37,8 +37,7 @@ class ActualizarUsuarioController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
-                'users'=>array('1803087558'),
+				'users'=>array('admin','1803087558'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -71,7 +70,6 @@ class ActualizarUsuarioController extends Controller
 		if(isset($_POST['ActualizarUsuario']))
 		{
 			$model->attributes=$_POST['ActualizarUsuario'];
-            $model->password=md5($model->password); //para guardar en md5 desde el crud
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->ci));
 		}
@@ -96,7 +94,6 @@ class ActualizarUsuarioController extends Controller
 		if(isset($_POST['ActualizarUsuario']))
 		{
 			$model->attributes=$_POST['ActualizarUsuario'];
-            $model->password=md5($model->password); //para guardar en md5 desde el crud
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->ci));
 		}
@@ -124,19 +121,11 @@ class ActualizarUsuarioController extends Controller
 	 * Lists all models.
 	 */
 	public function actionIndex()
-    {
-        if (Yii::app()->user->isGuest)
-        {
-            $this->redirect(Yii::app()->homeUrl);
-        }
-        else
-        {
-
-        $dataProvider = new CActiveDataProvider('ActualizarUsuario');
-        $this->render('index', array(
-            'dataProvider' => $dataProvider,
-        ));
-    }
+	{
+		$dataProvider=new CActiveDataProvider('ActualizarUsuario');
+		$this->render('index',array(
+			'dataProvider'=>$dataProvider,
+		));
 	}
 
 	/**

@@ -67,7 +67,6 @@ $this->breadcrumbs=array('Registro');
 <br>
 
     <div class="row buttons" align="center">
-
         <?php echo CHtml::submitButton('Registrarme', array('class' => 'btn btn-primary')); ?>
     </div>
 

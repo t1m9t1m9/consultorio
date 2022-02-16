@@ -62,35 +62,30 @@
 		<?php echo $form->error($model,'confirmacion'); ?>
 	</div>
 
-<!--	<div class="row">-->
-<!--		--><?php //echo $form->labelEx($model,'ciUsuario'); ?>
-<!--		--><?php //echo $form->textField($model,'ciUsuario',array('size'=>10,'maxlength'=>10,'readonly'=> false)); ?>
-<!--		--><?php //echo $form->error($model,'ciUsuario'); ?>
-
         <div class="row">
             <?php echo $form->labelEx($model,'ciUsuario'); ?>
             <?php echo $form->dropDownList($model,'ciUsuario',
-                CHtml::listData(Usuario::model()->findAll(), 'ci', 'primerNombre.primerApellido'),
+                CHtml::listData(Usuario::model()->findAll(), 'ci', 'nombreCompleto','ci'),
                 array('empty'=>'Seleccione un Usuario'));?>
             <?php echo $form->error($model,'ciUsuario'); ?>
 
-
-    <?php
-    $cedu = Yii::app()->user->name;
-    $cedulaActual = $model->ciUsuario;
-    $nombre = Usuario::model()->findAll();
-    $i1 = 1;
-
-    foreach ($nombre as $infoPersonal)
-    {
-    if($cedulaActual == $ced[$i1++]="$infoPersonal->ci")
-    {
-        echo " ";echo " ";
-        echo $infoPersonal->primerNombre." ";
-        echo $infoPersonal->primerApellido;
-    }
-    }
-    ?>
+<!--    --><?php
+//    $cedu = Yii::app()->user->name;
+//    $cedulaActual = $model->ciUsuario;
+//    $nombre = Usuario::model()->findAll();
+//    $i1 = 1;
+//
+//    foreach ($nombre as $infoPersonal)
+//    {
+//    if($cedulaActual == $ced[$i1++]="$infoPersonal->ci")
+//    {
+//        echo " ";echo " ";
+//        echo $infoPersonal->primerNombre." ";
+//        echo $infoPersonal->primerApellido;
+//        echo $infoPersonal->ci;
+//    }
+//    }
+//    ?>
     </div>
 
         <br>
