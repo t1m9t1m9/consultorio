@@ -70,6 +70,10 @@ class ActualizarUsuarioController extends Controller
 		if(isset($_POST['ActualizarUsuario']))
 		{
 			$model->attributes=$_POST['ActualizarUsuario'];
+            $model->primerNombre = strtoupper($model->primerNombre);
+            $model->primerApellido = strtoupper($model->primerApellido);
+            $model->password = md5($model->password);
+            $model->nombreCompleto =  strtoupper($model->primerNombre)." ". strtoupper($model->primerApellido);
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->ci));
 		}
@@ -94,6 +98,10 @@ class ActualizarUsuarioController extends Controller
 		if(isset($_POST['ActualizarUsuario']))
 		{
 			$model->attributes=$_POST['ActualizarUsuario'];
+            $model->primerNombre = strtoupper($model->primerNombre);
+            $model->primerApellido = strtoupper($model->primerApellido);
+            $model->password = md5($model->password);
+            $model->nombreCompleto =  strtoupper($model->primerNombre)." ". strtoupper($model->primerApellido);
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->ci));
 		}

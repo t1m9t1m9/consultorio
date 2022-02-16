@@ -1147,3 +1147,36 @@ Stack trace:
 REQUEST_URI=/consultorio/index.php?r=site/registro
 in C:\xampp\htdocs\consultorio\protected\controllers\SiteController.php (112)
 in C:\xampp\htdocs\consultorio\index.php (13)
+2022/02/16 04:33:25 [error] [exception.CException] CException: Property "ActualizarUsuario.ci" is not defined. in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2760): CComponent->__get('ci')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2483): CHtml::resolveValue(Object(ActualizarUsuario), 'ci')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1540): CHtml::activeInputField('text', Object(ActualizarUsuario), 'ci', Array)
+#3 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(792): CHtml::activeTextField(Object(ActualizarUsuario), 'ci', Array)
+#4 C:\xampp\htdocs\consultorio\protected\views\actualizarUsuario\_form.php(24): CActiveForm->textField(Object(ActualizarUsuario), 'ci', Array)
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\consultorio\protected\views\actualizarUsuario\create.php(18): CController->renderPartial('_form', Array)
+#9 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#13 C:\xampp\htdocs\consultorio\protected\controllers\ActualizarUsuarioController.php(78): CController->render('create', Array)
+#14 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): ActualizarUsuarioController->actionCreate()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('actualizarUsuar...')
+#25 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/consultorio/index.php?r=actualizarUsuario/create
+HTTP_REFERER=http://localhost/consultorio/index.php?r=actualizarUsuario/admin
+---

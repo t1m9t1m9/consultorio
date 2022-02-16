@@ -30,9 +30,10 @@ class ActualizarUsuario extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('ci, primerNombre, primerApellido, email, password', 'required'),
-			array('ci', 'length', 'max'=>10),
+			array('ci', 'length', 'max'=>10, 'min'=>10),
 			array('primerNombre, primerApellido', 'length', 'max'=>32),
 			array('email, password', 'length', 'max'=>128),
+            array('email', 'email','message' => 'El formato de email no es correcto'),
 			array('nombreCompleto', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -57,9 +58,9 @@ class ActualizarUsuario extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'ci' => 'Ci',
-			'primerNombre' => 'Primer Nombre',
-			'primerApellido' => 'Primer Apellido',
+			'ci' => 'Cedula',
+			'primerNombre' => 'Nombre',
+			'primerApellido' => 'Apellido',
 			'email' => 'Email',
 			'password' => 'Password',
 			'nombreCompleto' => 'Nombre Completo',

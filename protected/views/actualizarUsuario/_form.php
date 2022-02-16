@@ -22,38 +22,33 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'ci'); ?>
 		<?php echo $form->textField($model,'ci',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'ci'); ?>
+		<?php echo $form->error($model,'ci', array("class" => "text-error")); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'primerNombre'); ?>
 		<?php echo $form->textField($model,'primerNombre',array('size'=>32,'maxlength'=>32)); ?>
-		<?php echo $form->error($model,'primerNombre'); ?>
+		<?php echo $form->error($model,'primerNombre', array("class" => "text-error")); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'primerApellido'); ?>
 		<?php echo $form->textField($model,'primerApellido',array('size'=>32,'maxlength'=>32)); ?>
-		<?php echo $form->error($model,'primerApellido'); ?>
+		<?php echo $form->error($model,'primerApellido', array("class" => "text-error")); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'email'); ?>
 		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>128)); ?>
-		<?php echo $form->error($model,'email'); ?>
+		<?php echo $form->error($model,'email', array("class" => "text-error")); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'password'); ?>
 		<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>128)); ?>
-		<?php echo $form->error($model,'password'); ?>
+		<?php echo $form->error($model,'password', array("class" => "text-error")); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'nombreCompleto'); ?>
-		<?php echo $form->textField($model,'nombreCompleto',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($model,'nombreCompleto'); ?>
-	</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
