@@ -61,7 +61,7 @@ class ActualizarUsuario extends CActiveRecord
 			array('email, password', 'length', 'max'=>128),
             array('email', 'email','message' => 'El formato de email no es correcto'),
 			array('nombreCompleto', 'length', 'max'=>100),
-            array('ci', 'comprobar_cedula'),
+//            array('ci', 'comprobar_cedula'),
             array('ci', 'validar_cedula'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -136,27 +136,27 @@ class ActualizarUsuario extends CActiveRecord
 		return parent::model($className);
 	}
 
-    public function comprobar_cedula($attributes, $params)
-    {
-        $conexion = Yii::app()->db;
-
-        $consulta = "SELECT ci FROM usuario WHERE ";
-        $consulta .= "ci='".$this->ci."'";
-
-        $resultado = $conexion->createCommand($consulta);
-        $filas = $resultado->query();
-
-        foreach($filas as $fila)
-        {
-            if($this->ci === $fila['ci'])
-            {
-                $this->addError('ci', 'Su cedula ya se encuentra registrada');
-                break;
-            }
-
-        }
-
-    }
+//    public function comprobar_cedula($attributes, $params)
+//    {
+//        $conexion = Yii::app()->db;
+//
+//        $consulta = "SELECT ci FROM usuario WHERE ";
+//        $consulta .= "ci='".$this->ci."'";
+//
+//        $resultado = $conexion->createCommand($consulta);
+//        $filas = $resultado->query();
+//
+//        foreach($filas as $fila)
+//        {
+//            if($this->ci === $fila['ci'])
+//            {
+//                $this->addError('ci', 'Su cedula ya se encuentra registrada');
+//                break;
+//            }
+//
+//        }
+//
+//    }
 
     public function validar_cedula($attributes, $params)
     {

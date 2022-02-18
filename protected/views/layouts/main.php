@@ -72,6 +72,7 @@ foreach($idusu as $idusuced)
                         array('label' => 'Panel de Control', 'visible' => !Yii::app()->user->isGuest,
                             'items' => array(
                                 array('label' => 'Cambiar Password', 'url' => array('/usuario/configuracion')),
+                                array('label' => 'Actualizar Informacion', 'url' => array('/actualizarUsuarioCliente/view','id'=>$cedu)),
                             ),
                         ),
                         array('label' => 'Logout (' . $nom[$posision] . " " . $ape[$posision] . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
