@@ -26,5 +26,6 @@ $this->menu=array(
 		'fecha',
 		'confirmacion',
 		'ciUsuario',
+        'nombreCompleto',
 	),
 )); ?>

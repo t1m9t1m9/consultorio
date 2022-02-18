@@ -44,7 +44,8 @@ $('.search-form form').submit(function(){
 		'hora',
 		'fecha',
 		'confirmacion',
-		'ciUsuario',
+//		'ciUsuario',
+        'nombreCompleto',
 		array(
 			'class'=>'CButtonColumn',
 		),

@@ -24,6 +24,10 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('ciUsuario')); ?>:</b>
 	<?php echo CHtml::encode($data->ciUsuario); ?>
 	<br />
+
+    <b><?php echo CHtml::encode($data->getAttributeLabel('nombreCompleto')); ?>:</b>
+    <?php echo CHtml::encode($data->nombreCompleto); ?>
+    <br />
 <br>
 
 </div>

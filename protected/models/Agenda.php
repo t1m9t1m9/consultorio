@@ -29,7 +29,7 @@ class Agenda extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('hora, fecha, confirmacion, ciUsuario', 'required'),
+			array('hora, fecha, confirmacion, ciUsuario, nombreCompleto', 'required'),
 			array('hora', 'length', 'max'=>6),
 			array('confirmacion', 'length', 'max'=>2),
 			array('ciUsuario', 'length', 'max'=>10),
@@ -88,7 +88,7 @@ class Agenda extends CActiveRecord
 		$criteria->compare('fecha',$this->fecha,true);
 		$criteria->compare('confirmacion',$this->confirmacion,true);
 		$criteria->compare('ciUsuario',$this->ciUsuario,true);
-        $criteria->compare('nombreCompleto', $this->nombreCompleto, true);
+        $criteria->compare('nombreCompleto',$this->nombreCompleto, true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
