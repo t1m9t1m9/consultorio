@@ -5824,7 +5824,7 @@ EOD;
 		if($content!=='')
 		{
 			if($header===null)
-				$header='<p>'.Yii::t('yii','Please fix the following input errors:').'</p>';
+				$header='<p>'.Yii::t('yii','Por favor corregir los siguientes errores:').'</p>';
 			if(!isset($htmlOptions['class']))
 				$htmlOptions['class']=self::$errorSummaryCss;
 			return self::tag('div',$htmlOptions,$header."\n<ul>\n$content</ul>".$footer);
@@ -10480,7 +10480,7 @@ class CRequiredValidator extends CValidator
 		}
 		elseif($this->isEmpty($value,$this->trim))
 		{
-			$message=$this->message!==null?$this->message:Yii::t('yii','{attribute} cannot be blank.');
+			$message=$this->message!==null?$this->message:Yii::t('yii','{attribute} No puede estar en blanco.');
 			$this->addError($object,$attribute,$message);
 		}
 	}
@@ -10504,7 +10504,7 @@ if(value!=" . CJSON::encode($this->requiredValue) . ") {
 		else
 		{
 			if($message===null)
-				$message=Yii::t('yii','{attribute} cannot be blank.');
+				$message=Yii::t('yii','{attribute} No puede estar en blanco.');
 			$message=strtr($message, array(
 				'{attribute}'=>$object->getAttributeLabel($attribute),
 			));

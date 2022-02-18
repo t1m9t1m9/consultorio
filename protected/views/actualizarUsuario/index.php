@@ -7,14 +7,15 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create ActualizarUsuario', 'url'=>array('create')),
-	array('label'=>'Manage ActualizarUsuario', 'url'=>array('admin')),
+	array('label'=>'Crear Usuarios', 'url'=>array('create')),
+	array('label'=>'Administrar Usuarios', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Actualizar Usuarios</h1>
+<h1 align="center">Actualizar Usuarios</h1>
 
-<?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
-)); ?>
+    <?php $this->widget('zii.widgets.CListView', array(
+        'dataProvider'=>$dataProvider,
+        'itemView'=>'_view',
+    )); ?>
+

@@ -28,8 +28,7 @@ $('.search-form form').submit(function(){
 
 <h1 align="center">Administrar Citas Agendadas</h1>
 
-
-<?php echo CHtml::link('Busqueda Avanzada','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link('','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
@@ -41,7 +40,7 @@ $('.search-form form').submit(function(){
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
+//		'id',
 		'hora',
 		'fecha',
 		'confirmacion',

@@ -11,7 +11,7 @@ $this->menu=array(
 	array('label'=>'List Certificados', 'url'=>array('index')),
 	array('label'=>'Create Certificados', 'url'=>array('create')),
 	array('label'=>'Update Certificados', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Certificados', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Delete Certificados', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Esta seguro de que desea elimiar este usuario?')),
 	array('label'=>'Manage Certificados', 'url'=>array('admin')),
 );
 ?>

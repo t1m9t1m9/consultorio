@@ -9,6 +9,7 @@
  * @property string $fecha
  * @property string $confirmacion
  * @property string $ciUsuario
+ * @property string $nombreCompleto
  */
 class Agenda extends CActiveRecord
 {
@@ -34,7 +35,7 @@ class Agenda extends CActiveRecord
 			array('ciUsuario', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, hora, fecha, confirmacion, ciUsuario', 'safe', 'on'=>'search'),
+			array('id, hora, fecha, confirmacion, ciUsuario, nombreCompleto', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -60,6 +61,7 @@ class Agenda extends CActiveRecord
 			'fecha' => 'Fecha',
 			'confirmacion' => 'Confirmacion',
 			'ciUsuario' => 'Ci Usuario',
+            'nombreCompleto' => 'Nombre Completo',
 		);
 	}
 
@@ -86,6 +88,7 @@ class Agenda extends CActiveRecord
 		$criteria->compare('fecha',$this->fecha,true);
 		$criteria->compare('confirmacion',$this->confirmacion,true);
 		$criteria->compare('ciUsuario',$this->ciUsuario,true);
+        $criteria->compare('nombreCompleto', $this->nombreCompleto, true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

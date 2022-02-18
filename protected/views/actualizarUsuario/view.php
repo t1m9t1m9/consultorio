@@ -8,24 +8,24 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List ActualizarUsuario', 'url'=>array('index')),
-	array('label'=>'Create ActualizarUsuario', 'url'=>array('create')),
-	array('label'=>'Update ActualizarUsuario', 'url'=>array('update', 'id'=>$model->ci)),
-	array('label'=>'Delete ActualizarUsuario', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->ci),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage ActualizarUsuario', 'url'=>array('admin')),
+	array('label'=>'Lista de Usuarios', 'url'=>array('index')),
+	array('label'=>'Crear Usuarios', 'url'=>array('create')),
+	array('label'=>'Actualizar Usuario', 'url'=>array('update', 'id'=>$model->ci)),
+	array('label'=>'Eliminar Usuario', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->ci),'confirm'=>'Esta seguro que desea eliminar este usuario?')),
+	array('label'=>'Administrar Usuarios', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View ActualizarUsuario #<?php echo $model->ci; ?></h1>
+<h1>Actualizacion de Usuario: <?php echo $model->nombreCompleto; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
 		'ci',
-		'primerNombre',
-		'primerApellido',
+        'nombreCompleto',
+//		'primerNombre',
+//		'primerApellido',
 		'email',
 		'password',
-		'nombreCompleto',
 	),
 )); ?>

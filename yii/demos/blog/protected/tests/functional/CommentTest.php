@@ -21,8 +21,8 @@ class CommentTest extends WebTestCase
 
 	    // verify validation errors
 	    $this->clickAndWait("//input[@value='Submit']");
-	    $this->assertTextPresent('Name cannot be blank.');
-	    $this->assertTextPresent('Email cannot be blank.');
+	    $this->assertTextPresent('El Nombre no puede estar vacio.');
+	    $this->assertTextPresent('El Email no puede estar vacio.');
 	    $this->assertTextPresent('Comment cannot be blank.');
 
 		// verify commenting is successful

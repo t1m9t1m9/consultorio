@@ -56,7 +56,7 @@ $cedu = Yii::app()->user->name;
             {
                 $citaMedica[$i1] = "$cita->fecha" . "T" . "$cita->hora";
                 $citaAgendada[$i1] = "$cita->confirmacion";
-                $ciCliente[$i1] = "$cita->ciUsuario";
+                $ciCliente[$i1] = "$cita->nombreCompleto";
                 $i1++;
             }
             foreach ($nombres as $nombre)

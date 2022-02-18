@@ -76,9 +76,22 @@ class ConsultasBD
         if ($hora == '20')
             $hora = "17:30";
         $ci = Yii::app()->user->name;
-        $consulta = "INSERT INTO agenda(id, hora, fecha, confirmacion, ciUsuario)";
+        $nombres = Usuario::model()->findAll();
+        $i1 = 1;
+        $posision = 0;
+        foreach ($nombres as $item)
+        {
+            if($ced[$i1++]="$item->ci" == $ci)
+            {
+                $posision=$i1;
+            }
+            $nombre[$i1]="$item->primerNombre";
+            $apellido[$i1]="$item->primerApellido";
+        }
+        $nombreCompleto = $nombre[$posision]." ".$apellido[$posision];
+        $consulta = "INSERT INTO agenda(id, hora, fecha, confirmacion, ciUsuario, nombreCompleto)";
         $consulta .= " VALUES ";
-        $consulta .= "(NULL,'$hora', '$fecha', 'NO', '$ci')";
+        $consulta .= "(NULL,'$hora', '$fecha', 'NO', '$ci','$nombreCompleto')";
         $resultado = $conexion->createCommand($consulta)->execute();
     }
 
