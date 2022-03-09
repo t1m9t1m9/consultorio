@@ -2172,3 +2172,695 @@ REQUEST_URI=/consultorio/index.php?r=actualizarUsuarioCliente/update&id=18034438
 in C:\xampp\htdocs\consultorio\protected\models\ActualizarUsuario.php (169)
 in C:\xampp\htdocs\consultorio\protected\controllers\ActualizarUsuarioClienteController.php (101)
 in C:\xampp\htdocs\consultorio\index.php (13)
+2022/02/27 01:34:47 [error] [exception.CHttpException.403] CHttpException: Usted no se encuentra autorizado a realizar esta acción. in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('solicitudesReci...')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/consultorio/index.php?r=solicitudesRecibidasDoctor/admin
+HTTP_REFERER=http://localhost/consultorio/index.php?r=solicitudesRecibidasDoctor/create
+---
+2022/02/27 04:14:07 [error] [exception.CHttpException.400] CHttpException: Su solicitud es inválida. in C:\xampp\htdocs\yii\framework\web\CController.php:337
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('solicitudesreci...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/consultorio/index.php?r=solicitudesrecibidas/update
+HTTP_REFERER=http://localhost/consultorio/index.php
+---
+2022/02/27 04:14:48 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\xampp\htdocs\consultorio\protected\controllers\SolicitudesRecibidasController.php:157
+Stack trace:
+#0 C:\xampp\htdocs\consultorio\protected\controllers\SolicitudesRecibidasController.php(89): SolicitudesrecibidasController->loadModel('1111111111')
+#1 [internal function]: SolicitudesrecibidasController->actionUpdate('1111111111')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(SolicitudesrecibidasController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SolicitudesrecibidasController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('solicitudesreci...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/consultorio/index.php?r=solicitudesrecibidas/update&id=1111111111
+HTTP_REFERER=http://localhost/consultorio/index.php
+---
+2022/02/27 04:15:03 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\xampp\htdocs\consultorio\protected\controllers\SolicitudesRecibidasController.php:157
+Stack trace:
+#0 C:\xampp\htdocs\consultorio\protected\controllers\SolicitudesRecibidasController.php(89): SolicitudesrecibidasController->loadModel('1111111111')
+#1 [internal function]: SolicitudesrecibidasController->actionUpdate('1111111111')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(SolicitudesrecibidasController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SolicitudesrecibidasController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('solicitudesreci...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/consultorio/index.php?r=solicitudesrecibidas/update&id=1111111111
+HTTP_REFERER=http://localhost/consultorio/index.php
+---
+2022/02/27 04:15:09 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\xampp\htdocs\consultorio\protected\controllers\SolicitudesRecibidasController.php:157
+Stack trace:
+#0 C:\xampp\htdocs\consultorio\protected\controllers\SolicitudesRecibidasController.php(55): SolicitudesrecibidasController->loadModel('1111111111')
+#1 [internal function]: SolicitudesrecibidasController->actionView('1111111111')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(SolicitudesrecibidasController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SolicitudesrecibidasController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('solicitudesreci...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/consultorio/index.php?r=solicitudesrecibidas/view&id=1111111111
+HTTP_REFERER=http://localhost/consultorio/index.php
+---
+2022/02/27 04:15:48 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\xampp\htdocs\consultorio\protected\controllers\SolicitudesRecibidasController.php:157
+Stack trace:
+#0 C:\xampp\htdocs\consultorio\protected\controllers\SolicitudesRecibidasController.php(55): SolicitudesrecibidasController->loadModel('1111111111')
+#1 [internal function]: SolicitudesrecibidasController->actionView('1111111111')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(SolicitudesrecibidasController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SolicitudesrecibidasController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('solicitudesreci...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/consultorio/index.php?r=solicitudesrecibidas/view&id=1111111111
+HTTP_REFERER=http://localhost/consultorio/index.php
+---
+2022/03/04 02:08:47 [error] [exception.CHttpException.403] CHttpException: Usted no se encuentra autorizado a realizar esta acción. in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('solicitudesreci...')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/consultorio/index.php?r=solicitudesrecibidasDoctor/admin
+HTTP_REFERER=http://localhost/consultorio/index.php?r=solicitudesrecibidasDoctor/index
+---
+2022/03/04 02:08:57 [error] [exception.CHttpException.403] CHttpException: Usted no se encuentra autorizado a realizar esta acción. in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('solicitudesreci...')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/consultorio/index.php?r=solicitudesrecibidasDoctor/admin
+HTTP_REFERER=http://localhost/consultorio/index.php?r=solicitudesrecibidasDoctor/index
+---
+2022/03/04 02:09:01 [error] [exception.CHttpException.403] CHttpException: Usted no se encuentra autorizado a realizar esta acción. in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('solicitudesreci...')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/consultorio/index.php?r=solicitudesrecibidasDoctor/admin
+HTTP_REFERER=http://localhost/consultorio/index.php?r=solicitudesrecibidasDoctor/index
+---
+2022/03/04 04:27:23 [error] [php] Undefined index: archivo (C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php:2)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(872): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(785): SiteController->renderPartial()
+#2 C:\xampp\htdocs\consultorio\protected\controllers\SiteController.php(252): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSubirArchivos()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\consultorio\index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php?r=site/subirarchivos
+in C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php (2)
+in C:\xampp\htdocs\consultorio\protected\controllers\SiteController.php (252)
+in C:\xampp\htdocs\consultorio\index.php (13)
+2022/03/04 04:34:11 [error] [php] include_once(config.inc.php): failed to open stream: No such file or directory (C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php:2)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): SiteController->renderFile()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(785): SiteController->renderPartial()
+#3 C:\xampp\htdocs\consultorio\protected\controllers\SiteController.php(252): SiteController->render()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSubirArchivos()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\consultorio\index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php?r=site/subirarchivos
+in C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php (2)
+in C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php (2)
+in C:\xampp\htdocs\consultorio\protected\controllers\SiteController.php (252)
+2022/03/04 04:37:10 [error] [php] include_once(config.inc.php): failed to open stream: No such file or directory (C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php:2)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): SiteController->renderFile()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(785): SiteController->renderPartial()
+#3 C:\xampp\htdocs\consultorio\protected\controllers\SiteController.php(252): SiteController->render()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSubirArchivos()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\consultorio\index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php?r=site/subirarchivos
+in C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php (2)
+in C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php (2)
+in C:\xampp\htdocs\consultorio\protected\controllers\SiteController.php (252)
+2022/03/04 04:37:11 [error] [php] include_once(config.inc.php): failed to open stream: No such file or directory (C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php:2)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): SiteController->renderFile()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(785): SiteController->renderPartial()
+#3 C:\xampp\htdocs\consultorio\protected\controllers\SiteController.php(252): SiteController->render()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSubirArchivos()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\consultorio\index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php?r=site/subirarchivos
+in C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php (2)
+in C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php (2)
+in C:\xampp\htdocs\consultorio\protected\controllers\SiteController.php (252)
+2022/03/04 04:42:39 [error] [php] include_once(config.inc.php): failed to open stream: No such file or directory (C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php:2)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): SiteController->renderFile()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(785): SiteController->renderPartial()
+#3 C:\xampp\htdocs\consultorio\protected\controllers\SiteController.php(252): SiteController->render()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSubirArchivos()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\consultorio\index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php?r=site/subirarchivos
+in C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php (2)
+in C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php (2)
+in C:\xampp\htdocs\consultorio\protected\controllers\SiteController.php (252)
+2022/03/04 04:42:40 [error] [php] include_once(config.inc.php): failed to open stream: No such file or directory (C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php:2)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): SiteController->renderFile()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(785): SiteController->renderPartial()
+#3 C:\xampp\htdocs\consultorio\protected\controllers\SiteController.php(252): SiteController->render()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSubirArchivos()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\consultorio\index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php?r=site/subirarchivos
+in C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php (2)
+in C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php (2)
+in C:\xampp\htdocs\consultorio\protected\controllers\SiteController.php (252)
+2022/03/04 04:42:48 [error] [php] Undefined index: archivo (C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php:3)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(872): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(785): SiteController->renderPartial()
+#2 C:\xampp\htdocs\consultorio\protected\controllers\SiteController.php(252): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSubirArchivos()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\consultorio\index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php?r=site/subirarchivos
+in C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php (3)
+in C:\xampp\htdocs\consultorio\protected\controllers\SiteController.php (252)
+in C:\xampp\htdocs\consultorio\index.php (13)
+2022/03/04 05:03:02 [error] [php] move_uploaded_file(archivos/recetas/guitarra_uta.pdf): failed to open stream: No such file or directory (C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php:10)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): SiteController->renderFile()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(785): SiteController->renderPartial()
+#3 C:\xampp\htdocs\consultorio\protected\controllers\SiteController.php(252): SiteController->render()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSubirArchivos()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\consultorio\index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php?r=site/subirarchivos
+in C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php (10)
+in C:\xampp\htdocs\consultorio\protected\controllers\SiteController.php (252)
+in C:\xampp\htdocs\consultorio\index.php (13)
+2022/03/04 05:03:17 [error] [php] move_uploaded_file(archivos/recetas/guitarra_uta.pdf): failed to open stream: No such file or directory (C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php:10)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): SiteController->renderFile()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(785): SiteController->renderPartial()
+#3 C:\xampp\htdocs\consultorio\protected\controllers\SiteController.php(252): SiteController->render()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSubirArchivos()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\consultorio\index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php?r=site/subirarchivos
+in C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php (10)
+in C:\xampp\htdocs\consultorio\protected\controllers\SiteController.php (252)
+in C:\xampp\htdocs\consultorio\index.php (13)
+2022/03/04 05:03:32 [error] [php] move_uploaded_file(archivos/recetas/guitarra_uta.pdf): failed to open stream: No such file or directory (C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php:10)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): SiteController->renderFile()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(785): SiteController->renderPartial()
+#3 C:\xampp\htdocs\consultorio\protected\controllers\SiteController.php(252): SiteController->render()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSubirArchivos()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\consultorio\index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php?r=site/subirarchivos
+in C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php (10)
+in C:\xampp\htdocs\consultorio\protected\controllers\SiteController.php (252)
+in C:\xampp\htdocs\consultorio\index.php (13)
+2022/03/04 05:17:05 [error] [php] opendir(archivos): El sistema no puede encontrar el archivo especificado. (code: 2) (C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php:34)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): SiteController->renderFile()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(785): SiteController->renderPartial()
+#3 C:\xampp\htdocs\consultorio\protected\controllers\SiteController.php(252): SiteController->render()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSubirArchivos()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\consultorio\index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php?r=site/subirarchivos
+in C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php (34)
+in C:\xampp\htdocs\consultorio\protected\controllers\SiteController.php (252)
+in C:\xampp\htdocs\consultorio\index.php (13)
+2022/03/04 05:20:05 [error] [php] opendir(archivos): El sistema no puede encontrar el archivo especificado. (code: 2) (C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php:34)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): SiteController->renderFile()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(785): SiteController->renderPartial()
+#3 C:\xampp\htdocs\consultorio\protected\controllers\SiteController.php(252): SiteController->render()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSubirArchivos()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\consultorio\index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php?r=site/subirarchivos
+in C:\xampp\htdocs\consultorio\protected\views\site\subirarchivos.php (34)
+in C:\xampp\htdocs\consultorio\protected\controllers\SiteController.php (252)
+in C:\xampp\htdocs\consultorio\index.php (13)
+2022/03/05 03:26:39 [error] [exception.CHttpException.404] CHttpException: No es posible resolver la solicitud "upload_download/index" in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/index
+---
+2022/03/05 03:28:47 [error] [exception.ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' in C:\xampp\htdocs\consultorio\protected\views\layouts\main.php:150
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div class="spa...')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div class="spa...')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(215): COutputProcessor->run()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 C:\xampp\htdocs\consultorio\protected\views\layouts\column2.php(22): CBaseController->endContent()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\consultorio\protected\controllers\AgendarcitasController.php(133): CController->render('index', Array)
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): AgendarcitasController->actionIndex()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#21 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('agendarcitas/in...')
+#22 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/consultorio/index.php?r=agendarcitas/index
+HTTP_REFERER=http://localhost/consultorio/
+---
+2022/03/05 03:28:49 [error] [exception.ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' in C:\xampp\htdocs\consultorio\protected\views\layouts\main.php:150
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(215): COutputProcessor->run()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 C:\xampp\htdocs\consultorio\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\consultorio\protected\controllers\SiteController.php(32): CController->render('index')
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/consultorio/
+---
+2022/03/05 03:30:03 [error] [exception.ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')' in C:\xampp\htdocs\consultorio\protected\views\layouts\main.php:150
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#3 C:\xampp\htdocs\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(215): COutputProcessor->run()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(309): CBaseController->endWidget('CContentDecorat...')
+#6 C:\xampp\htdocs\consultorio\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\consultorio\protected\controllers\SiteController.php(32): CController->render('index')
+#11 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/consultorio/
+---
+2022/03/05 03:31:33 [error] [exception.CHttpException.404] CHttpException: No es posible resolver la solicitud "upload_download/index" in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/index
+HTTP_REFERER=http://localhost/consultorio/
+---
+2022/03/05 03:36:20 [error] [exception.CHttpException.404] CHttpException: No es posible resolver la solicitud "upload_download/index" in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/index
+HTTP_REFERER=http://localhost/consultorio/
+---
+2022/03/05 03:36:22 [error] [exception.CHttpException.404] CHttpException: No es posible resolver la solicitud "upload_download/index" in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/index
+HTTP_REFERER=http://localhost/consultorio/
+---
+2022/03/05 03:40:50 [error] [exception.CHttpException.404] CHttpException: No es posible resolver la solicitud "upload_download/index" in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/index
+HTTP_REFERER=http://localhost/consultorio/
+---
+2022/03/05 03:40:51 [error] [exception.CHttpException.404] CHttpException: No es posible resolver la solicitud "upload_download/index" in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/index
+HTTP_REFERER=http://localhost/consultorio/
+---
+2022/03/05 03:41:34 [error] [exception.CHttpException.404] CHttpException: No es posible resolver la solicitud "upload_download/index" in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/index
+HTTP_REFERER=http://localhost/consultorio/
+---
+2022/03/05 03:41:35 [error] [exception.CHttpException.404] CHttpException: No es posible resolver la solicitud "upload_download/index" in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/index
+HTTP_REFERER=http://localhost/consultorio/
+---
+2022/03/05 03:42:08 [error] [exception.CHttpException.404] CHttpException: No es posible resolver la solicitud "upload_download/indexarchivos" in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/
+---
+2022/03/05 03:43:38 [error] [exception.CHttpException.404] CHttpException: No es posible resolver la solicitud "protected/views/upload_download/indexarchivos.php" in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('protected/views...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/consultorio/index.php?r=protected/views/upload_download/indexarchivos.php
+HTTP_REFERER=http://localhost/consultorio/index.php?r=certificados/index
+---
+2022/03/05 03:44:00 [error] [exception.CHttpException.404] CHttpException: No es posible resolver la solicitud "upload_download/indexarchivos" in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php?r=certificados/index
+---
+2022/03/05 04:04:40 [error] [php] move_uploaded_file(/protected/views/upload_download/upload/20220305040440_Investigacion.pptm): failed to open stream: No such file or directory (C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php:27)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): Upload_DownloadController->renderInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): Upload_DownloadController->renderFile()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(785): Upload_DownloadController->renderPartial()
+#3 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): Upload_DownloadController->render()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): Upload_DownloadController->runAction()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): Upload_DownloadController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): Upload_DownloadController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\consultorio\index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+in C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php (27)
+in C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php (7)
+in C:\xampp\htdocs\consultorio\index.php (13)
+2022/03/05 04:05:50 [error] [php] move_uploaded_file(views/upload_download/upload/20220305040550_Investigacion.pptm): failed to open stream: No such file or directory (C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php:27)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): Upload_DownloadController->renderInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): Upload_DownloadController->renderFile()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(785): Upload_DownloadController->renderPartial()
+#3 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): Upload_DownloadController->render()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): Upload_DownloadController->runAction()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): Upload_DownloadController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): Upload_DownloadController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\consultorio\index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+in C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php (27)
+in C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php (7)
+in C:\xampp\htdocs\consultorio\index.php (13)
+2022/03/05 04:06:16 [error] [php] move_uploaded_file(/views/upload_download/upload/20220305040616_Investigacion.pptm): failed to open stream: No such file or directory (C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php:27)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): Upload_DownloadController->renderInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): Upload_DownloadController->renderFile()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(785): Upload_DownloadController->renderPartial()
+#3 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): Upload_DownloadController->render()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): Upload_DownloadController->runAction()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): Upload_DownloadController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): Upload_DownloadController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\consultorio\index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+in C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php (27)
+in C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php (7)
+in C:\xampp\htdocs\consultorio\index.php (13)
+2022/03/09 04:11:47 [error] [exception.CHttpException.404] CHttpException: El sistema no ha podido encontrar la acción "dowload" solicitada. in C:\xampp\htdocs\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('dowload')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('dowload')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/dowload
+---
+2022/03/09 04:11:55 [error] [php] Undefined index: f (C:\xampp\htdocs\consultorio\protected\views\upload_download\download.php:89)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(872): Upload_DownloadController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(785): Upload_DownloadController->renderPartial()
+#2 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(11): Upload_DownloadController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionDownload()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): Upload_DownloadController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): Upload_DownloadController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): Upload_DownloadController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\consultorio\index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php?r=upload_download/download
+in C:\xampp\htdocs\consultorio\protected\views\upload_download\download.php (89)
+in C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php (11)
+in C:\xampp\htdocs\consultorio\index.php (13)
+2022/03/09 04:12:56 [error] [php] Undefined index: f (C:\xampp\htdocs\consultorio\protected\views\upload_download\download.php:89)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(872): Upload_DownloadController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(785): Upload_DownloadController->renderPartial()
+#2 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(11): Upload_DownloadController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionDownload()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): Upload_DownloadController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): Upload_DownloadController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): Upload_DownloadController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\consultorio\index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php?r=upload_download/download
+in C:\xampp\htdocs\consultorio\protected\views\upload_download\download.php (89)
+in C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php (11)
+in C:\xampp\htdocs\consultorio\index.php (13)
+2022/03/09 04:27:27 [error] [exception.Error] Error: Call to a member function fetch() on bool in C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php:78
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('indexarchivos', NULL, true)
+#4 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): CController->render('indexarchivos')
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos')
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php?r=solicitudesrecibidasDoctor/index
+---
+2022/03/09 04:49:33 [error] [exception.CHttpException.404] CHttpException: El sistema no ha podido encontrar la acción "indexarchivos.php" solicitada. in C:\xampp\htdocs\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('indexarchivos.p...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos.p...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos.php
+HTTP_REFERER=http://localhost/consultorio/index.php?r=upload_download/indexarchivos
+---

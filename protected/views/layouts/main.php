@@ -59,6 +59,7 @@ foreach($idusu as $idusuced)
                             'items' => array(
                                 array('label' => 'Agendar Cita', 'url' => array('/site/agendarcita')),
                                 array('label' => 'Calendario', 'url' => array('/site/calendario')),
+                                array('label' => 'Ingresar Solicitud', 'url' => array('/solicitudesrecibidas/create')),
                                 array('label' => 'Recetas'),
                                 array('label' => 'Pedidos',
                                     'items' => array(
@@ -88,6 +89,7 @@ foreach($idusu as $idusuced)
                         array('label' => 'Menu', 'visible' => !Yii::app()->user->isGuest,
                             'items' => array(
                                 array('label' => 'Agendar Cita', 'url' => array('/site/agendarcita')),
+                                array('label' => 'Ingresar Solicitud', 'url' => array('/solicitudesrecibidas/index')),
                                 array('label' => 'Recetas'),
                                 array('label' => 'Pedidos',
                                     'items' => array(
@@ -116,8 +118,9 @@ foreach($idusu as $idusuced)
 
                     array('label' => 'Solicitudes', 'visible' => !Yii::app()->user->isGuest,
                         'items' => array(
-                            array('label' => 'Revisar Solicitudes Recibidas', 'url' => array('/solicitudesrecibidas/index')),
-                            array('label' => 'Subir Recetas', 'url' => array('/recetas/index')),
+                            array('label' => 'Revisar Solicitudes Recibidas', 'url' => array('/solicitudesrecibidasDoctor/index')),
+//                            array('label' => 'Subir Recetas', 'url' => array('/recetas/index')),
+                            array('label' => 'Subir Recetas', 'url' => array('/upload_download/indexarchivos')),
                             array('label' => 'Subir Pedidos',
                                 'items' => array(
                                     array('label' => 'Imagenes', 'url' => array('/imagenes/index')),

@@ -16,7 +16,7 @@ class SiteController extends Controller
 				'backColor'=>0xFFFFFF,
 			),
 			// page action renders "static" pages stored under 'protected/views/site/pages'
-			// They can be accessed via: index.php?r=site/page&view=FileName
+			// They can be accessed via: indexarchivos.php?r=site/page&view=FileName
 			'page'=>array(
 				'class'=>'CViewAction',
 			),

@@ -3,16 +3,16 @@
 /* @var $model Solicitudesrecibidas */
 
 $this->breadcrumbs=array(
-	'Solicitudesrecibidases'=>array('index'),
-	'Create',
+//	'Solicitudesrecibidases'=>array('index'),
+	'Crear Solicitud',
 );
 
-$this->menu=array(
-	array('label'=>'List Solicitudesrecibidas', 'url'=>array('index')),
-	array('label'=>'Manage Solicitudesrecibidas', 'url'=>array('admin')),
-);
+//$this->menu=array(
+//	array('label'=>'List Solicitudesrecibidas', 'url'=>array('index')),
+//	array('label'=>'Manage Solicitudesrecibidas', 'url'=>array('admin')),
+//);
 ?>
 
-<h1>Create Solicitudesrecibidas</h1>
+<h1>Crear Solicitud</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

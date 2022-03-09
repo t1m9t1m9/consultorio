@@ -154,7 +154,7 @@ Controller '{$controllerID}' has been created in the following file:
     $controllerFile
 
 You may access it in the browser using the following URL:
-    http://hostname/path/to/index.php?r={$moduleID}{$controllerID}
+    http://hostname/path/to/indexarchivos.php?r={$moduleID}{$controllerID}
 
 EOD;
 	}

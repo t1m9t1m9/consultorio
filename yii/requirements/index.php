@@ -260,7 +260,7 @@ function getPreferredLanguage()
 			$lang=strtolower(str_replace('-','_',$language));
 			if (preg_match("/^en\_?/", $lang))
 				return false;
-			if (!is_file($viewFile=dirname(__FILE__)."/views/$lang/index.php"))
+			if (!is_file($viewFile=dirname(__FILE__)."/views/$lang/indexarchivos.php"))
 				$lang=false;
 			else
 				break;
@@ -298,9 +298,9 @@ foreach($requirements as $i=>$requirement)
 }
 
 $lang=getPreferredLanguage();
-$viewFile=dirname(__FILE__)."/views/$lang/index.php";
+$viewFile=dirname(__FILE__)."/views/$lang/indexarchivos.php";
 if(!is_file($viewFile))
-	$viewFile=dirname(__FILE__).'/views/index.php';
+	$viewFile=dirname(__FILE__).'/views/indexarchivos.php';
 
 renderFile($viewFile,array(
 	'requirements'=>$requirements,
