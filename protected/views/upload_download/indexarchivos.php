@@ -28,14 +28,19 @@ if(isset($_POST['submit'])!=""){
  $move =  move_uploaded_file($temp,"protected/views/upload_download/upload/".$fname);
  if($move){
  	$query=$conn->query("insert into upload(ci,name,fname)values('$cedu','$name','$fname')");
-	if($query){
+//	if($query){
 //	header("location:protected/views/upload_download/indexarchivos.php");
-	}
-	else{
-	die(mysql_error());
-	}
+//	}
+//	else{
+//	die(mysql_error());
+//	}
  }
 }
+echo $pathDescarga = "/protected/views/upload_download/upload/";
+echo $file = "20220313045427_mpdf.pdf";
+
+//echo Yii::app()->request->sendFile(Yii::getPathOfAlias('webroot').'protected/views/upload_download/upload/20220313045427_mpdf.pdf','click me');
+//echo Yii::app()->getRequest()->sendFile('protected/views/upload_download/upload/20220313045427_mpdf.pdf');
 ?>
 <html>
 <head>
@@ -52,6 +57,7 @@ if(isset($_POST['submit'])!=""){
 <style>
 </style>
 <body>
+<p><a href="protected/views/upload_download/descargar.php?path=/upload/20220313045427_mpdf.pdf">Download TEXT file</a></p>
 	    <div class="row-fluid">
 	        <div class="span12">
 	            <div class="container">
@@ -61,7 +67,7 @@ if(isset($_POST['submit'])!=""){
 		<br />
 			<form enctype="multipart/form-data" action="" name="form" method="post">
 				Seleccione Archivo:
-					<input type="file" name="file" id="file" /></td>
+					<input type="file" name="file" id="file" /></td><br>
 					<input type="submit" name="submit" id="submit" value="Subir" />
 			</form>
 		<br />
@@ -86,7 +92,8 @@ if(isset($_POST['submit'])!=""){
 					&nbsp;<?php echo $name ;?>
 				</td>
 				<td>
-					<button class="alert-success"><a href="protected/views/upload_download/download.php?filename=<?php echo $name;?>&f=<?php echo $row['fname'] ?>">Descargar</a></button>
+                    <button class="alert-success"><a href="protected/views/upload_download/descargar.php?filename=<?php echo $name;?>&f=<?php echo $row['fname'] ?>">Descargar</a></button>
+<!--                    <button class="alert-success"><a href="protected/views/upload_download/descargar.php?filename=--><?php //echo $name;?><!--&f=--><?php //echo $row['fname'] ?><!--">Descargar</a></button>-->
 				</td>
 			</tr>
 			<?php }?>

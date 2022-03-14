@@ -2864,3 +2864,687 @@ Stack trace:
 REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos.php
 HTTP_REFERER=http://localhost/consultorio/index.php?r=upload_download/indexarchivos
 ---
+2022/03/13 04:57:18 [error] [exception.Error] Error: Call to a member function rowCount() on bool in C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php:11
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('indexarchivos', NULL, true)
+#4 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): CController->render('indexarchivos')
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos')
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php?r=upload_download/indexarchivos
+---
+2022/03/13 05:12:52 [error] [exception.CHttpException.404] CHttpException: El sistema no ha podido encontrar la acción "download.php?filename=CV MARCELO ESPINOSA.pdf" solicitada. in C:\xampp\htdocs\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('download.php?fi...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('download.php?fi...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/download.php?filename=CV%20MARCELO%20ESPINOSA.pdf&f=20220313045749_CV%20MARCELO%20ESPINOSA.pdf
+HTTP_REFERER=http://localhost/consultorio/index.php?r=upload_download/indexarchivos
+---
+2022/03/13 05:15:16 [error] [exception.CHttpException.404] CHttpException: El sistema no ha podido encontrar la acción "download.php?filename=CV MARCELO ESPINOSA.pdf" solicitada. in C:\xampp\htdocs\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('download.php?fi...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('download.php?fi...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/download.php?filename=CV%20MARCELO%20ESPINOSA.pdf&f=20220313045749_CV%20MARCELO%20ESPINOSA.pdf
+HTTP_REFERER=http://localhost/consultorio/index.php?r=upload_download/indexarchivos
+---
+2022/03/13 05:57:26 [error] [exception.CHttpException.404] CHttpException: El sistema no ha podido encontrar la acción "protected" solicitada. in C:\xampp\htdocs\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('protected')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('protected')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/consultorio/index.php/upload_download/protected/views/upload_download/descargar.php?filename=mpdf.pdf&f=20220313054046_mpdf.pdf
+HTTP_REFERER=http://localhost/consultorio/index.php/upload_download/indexarchivos
+---
+2022/03/13 05:57:47 [error] [exception.CHttpException.404] CHttpException: El sistema no ha podido encontrar la acción "protected" solicitada. in C:\xampp\htdocs\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('protected')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('protected')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/consultorio/index.php/upload_download/protected/views/upload_download/descargar.php?filename=Espinosa%20Carvajal%20Marcelo%20Alejandro%201803087558.pdf&f=20220313055745_Espinosa%20Carvajal%20Marcelo%20Alejandro%201803087558.pdf
+HTTP_REFERER=http://localhost/consultorio/index.php/upload_download/indexarchivos
+---
+2022/03/13 05:59:47 [error] [exception.CHttpException.404] CHttpException: El sistema no ha podido encontrar la acción "views" solicitada. in C:\xampp\htdocs\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('views')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('views')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/consultorio/index.php/upload_download/views/upload_download/descargar.php?filename=Espinosa%20Carvajal%20Marcelo%20Alejandro%201803087558.pdf&f=20220313055745_Espinosa%20Carvajal%20Marcelo%20Alejandro%201803087558.pdf
+HTTP_REFERER=http://localhost/consultorio/index.php/upload_download/indexarchivos
+---
+2022/03/13 06:00:00 [error] [exception.CHttpException.404] CHttpException: El sistema no ha podido encontrar la acción "upload_download" solicitada. in C:\xampp\htdocs\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('upload_download')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('upload_download')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/consultorio/index.php/upload_download/upload_download/descargar.php?filename=Espinosa%20Carvajal%20Marcelo%20Alejandro%201803087558.pdf&f=20220313055745_Espinosa%20Carvajal%20Marcelo%20Alejandro%201803087558.pdf
+HTTP_REFERER=http://localhost/consultorio/index.php/upload_download/indexarchivos
+---
+2022/03/13 06:00:10 [error] [exception.CHttpException.404] CHttpException: El sistema no ha podido encontrar la acción "descargar.php" solicitada. in C:\xampp\htdocs\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('descargar.php')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('descargar.php')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/consultorio/index.php/upload_download/descargar.php?filename=Espinosa%20Carvajal%20Marcelo%20Alejandro%201803087558.pdf&f=20220313055745_Espinosa%20Carvajal%20Marcelo%20Alejandro%201803087558.pdf
+HTTP_REFERER=http://localhost/consultorio/index.php/upload_download/indexarchivos
+---
+2022/03/13 06:32:14 [error] [exception.Error] Error: Access to undeclared static property: Yii::$app in C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php:40
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('indexarchivos', NULL, true)
+#4 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): CController->render('indexarchivos')
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos')
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php
+---
+2022/03/13 06:32:53 [error] [exception.CException] CException: La propiedad "CWebApplication"."response" no se encuentra definida. in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\base\CModule.php(105): CComponent->__get('response')
+#1 C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php(40): CModule->__get('response')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('indexarchivos', NULL, true)
+#6 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): CController->render('indexarchivos')
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php
+---
+2022/03/13 06:32:59 [error] [exception.CException] CException: La propiedad "CWebApplication"."response" no se encuentra definida. in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\base\CModule.php(105): CComponent->__get('response')
+#1 C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php(40): CModule->__get('response')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('indexarchivos', NULL, true)
+#6 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): CController->render('indexarchivos')
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php?r=upload_download/indexarchivos
+---
+2022/03/13 06:33:25 [error] [exception.CException] CException: La propiedad "CWebApplication"."response" no se encuentra definida. in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\base\CModule.php(105): CComponent->__get('response')
+#1 C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php(40): CModule->__get('response')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('indexarchivos', NULL, true)
+#6 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): CController->render('indexarchivos')
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php?r=upload_download/indexarchivos
+---
+2022/03/13 06:33:26 [error] [exception.CException] CException: La propiedad "CWebApplication"."response" no se encuentra definida. in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\base\CModule.php(105): CComponent->__get('response')
+#1 C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php(40): CModule->__get('response')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('indexarchivos', NULL, true)
+#6 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): CController->render('indexarchivos')
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php?r=upload_download/indexarchivos
+---
+2022/03/13 06:33:58 [error] [exception.CException] CException: CWebApplication y sus behaviors no tienen un método o closure llamado "sendFile". in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php(40): CComponent->__call('sendFile', Array)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('indexarchivos', NULL, true)
+#5 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): CController->render('indexarchivos')
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php?r=upload_download/indexarchivos
+---
+2022/03/13 06:33:58 [error] [exception.CException] CException: CWebApplication y sus behaviors no tienen un método o closure llamado "sendFile". in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php(40): CComponent->__call('sendFile', Array)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('indexarchivos', NULL, true)
+#5 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): CController->render('indexarchivos')
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php?r=upload_download/indexarchivos
+---
+2022/03/13 06:34:05 [error] [exception.CException] CException: CWebApplication y sus behaviors no tienen un método o closure llamado "sendFile". in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php(40): CComponent->__call('sendFile', Array)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('indexarchivos', NULL, true)
+#5 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): CController->render('indexarchivos')
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php?r=upload_download/indexarchivos
+---
+2022/03/13 06:35:52 [error] [exception.Error] Error: Access to undeclared static property: Yii::$app in C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php:40
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('indexarchivos', NULL, true)
+#4 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): CController->render('indexarchivos')
+#5 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos')
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php?r=upload_download/indexarchivos
+---
+2022/03/13 06:36:04 [error] [exception.CException] CException: La propiedad "CWebApplication"."response" no se encuentra definida. in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\base\CModule.php(105): CComponent->__get('response')
+#1 C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php(40): CModule->__get('response')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('indexarchivos', NULL, true)
+#6 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): CController->render('indexarchivos')
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php?r=upload_download/indexarchivos
+---
+2022/03/13 06:38:49 [error] [exception.ArgumentCountError] ArgumentCountError: Too few arguments to function CHttpRequest::sendFile(), 1 passed in C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php on line 41 and at least 2 expected in C:\xampp\htdocs\yii\framework\web\CHttpRequest.php:1115
+Stack trace:
+#0 C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php(41): CHttpRequest->sendFile('protected/views...')
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('indexarchivos', NULL, true)
+#5 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): CController->render('indexarchivos')
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php?r=upload_download/indexarchivos
+---
+2022/03/13 06:39:10 [error] [exception.ArgumentCountError] ArgumentCountError: Too few arguments to function CHttpRequest::sendFile(), 1 passed in C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php on line 41 and at least 2 expected in C:\xampp\htdocs\yii\framework\web\CHttpRequest.php:1115
+Stack trace:
+#0 C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php(41): CHttpRequest->sendFile('protected/views...')
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('indexarchivos', NULL, true)
+#5 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): CController->render('indexarchivos')
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php?r=upload_download/indexarchivos
+---
+2022/03/13 06:39:11 [error] [exception.ArgumentCountError] ArgumentCountError: Too few arguments to function CHttpRequest::sendFile(), 1 passed in C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php on line 41 and at least 2 expected in C:\xampp\htdocs\yii\framework\web\CHttpRequest.php:1115
+Stack trace:
+#0 C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php(41): CHttpRequest->sendFile('protected/views...')
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('indexarchivos', NULL, true)
+#5 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): CController->render('indexarchivos')
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php?r=upload_download/indexarchivos
+---
+2022/03/13 06:39:16 [error] [exception.ArgumentCountError] ArgumentCountError: Too few arguments to function CHttpRequest::sendFile(), 1 passed in C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php on line 41 and at least 2 expected in C:\xampp\htdocs\yii\framework\web\CHttpRequest.php:1115
+Stack trace:
+#0 C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php(41): CHttpRequest->sendFile('protected/views...')
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('indexarchivos', NULL, true)
+#5 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): CController->render('indexarchivos')
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php?r=upload_download/indexarchivos
+---
+2022/03/13 06:39:17 [error] [exception.ArgumentCountError] ArgumentCountError: Too few arguments to function CHttpRequest::sendFile(), 1 passed in C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php on line 41 and at least 2 expected in C:\xampp\htdocs\yii\framework\web\CHttpRequest.php:1115
+Stack trace:
+#0 C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php(41): CHttpRequest->sendFile('protected/views...')
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('indexarchivos', NULL, true)
+#5 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): CController->render('indexarchivos')
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php?r=upload_download/indexarchivos
+---
+2022/03/13 06:39:24 [error] [exception.ArgumentCountError] ArgumentCountError: Too few arguments to function CHttpRequest::sendFile(), 1 passed in C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php on line 41 and at least 2 expected in C:\xampp\htdocs\yii\framework\web\CHttpRequest.php:1115
+Stack trace:
+#0 C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php(41): CHttpRequest->sendFile('protected/views...')
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('indexarchivos', NULL, true)
+#5 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): CController->render('indexarchivos')
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php?r=upload_download/indexarchivos
+---
+2022/03/13 06:40:05 [error] [exception.ArgumentCountError] ArgumentCountError: Too few arguments to function CHttpRequest::sendFile(), 1 passed in C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php on line 41 and at least 2 expected in C:\xampp\htdocs\yii\framework\web\CHttpRequest.php:1115
+Stack trace:
+#0 C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php(41): CHttpRequest->sendFile('protected/views...')
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('indexarchivos', NULL, true)
+#5 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): CController->render('indexarchivos')
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php?r=upload_download/indexarchivos
+---
+2022/03/13 06:40:31 [error] [exception.ArgumentCountError] ArgumentCountError: Too few arguments to function CHttpRequest::sendFile(), 1 passed in C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php on line 41 and at least 2 expected in C:\xampp\htdocs\yii\framework\web\CHttpRequest.php:1115
+Stack trace:
+#0 C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php(41): CHttpRequest->sendFile('protected/views...')
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('indexarchivos', NULL, true)
+#5 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): CController->render('indexarchivos')
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php?r=upload_download/indexarchivos
+---
+2022/03/13 06:40:32 [error] [exception.ArgumentCountError] ArgumentCountError: Too few arguments to function CHttpRequest::sendFile(), 1 passed in C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php on line 41 and at least 2 expected in C:\xampp\htdocs\yii\framework\web\CHttpRequest.php:1115
+Stack trace:
+#0 C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php(41): CHttpRequest->sendFile('protected/views...')
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('indexarchivos', NULL, true)
+#5 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): CController->render('indexarchivos')
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php?r=upload_download/indexarchivos
+---
+2022/03/13 06:40:37 [error] [exception.ArgumentCountError] ArgumentCountError: Too few arguments to function CHttpRequest::sendFile(), 1 passed in C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php on line 41 and at least 2 expected in C:\xampp\htdocs\yii\framework\web\CHttpRequest.php:1115
+Stack trace:
+#0 C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php(41): CHttpRequest->sendFile('protected/views...')
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('indexarchivos', NULL, true)
+#5 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): CController->render('indexarchivos')
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php?r=solicitudesrecibidasDoctor/index
+---
+2022/03/13 06:40:51 [error] [exception.ArgumentCountError] ArgumentCountError: Too few arguments to function CHttpRequest::sendFile(), 1 passed in C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php on line 41 and at least 2 expected in C:\xampp\htdocs\yii\framework\web\CHttpRequest.php:1115
+Stack trace:
+#0 C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php(41): CHttpRequest->sendFile('protected/views...')
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('indexarchivos', NULL, true)
+#5 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): CController->render('indexarchivos')
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php?r=solicitudesrecibidasDoctor/index
+---
+2022/03/13 06:40:51 [error] [exception.ArgumentCountError] ArgumentCountError: Too few arguments to function CHttpRequest::sendFile(), 1 passed in C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php on line 41 and at least 2 expected in C:\xampp\htdocs\yii\framework\web\CHttpRequest.php:1115
+Stack trace:
+#0 C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php(41): CHttpRequest->sendFile('protected/views...')
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('indexarchivos', NULL, true)
+#5 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): CController->render('indexarchivos')
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php?r=solicitudesrecibidasDoctor/index
+---
+2022/03/13 06:41:32 [error] [exception.ArgumentCountError] ArgumentCountError: Too few arguments to function CHttpRequest::sendFile(), 1 passed in C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php on line 88 and at least 2 expected in C:\xampp\htdocs\yii\framework\web\CHttpRequest.php:1115
+Stack trace:
+#0 C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php(88): CHttpRequest->sendFile('protected/views...')
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('indexarchivos', NULL, true)
+#5 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): CController->render('indexarchivos')
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php?r=solicitudesrecibidasDoctor/index
+---
+2022/03/13 06:41:33 [error] [exception.ArgumentCountError] ArgumentCountError: Too few arguments to function CHttpRequest::sendFile(), 1 passed in C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php on line 88 and at least 2 expected in C:\xampp\htdocs\yii\framework\web\CHttpRequest.php:1115
+Stack trace:
+#0 C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php(88): CHttpRequest->sendFile('protected/views...')
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('indexarchivos', NULL, true)
+#5 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): CController->render('indexarchivos')
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php?r=solicitudesrecibidasDoctor/index
+---
+2022/03/13 06:50:07 [error] [exception.CHttpException.404] CHttpException: El sistema no ha podido encontrar la acción "upload" solicitada. in C:\xampp\htdocs\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('upload')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('upload')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/upload/20220313045427_mpdf.pdf
+HTTP_REFERER=http://localhost/consultorio/index.php?r=upload_download/indexarchivos
+---
+2022/03/13 06:50:36 [error] [exception.CHttpException.404] CHttpException: El sistema no ha podido encontrar la acción "upload" solicitada. in C:\xampp\htdocs\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('upload')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('upload')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/upload/20220313045427_mpdf.pdf
+HTTP_REFERER=http://localhost/consultorio/index.php?r=upload_download/indexarchivos
+---
+2022/03/13 06:50:47 [error] [exception.CHttpException.404] CHttpException: El sistema no ha podido encontrar la acción "upload" solicitada. in C:\xampp\htdocs\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('upload')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('upload')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/upload/20220313045427_mpdf.pdf
+HTTP_REFERER=http://localhost/consultorio/index.php?r=upload_download/indexarchivos
+---
+2022/03/13 06:51:37 [error] [exception.CHttpException.404] CHttpException: El sistema no ha podido encontrar la acción "upload" solicitada. in C:\xampp\htdocs\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('upload')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('upload')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/upload/20220313045427_mpdf.pdf
+HTTP_REFERER=http://localhost/consultorio/index.php?r=upload_download/indexarchivos
+---
+2022/03/13 06:52:02 [error] [exception.CHttpException.404] CHttpException: El sistema no ha podido encontrar la acción "upload" solicitada. in C:\xampp\htdocs\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('upload')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('upload')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/upload/20220313045427_mpdf.pdf
+HTTP_REFERER=http://localhost/consultorio/index.php?r=upload_download/indexarchivos
+---
+2022/03/13 06:58:36 [error] [php] file_get_contents(protected/views/upload_download/upload/): failed to open stream: No such file or directory (C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php:42)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): Upload_DownloadController->renderInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): Upload_DownloadController->renderFile()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(785): Upload_DownloadController->renderPartial()
+#3 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): Upload_DownloadController->render()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): Upload_DownloadController->runAction()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): Upload_DownloadController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): Upload_DownloadController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\consultorio\index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+2022/03/13 06:58:54 [error] [php] file_get_contents(/protected/views/upload_download/upload/): failed to open stream: No such file or directory (C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php:42)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): Upload_DownloadController->renderInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(872): Upload_DownloadController->renderFile()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(785): Upload_DownloadController->renderPartial()
+#3 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): Upload_DownloadController->render()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): Upload_DownloadController->runAction()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): Upload_DownloadController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): Upload_DownloadController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\consultorio\index.php(13): CWebApplication->run()
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+2022/03/13 07:30:26 [error] [exception.ArgumentCountError] ArgumentCountError: Too few arguments to function CHttpRequest::sendFile(), 1 passed in C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php on line 43 and at least 2 expected in C:\xampp\htdocs\yii\framework\web\CHttpRequest.php:1115
+Stack trace:
+#0 C:\xampp\htdocs\consultorio\protected\views\upload_download\indexarchivos.php(43): CHttpRequest->sendFile('protected/views...')
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(785): CController->renderPartial('indexarchivos', NULL, true)
+#5 C:\xampp\htdocs\consultorio\protected\controllers\Upload_DownloadController.php(7): CController->render('indexarchivos')
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): Upload_DownloadController->actionIndexArchivos()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('indexarchivos')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('upload_download...')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\consultorio\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/consultorio/index.php?r=upload_download/indexarchivos
+HTTP_REFERER=http://localhost/consultorio/index.php?r=solicitudesrecibidasDoctor/index
+---

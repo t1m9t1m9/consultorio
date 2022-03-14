@@ -9,6 +9,6 @@ class Upload_DownloadController extends Controller
 
     public function actionDownload()
     {
-        $this->render('download');
+        $this->render('descargar');
     }
 }
