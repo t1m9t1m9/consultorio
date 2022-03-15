@@ -7,14 +7,17 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Solicitudesrecibidas', 'url'=>array('create')),
-	array('label'=>'Manage Solicitudesrecibidas', 'url'=>array('admin')),
+	array('label'=>'Crear Solicitud', 'url'=>array('create')),
+//	array('label'=>'Manage Solicitudesrecibidas', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Solicitudesrecibidases</h1>
+<h1>Solicitudes Creadas</h1>
 
-<?php $this->widget('zii.widgets.CListView', array(
+<?php
+$dataProvider->pagination->pageSize = 5;
+$this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
 )); ?>
+

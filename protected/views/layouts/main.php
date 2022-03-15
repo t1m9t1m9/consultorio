@@ -60,14 +60,14 @@ foreach($idusu as $idusuced)
                                 array('label' => 'Agendar Cita', 'url' => array('/site/agendarcita')),
                                 array('label' => 'Calendario', 'url' => array('/site/calendario')),
                                 array('label' => 'Ingresar Solicitud', 'url' => array('/solicitudesrecibidas/create')),
-                                array('label' => 'Recetas'),
-                                array('label' => 'Pedidos',
-                                    'items' => array(
-                                            array('label' => 'Imagenes'),
-                                        array('label' => 'Laboratorio'),
-                                    )
-                                    ),
-                                array('label' => 'Certificados'),
+                                array('label' => 'Descargar Solicitudes', 'url' => array('/upload_download/indexarchivosUsuario')),
+//                                array('label' => 'Pedidos',
+//                                    'items' => array(
+//                                            array('label' => 'Imagenes'),
+//                                        array('label' => 'Laboratorio'),
+//                                    )
+//                                    ),
+//                                array('label' => 'Certificados'),
                             ),
                         ),
                         array('label' => 'Panel de Control', 'visible' => !Yii::app()->user->isGuest,
@@ -120,14 +120,14 @@ foreach($idusu as $idusuced)
                         'items' => array(
                             array('label' => 'Revisar Solicitudes Recibidas', 'url' => array('/solicitudesrecibidasDoctor/index')),
 //                            array('label' => 'Subir Recetas', 'url' => array('/recetas/index')),
-                            array('label' => 'Subir Recetas', 'url' => array('/upload_download/indexarchivos')),
-                            array('label' => 'Subir Pedidos',
-                                'items' => array(
-                                    array('label' => 'Imagenes', 'url' => array('/imagenes/index')),
-                                    array('label' => 'Laboratorio', 'url' => array('/laboratorio/index')),
-                                )
-                            ),
-                            array('label' => 'Subir Certificados', 'url' => array('/certificados/index')),
+                            array('label' => 'Cargar Documentos', 'url' => array('/upload_download/indexarchivos')),
+//                            array('label' => 'Subir Pedidos',
+//                                'items' => array(
+//                                    array('label' => 'Imagenes', 'url' => array('/imagenes/index')),
+//                                    array('label' => 'Laboratorio', 'url' => array('/laboratorio/index')),
+//                                )
+//                            ),
+//                            array('label' => 'Subir Certificados', 'url' => array('/certificados/index')),
                         ),
                     ),
 

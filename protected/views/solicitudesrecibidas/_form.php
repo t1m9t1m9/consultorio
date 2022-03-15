@@ -50,8 +50,8 @@ foreach ($datos as $nombres)
 	<div class="row">
 		<?php echo $form->labelEx($model,'respuesta'); ?>
         <?php echo $form->dropDownList($model,'respuesta', array(
-            "1"=>"SI","0"=>"NO"
-        ),array('selected' => 'Choose')); ?>
+            "0"=>"NO","1"=>"SI"
+        ),array('selected' => 'Choose', 'readonly' => true)); ?>
 		<?php echo $form->error($model,'respuesta', array("class" => "text-error")); ?>
 	</div>
 

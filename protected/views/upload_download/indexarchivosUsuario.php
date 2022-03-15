@@ -63,25 +63,25 @@ if(isset($_POST['submit'])!=""){
 	        <div class="span12">
 	            <div class="container">
 		<br />
-		<h1 align="center"><p>Cargar Documentos</p></h1>
+		<h1 align="center"><p>Descargar Documentos</p></h1>
 		<br />
 		<br />
-                    <?php
-                    $mysqli = new mysqli('localhost', 'root', '', 'consultorio');
-                    ?>
-                    <div>
-                        <p>Seleccione un usuario:
-                            <select class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-                                <option value="0">Seleccione un Usuario</option>
-                                <?php
-                                $query = $mysqli -> query ("SELECT * FROM usuario");
-                                while ($valores = mysqli_fetch_array($query)) {
-                                    echo '<option value="'.$valores['ci'].'">'.$valores['nombreCompleto'].'</option>';
-                                }
-                                ?>
-                            </select>
-                        </p>
-                    </div>
+<!--                    --><?php
+//                    $mysqli = new mysqli('localhost', 'root', '', 'consultorio');
+//                    ?>
+<!--                    <div>-->
+<!--                        <p>Seleccione un usuario:-->
+<!--                            <select class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">-->
+<!--                                <option value="0">Seleccione un Usuario</option>-->
+<!--                                --><?php
+//                                $query = $mysqli -> query ("SELECT * FROM usuario");
+//                                while ($valores = mysqli_fetch_array($query)) {
+//                                    echo '<option value="'.$valores['ci'].'">'.$valores['nombreCompleto'].'</option>';
+//                                }
+//                                ?>
+<!--                            </select>-->
+<!--                        </p>-->
+<!--                    </div>-->
 
                     Tipo de Solicitud:
                     <select class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
@@ -93,13 +93,13 @@ if(isset($_POST['submit'])!=""){
                     </select>
                     <br />
                     <br />
-			<form enctype="multipart/form-data" action="" name="form" method="post">
-				Seleccione Archivo:
-					<input type="file" name="file" id="file" class="btn btn-primary"/></td><br><br>
-					<input type="submit" class="btn btn-primary" name="submit" id="submit" value="Cargar Archivo" />
-			</form>
-		<br />
-		<br />
+<!--			<form enctype="multipart/form-data" action="" name="form" method="post">-->
+<!--				Seleccione Archivo:-->
+<!--					<input type="file" name="file" id="file" class="btn btn-primary"/></td><br><br>-->
+<!--					<input type="submit" class="btn btn-primary" name="submit" id="submit" value="Cargar Archivo" />-->
+<!--			</form>-->
+<!--		<br />-->
+<!--		<br />-->
 		<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
 			<thead>
 				<tr>

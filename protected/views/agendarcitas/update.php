@@ -5,7 +5,7 @@
 $this->breadcrumbs=array(
 	'Agendas'=>array('index'),
 	$model->id=>array('view','id'=>$model->id),
-	'Actulizar',
+	'Actualizar',
 );
 
 $this->menu=array(
@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update Agenda <?php echo $model->id; ?></h1>
+<h1>Actualizar Cita Medica</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

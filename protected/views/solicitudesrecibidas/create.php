@@ -7,10 +7,10 @@ $this->breadcrumbs=array(
 	'Crear Solicitud',
 );
 
-//$this->menu=array(
-//	array('label'=>'List Solicitudesrecibidas', 'url'=>array('index')),
+$this->menu=array(
+	array('label'=>'Lista de Solicitudes', 'url'=>array('index')),
 //	array('label'=>'Manage Solicitudesrecibidas', 'url'=>array('admin')),
-//);
+);
 ?>
 
 <h1>Crear Solicitud</h1>

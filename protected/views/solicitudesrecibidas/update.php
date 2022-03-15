@@ -9,10 +9,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Solicitudesrecibidas', 'url'=>array('index')),
-	array('label'=>'Create Solicitudesrecibidas', 'url'=>array('create')),
-	array('label'=>'View Solicitudesrecibidas', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Solicitudesrecibidas', 'url'=>array('admin')),
+    array('label'=>'Lista de Solicitude', 'url'=>array('index')),
+	array('label'=>'Crear Solicitud', 'url'=>array('create')),
+	array('label'=>'Ver Solicitud', 'url'=>array('view', 'id'=>$model->id)),
+//	array('label'=>'Manage Solicitudesrecibidas', 'url'=>array('admin')),
 );
 ?>
 

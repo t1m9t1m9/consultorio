@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Solicitudesrecibidas', 'url'=>array('index')),
-	array('label'=>'Create Solicitudesrecibidas', 'url'=>array('create')),
-	array('label'=>'Update Solicitudesrecibidas', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Solicitudesrecibidas', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Solicitudesrecibidas', 'url'=>array('admin')),
+	array('label'=>'Lista de Solicitudes', 'url'=>array('index')),
+//	array('label'=>'Create Solicitudesrecibidas', 'url'=>array('create')),
+	array('label'=>'Actualizar Solicitud', 'url'=>array('update', 'id'=>$model->id)),
+//	array('label'=>'Delete Solicitudesrecibidas', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+//	array('label'=>'Manage Solicitudesrecibidas', 'url'=>array('admin')),
 );
 ?>
 

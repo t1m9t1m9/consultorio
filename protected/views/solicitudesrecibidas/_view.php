@@ -1,12 +1,16 @@
 <?php
 /* @var $this SolicitudesrecibidasController */
 /* @var $data Solicitudesrecibidas */
+$cedu = Yii::app()->user->name;
 ?>
 
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
+	<b><?php
+        if($cedu == $data->ciUsuario)
+        {
+        echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
+    <?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('tipoSolicitud')); ?>:</b>
@@ -18,7 +22,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('respuesta')); ?>:</b>
-	<?php echo CHtml::encode($data->respuesta); ?>
+	<?php CHtml::encode($data->respuesta); if($data->respuesta == 0) echo "NO"; else echo "SI"; ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('observaciones')); ?>:</b>
@@ -30,8 +34,8 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('apellido')); ?>:</b>
-	<?php echo CHtml::encode($data->apellido); ?>
+	<?php echo CHtml::encode($data->apellido);?>
 	<br />
-
+<br><?php } ?>
 
 </div>

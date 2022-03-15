@@ -7,6 +7,11 @@ class Upload_DownloadController extends Controller
         $this->render('indexarchivos');
     }
 
+    public function actionIndexArchivosUsuario()
+    {
+        $this->render('indexarchivosUsuario');
+    }
+
     public function actionDownload()
     {
         $this->render('descargar');
