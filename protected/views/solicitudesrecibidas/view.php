@@ -3,8 +3,8 @@
 /* @var $model Solicitudesrecibidas */
 
 $this->breadcrumbs=array(
-	'Solicitudesrecibidases'=>array('index'),
-	$model->id,
+	'Solicitudes'=>array('index'),
+	$model->nombre ." ".$model->apellido,
 );
 
 $this->menu=array(
@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Solicitudesrecibidas #<?php echo $model->id; ?></h1>
+<h1>VISTA DE SOLICITUD: <?php echo $model->nombre." ".$model->apellido; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

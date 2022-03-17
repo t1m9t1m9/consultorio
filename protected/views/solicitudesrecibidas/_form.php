@@ -49,10 +49,8 @@ foreach ($datos as $nombres)
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'respuesta'); ?>
-        <?php echo $form->dropDownList($model,'respuesta', array(
-            "0"=>"NO","1"=>"SI"
-        ),array('selected' => 'Choose', 'readonly' => true)); ?>
-		<?php echo $form->error($model,'respuesta', array("class" => "text-error")); ?>
+        <?php echo $form->textField($model,'respuesta',array('readonly'=> true)); ?>
+        <?php echo $form->error($model,'respuesta', array("class" => "text-error")); ?>
 	</div>
 
 	<div class="row">

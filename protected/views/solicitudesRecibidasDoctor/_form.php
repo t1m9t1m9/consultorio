@@ -2,6 +2,16 @@
 /* @var $this SolicitudesRecibidasDoctorController */
 /* @var $model SolicitudesRecibidasDoctor */
 /* @var $form CActiveForm */
+$cedu = Yii::app()->user->name;
+$datos = Usuario::model()->findAll();
+foreach ($datos as $nombres)
+{
+    if($cedu == $nombres->ci)
+    {
+        $nombre=$nombres->primerNombre;
+        $apellido=$nombres->primerApellido;
+    }
+}
 ?>
 
 <div class="form">
@@ -21,19 +31,27 @@
 
 	<div class="row" align="center">
 		<?php echo $form->labelEx($model,'tipoSolicitud'); ?>
-		<?php echo $form->textField($model,'tipoSolicitud',array('size'=>60,'maxlength'=>100)); ?>
+        <?php echo $form->dropDownList($model,'tipoSolicitud', array(
+            ""=>"Seleccione una Opcion",
+            "RECETAS"=>"RECETAS",
+            "CERTIFICADO MEDICO"=>"CERTIFICADO MEDICO",
+            "PEDIDOS DE IMAGENES"=>"PEDIDO DE IMAGENES",
+            "PEDIDOS DE LABORATORIO"=>"PEDIDO DE LABORATORIO",
+        )); ?>
 		<?php echo $form->error($model,'tipoSolicitud', array("class" => "text-error")); ?>
 	</div>
 
 	<div class="row" align="center">
 		<?php echo $form->labelEx($model,'ciUsuario'); ?>
-		<?php echo $form->textField($model,'ciUsuario',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->textField($model,'ciUsuario',array('size'=>10,'maxlength'=>10,'readonly'=> true)); ?>
 		<?php echo $form->error($model,'ciUsuario', array("class" => "text-error")); ?>
 	</div>
 
 	<div class="row" align="center">
 		<?php echo $form->labelEx($model,'respuesta'); ?>
-		<?php echo $form->textField($model,'respuesta'); ?>
+        <?php echo $form->dropDownList($model,'respuesta', array(
+            "0"=>"NO","1"=>"SI"
+        ),array('selected' => 'Choose')); ?>
 		<?php echo $form->error($model,'respuesta', array("class" => "text-error")); ?>
 	</div>
 
@@ -45,13 +63,13 @@
 
 	<div class="row" align="center">
 		<?php echo $form->labelEx($model,'nombre'); ?>
-		<?php echo $form->textField($model,'nombre',array('size'=>32,'maxlength'=>32)); ?>
+		<?php echo $form->textField($model,'nombre',array('size'=>32,'maxlength'=>32,'readonly'=> true)); ?>
 		<?php echo $form->error($model,'nombre', array("class" => "text-error")); ?>
 	</div>
 
 	<div class="row" align="center">
 		<?php echo $form->labelEx($model,'apellido'); ?>
-		<?php echo $form->textField($model,'apellido',array('size'=>32,'maxlength'=>32)); ?>
+		<?php echo $form->textField($model,'apellido',array('size'=>32,'maxlength'=>32,'readonly'=> true)); ?>
 		<?php echo $form->error($model,'apellido', array("class" => "text-error")); ?>
 	</div>
 

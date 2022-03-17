@@ -7,7 +7,7 @@
  * @property integer $id
  * @property string $tipoSolicitud
  * @property string $ciUsuario
- * @property integer $respuesta
+ * @property string $respuesta
  * @property string $observaciones
  * @property string $nombre
  * @property string $apellido
@@ -30,7 +30,7 @@ class Solicitudesrecibidas extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('respuesta', 'numerical', 'integerOnly'=>true),
+			array('respuesta', 'length', 'max'=>2),
 			array('tipoSolicitud', 'length', 'max'=>100),
 			array('ciUsuario', 'length', 'max'=>10),
 			array('observaciones', 'length', 'max'=>300),
